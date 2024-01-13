@@ -1,2 +1,3 @@
 hardware/micropython_testenvironment/micropython_testenvironment-backups/*
 hardware/micropython_testenvironment/parts/RPi_Hat_Template/*
+hardware/micropython_testenvironment/fp-info-cache
