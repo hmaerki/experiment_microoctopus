@@ -6,7 +6,7 @@
     (property "Value" "RPi_GPIO" (at 19.05 3.81 0)
       (effects (font (size 1.524 1.524)))
     )
-    (property "Footprint" "00_project_RPI_Hat:RPi_Hat" (at 0 0 0)
+    (property "Footprint" "00_project_RPI_Hat:RPi_Hat_2holes" (at 0 0 0)
       (effects (font (size 1.524 1.524)))
     )
     (property "Datasheet" "" (at 0 0 0)

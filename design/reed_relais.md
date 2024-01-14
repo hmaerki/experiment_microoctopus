@@ -17,6 +17,7 @@ https://jlcpcb.com/partdetail/CosmoElectronics-D1A050000/C150533
   USD 0.74
 
 
+Photocouplers
 https://jlcpcb.com/partdetail/Toshiba-TLP172GM_TPL_EO/C261926
 file:///home/hansm/Downloads/TLP172GM(TPL,E(O.pdf
 
@@ -29,5 +30,3 @@ file:///home/hansm/Downloads/TLP172AM(TPL,E.pdf
 Power: FET
 IO: photo-MOSFET
 
-
-https://www.aliexpress.com/item/1005001412414804.html
