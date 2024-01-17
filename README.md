@@ -1,17 +1,17 @@
 
-# uOctopus - Micropython Testenvironment
+# microOctopus - Micropython Testenvironment
 
 Ideas on how to set up a micropython testenvironment
 
-![uOctopus](branding/images/uOctopus-pytest.png)
+![microOctopus](branding/images/uOctopus-pytest.png)
 
 ## Terms
 
-* `uOctopus`: micropyton Octopus
+* `microOctopus`: micropyton Octopus
 * `DUT`: device under test. In this context different micropython boards and different micropython gadgets
 * `BoardDUT`: A micropython board under test.
 * `GadgetDUT`: A sensor, actor, device, Modbus dongle which may be connected to a micropython board.
-* `Tentacle`: uOctopus has many tentacles, every tentacle may host a DUT.
+* `Tentacle`: microOctopus has many tentacles, every tentacle may host a DUT.
 * `BoardTentacle`: A tentacle holding a micropython board.
 * `GadgetTentacle`: A tentacle holding a gadget.
 * `Inkbus`: All tentacles are connected by the inkbus. Typically a 
@@ -19,11 +19,11 @@ Ideas on how to set up a micropython testenvironment
 
 ## Goal
 
-* `uOctopus` allows to automatically test various micropython against various gadgets  (sensor, displays, etc).
+* `microOctopus` allows to automatically test various micropython against various gadgets  (sensor, displays, etc).
 * Tests should run automatically and include firmware update.
 * Tests should be triggered from the github ci pipeline, for example on commits or pull requests.
 
-## uOctopus testenvironment
+## microOctopus testenvironment
 
 * Software:
   * dockerized on linux
@@ -34,17 +34,17 @@ Ideas on how to set up a micropython testenvironment
   * Every tentacle is equipped by a RP2040 which controls the DUT.
   * The Inkbus connects the tentacles. Typically exactly one BoardTentacle and one GadgetTentacle is connected to the Inkbus.
 * Extended Hardware
-  * uOctopus may also have specialized tentacles like a scope tentacle.
-  * uOctopus may also control cams to read displays, wlan hotspot, etc.
+  * microOctopus may also have specialized tentacles like a scope tentacle.
+  * microOctopus may also control cams to read displays, wlan hotspot, etc.
 * Firmware under test
   * Must be provided by the tester
 * Test software
-  * uOctopus provides basic functionality like updating firmware, connecting the inkbus, tentacle inventory.
+  * microOctopus provides basic functionality like updating firmware, connecting the inkbus, tentacle inventory.
   * However the pytest code itselve is provided by the tester together with the firmware.
 
 ## Hardware example
 
-* `uOctopus`
+* `microOctopus`
   * `BoardTentacle` PYBv1.1
   * `BoardTentacle` ESP32
   * `GadgetTentacle` OLED
@@ -64,7 +64,7 @@ In this test the OLED display shall be tested agains PYBv1.1 and ESP32 using fir
 ```mermaid
 sequenceDiagram
     participant github
-    participant U as uOctopus
+    participant U as microOctopus
     participant TP as Tentacle PYBv1.1
     participant TE as Tentacle ESP32
     participant TO as Tentacle OLED
