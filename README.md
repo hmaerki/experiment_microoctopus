@@ -8,20 +8,21 @@ Ideas on how to set up a micropython testenvironment
 ## Terms
 
 * `microOctopus`: micropyton Octopus
-* `DUT`: device under test. In this context different micropython boards and different micropython gadgets
+* `Gadget`: Something that may be collected to a micropython board: A sensor, actor, display or even a Modbus dongle.
+* `DUT`: Device Under Test.
 * `BoardDUT`: A micropython board under test.
-* `GadgetDUT`: A sensor, actor, device, Modbus dongle which may be connected to a micropython board.
+* `GadgetDUT`: A gadget under test.
 * `Tentacle`: microOctopus has many tentacles, every tentacle may host a DUT.
 * `BoardTentacle`: A tentacle holding a micropython board.
 * `GadgetTentacle`: A tentacle holding a gadget.
-* `Inkbus`: All tentacles are connected by the inkbus. Typically a 
+* `Inkbus`: All tentacles are connected by the inkbus: A 40 wire ribbon cable.
 
 
 ## Goal
 
-* `microOctopus` allows to automatically test various micropython against various gadgets  (sensor, displays, etc).
+* `microOctopus` allows to automatically test various micropython boards against various gadgets.
 * Tests should run automatically and include firmware update.
-* Tests should be triggered from the github ci pipeline, for example on commits or pull requests.
+* Tests should be triggered from the github workflow, for example on commits or pull requests.
 
 ## microOctopus testenvironment
 
