@@ -1,3 +1,7 @@
-hardware/micropython_testenvironment/micropython_testenvironment-backups/*
+**/*-backups
+**/fp-info-cache
+**/fp-info-cache
+**/~*.lck
 hardware/micropython_testenvironment/parts/RPi_Hat_Template/*
-hardware/micropython_testenvironment/fp-info-cache
+hardware/pcb_experiment_usb10.tgz
+

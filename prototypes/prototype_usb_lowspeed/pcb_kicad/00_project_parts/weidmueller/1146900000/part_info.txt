@@ -1,0 +1,9 @@
+Manufacturer=Weidmüller
+PartNumber=1146900000
+PartCategory=Connector
+PackageCategory=Other
+PinCount=10
+Version=3.7
+Released=2022-12-12 08:03:03
+Downloaded=2023-11-22 20:36:18
+3D=Y

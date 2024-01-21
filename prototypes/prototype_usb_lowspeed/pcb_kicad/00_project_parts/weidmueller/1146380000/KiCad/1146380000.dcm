@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 1146380000
+D PCB plug-in connector, male header, open side, THT solder connection, 5.08 mm, Number of poles: 4, 180, Solder pin length: 3.2 mm, tinned, orange, Box
+K
+F http://catalog.weidmueller.com/createDatasheetForMobile.do?ordernumber=1146380000&scope1=1&scope2=1&localeId=en
+$ENDCMP
+#
+#End Doc Library

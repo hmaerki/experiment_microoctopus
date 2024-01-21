@@ -1,0 +1,9 @@
+Manufacturer=Weidmüller
+PartNumber=1146940000
+PartCategory=Connector
+PackageCategory=Other
+PinCount=12
+Version=2.3
+Released=2023-02-04 04:54:11
+Downloaded=2023-11-19 15:22:29
+3D=Y
