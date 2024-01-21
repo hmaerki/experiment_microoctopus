@@ -18,6 +18,7 @@ https://jlcpcb.com/partdetail/CosmoElectronics-D1A050000/C150533
 
 
 Photocouplers
+
 https://jlcpcb.com/partdetail/Toshiba-TLP172GM_TPL_EO/C261926
 file:///home/hansm/Downloads/TLP172GM(TPL,E(O.pdf
 
