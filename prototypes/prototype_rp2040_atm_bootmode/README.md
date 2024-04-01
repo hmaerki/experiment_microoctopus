@@ -1,6 +1,5 @@
 # rp2040 ATM, Bootmode
 
-
 Every tentacle is controlled by a rp2040 running micropython.
 
 It would be beneficial, if this rp2040 may be reflashed without having to manually press the bootsel button.

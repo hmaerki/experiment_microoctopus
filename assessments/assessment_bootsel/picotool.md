@@ -137,8 +137,30 @@ Device at bus 3, address 32 appears to be a RP2040 MicroPython device not in BOO
 ```
 sudo ./picotool reboot -u --address 33
 No accessible RP2040 devices in BOOTSEL mode were found with address 33.
-
 but:
-
 Device at bus 3, address 33 appears to be a RP2040 MicroPython device not in BOOTSEL mode.
 ```
+
+# 2024-03-31
+
+```bash
+sudo ./picotool load -x /home/maerki/Downloads/RPI_PICO-20240126-v1.23.0-preview.72.g4a2e510a8.uf2
+```
+
+==> When pressing BOOTSEL button reboots into BOOTSEL
+
+```bash
+sudo ./picotool load -f /home/maerki/Downloads/RPI_PICO-20240126-v1.23.0-preview.72.g4a2e510a8.uf2
+sudo ./picotool load -F /home/maerki/Downloads/RPI_PICO-20240126-v1.23.0-preview.72.g4a2e510a8.uf2
+```
+
+==> When pressing BOOTSEL button does not even umount
+
+```bash
+sudo ./picotool reboot --application
+REBOOT 00000000 20042000 500
+       pc       sp       delay_ms
+The device was rebooted into application mode.
+```
+==> Boots into application mode
+==> When pressing BOOTSEL button boots into BOOTSEL mode

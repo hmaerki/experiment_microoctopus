@@ -14,7 +14,7 @@
   New USB device strings: Mfr=1, Product=2, SerialNumber=3
   Product: RP2 Boot
   Manufacturer: Raspberry Pi
-  SerialNumber: E0C912952D54
+  SerialNumber: E0C912952D54 (this is hardcoded...)
 
 
 ## Assessment
