@@ -1,0 +1,1 @@
+https://github.com/AchimPieters/KiCad-Templates

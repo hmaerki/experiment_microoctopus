@@ -1,33 +1,15 @@
-https://www.aliexpress.com/item/32788773655.html
-
-https://www.aliexpress.com/item/1005004818274573.html
-
-https://www.aliexpress.com/item/1005003234064658.html
-
-https://www.aliexpress.com/item/1005003025355512.html
-
-https://www.aliexpress.com/item/1005006040700348.html
-
-https://www.aliexpress.com/item/1005004822301240.html
-
-https://jlcpcb.com/partdetail/PanChang-SIP1A05/C10496
-  USD 0.68
-
-https://jlcpcb.com/partdetail/CosmoElectronics-D1A050000/C150533
-  USD 0.74
+# Photocouplers
 
 
-Photocouplers
+| USD | JLC |  Datasheet | Specs | Comment |
+| - | - | - | - | - |
+| 0.51 | C261926 | [TLP172GM]() |  |
+| 1.06 | C2152276 | [TLP172AM]() |  |  |
+| 0.55 | C7435105 | [GAQY221S](https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2308151358_SUPSiC-GAQY221S_C7435105.pdf) | Roff=2OOhm,Cout=12pF | A-Wahl |
+| 0.72 | C81521 | [CPC1017NTR](https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/1807271520_Littelfuse-IXYS-CPC1017NTR_C81521.pdf) | Ron-max=16Ohm,Cout=5pF |  |
 
-https://jlcpcb.com/partdetail/Toshiba-TLP172GM_TPL_EO/C261926
-file:///home/hansm/Downloads/TLP172GM(TPL,E(O.pdf
 
-22 Ohm, COff 30pF
-
-file:///home/hansm/Downloads/TLP172AM(TPL,E.pdf
-1 Ohm
-
+* Search for `PhotoMOS Supsic`
 
 Power: FET
 IO: photo-MOSFET
-
