@@ -4,4 +4,4 @@
 **/~*.lck
 hardware/micropython_testenvironment/parts/RPi_Hat_Template/*
 hardware/pcb_experiment_usb10.tgz
-
+hardware/octoprobe_kicad_v1/production/*
