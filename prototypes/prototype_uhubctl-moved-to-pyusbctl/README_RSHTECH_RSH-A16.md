@@ -25,7 +25,7 @@ EUR63
 
 ## Port assignements
 
-`sudo uhubctl --location xx --port xx --action=on``
+`sudo uhubctl --location xx --port xx --action=on`
 
 | plug | location | port
 |  - | - | - |

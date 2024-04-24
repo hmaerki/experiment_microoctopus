@@ -48,3 +48,15 @@ $ sudo usbreset 2e8a:000a
 * power up
 * Use `pyusb` to find rp2040 serial
 * TODO: find corresponding `picotool --address`
+
+
+## Try with modified board from peter
+
+```bash
+cd /home/maerki/tmp/fork_picotool/build
+wget https://micropython.org/resources/firmware/RPI_PICO-20240222-v1.22.2.uf2
+wget https://micropython.org/resources/firmware/RPI_PICO_W-20240222-v1.22.2.uf2
+
+sudo ./picotool load --update -x RPI_PICO-20240222-v1.22.2.uf2
+sudo ./picotool load --update -x RPI_PICO_W-20240222-v1.22.2.uf2
+```

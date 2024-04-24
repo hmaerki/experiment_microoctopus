@@ -14,7 +14,7 @@ https://www.aten.com/de/de/products/usb-l%C3%B6sungen/docks-und-switches/us234/
 
 ## Port assignements
 
-`sudo uhubctl --location xx --port xx --action=on``
+`sudo uhubctl --location xx --port xx --action=on`
 
 | plug | location | port
 |  - | - | - |

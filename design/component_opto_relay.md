@@ -1,5 +1,6 @@
 # Photocouplers
 
+* Search for `PhotoMOS Supsic`
 
 | USD | JLC |  Datasheet | Specs | Comment |
 | - | - | - | - | - |
@@ -9,7 +10,16 @@
 | 0.72 | C81521 | [CPC1017NTR](https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/1807271520_Littelfuse-IXYS-CPC1017NTR_C81521.pdf) | Ron-max=16Ohm,Cout=5pF |  |
 
 
-* Search for `PhotoMOS Supsic`
+## GAQY221S
 
-Power: FET
-IO: photo-MOSFET
+Possible Kicad footprints
+* TLP3123
+* CPC1117N
+* CPC1017N
+* CPC1002N
+
+Calculation of the input resistor
+  Vdiff = 3.3V - Vf = 3.3V- 1.2V = 2.1V
+  I_Fon = 0.5mA
+  R = 2.1V / 0.5mA = 4.2kOhm
+

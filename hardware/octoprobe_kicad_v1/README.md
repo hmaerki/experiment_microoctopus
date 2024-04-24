@@ -41,3 +41,20 @@ Result
 * Automatically update FW on tentacle B
   * Optorelays on boot button
   * install micropython and testcode
+
+## Kicad
+
+### Multiconnector
+
+GND, GND, 3V3, 5V, RELAYS0..5: 10 pins
+
+* Testpoint
+* 2 Muffe
+* 2 Lötauge
+
+A) Kicad repeat
+B) Footprint mit Testpoint, 2 Muffe, 2 Lötauge
+C) Footprint mit 10 Testpoint, 10x2 Muffe, 10x2 Lötauge
+D) Parametrierbarer Python Code. Symbol Name ist vordefiniert.
+E) Symbol `Conn_01x10_Pin`
+   Parametrierbarer Python Code, welcher die entsprechenden Pins benennt.
