@@ -1283,7 +1283,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/17153a56-7276-4436-853e-3501679a187d")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.167621 0.38)
@@ -2483,7 +2483,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/66635fca-a3f9-4b92-989f-2a94609b1714/4deba642-2c44-423a-b955-052ec928058c")
 		(sheetname "Relay 1")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 1.33 -1.33)
@@ -3517,7 +3517,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/66635fca-a3f9-4b92-989f-2a94609b1714/059c88cd-af1d-430d-884e-452633c52735")
 		(sheetname "Relay 1")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start -1.33 3.87)
@@ -5275,7 +5275,7 @@
 		(property ki_fp_filters "SOP*3.8x4.1mm*P2.54mm*")
 		(path "/b1263d91-a8e6-4644-b570-390bb3eee6dd/78a068e6-f974-41b9-b29b-a9c65d70a9cb")
 		(sheetname "Relay 5")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -2.01 -2.16)
@@ -6257,7 +6257,7 @@
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/f2dcd3f6-7abb-4a9a-b4b6-2512b15506c6")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -1.485 0.735)
@@ -7602,7 +7602,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/b1549334-c2d7-4e3f-871b-afc0cb52e452/abc32c86-930c-4269-8d64-a5a6c2bded06")
 		(sheetname "5V")
-		(sheetfile "pcb_dezentral_power.kicad_sch")
+		(sheetfile "pcb_octoprobe_power.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 1.33 -1.33)
@@ -8856,7 +8856,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/66635fca-a3f9-4b92-989f-2a94609b1714/20848e4d-908a-48d6-8e36-7c85baf99ca2")
 		(sheetname "Relay 1")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.167621 -0.38)
@@ -10314,7 +10314,7 @@
 		)
 		(path "/b1549334-c2d7-4e3f-871b-afc0cb52e452/ae36fce0-176d-46e0-af8d-92e5d632eb8f")
 		(sheetname "5V")
-		(sheetfile "pcb_dezentral_power.kicad_sch")
+		(sheetfile "pcb_octoprobe_power.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start 0 -1.56)
@@ -10798,7 +10798,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/66635fca-a3f9-4b92-989f-2a94609b1714/00cc5977-1ef1-4b4d-800b-5799d73d4ce7")
 		(sheetname "Relay 1")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.167621 -0.38)
@@ -11009,7 +11009,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/40e8a3b3-dd29-40ce-9094-097f4188a9a0")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.14058 0.51)
@@ -11232,7 +11232,7 @@
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/9f0ce1ac-0171-4d6a-8614-107d3aa07379/338ff49e-72ba-4038-a2c2-6f74f0fe7389")
 		(sheetname "Relay 4")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -1.485 -0.735)
@@ -11808,7 +11808,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/39237817-8317-42f4-bc98-98e5306fc055")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.115835 -0.36)
@@ -12581,7 +12581,7 @@
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/b1263d91-a8e6-4644-b570-390bb3eee6dd/338ff49e-72ba-4038-a2c2-6f74f0fe7389")
 		(sheetname "Relay 5")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -1.485 -0.735)
@@ -13609,7 +13609,7 @@
 		(property ki_fp_filters "SOP*3.8x4.1mm*P2.54mm*")
 		(path "/11dbe9e5-d49b-44cb-87f2-d7d490f0e7d2/78a068e6-f974-41b9-b29b-a9c65d70a9cb")
 		(sheetname "Relay 3")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -2.01 -2.16)
@@ -14362,7 +14362,7 @@
 		)
 		(path "/c93857e2-4cdb-4a73-87ff-b2446dc3a53c/278487ea-f1be-490e-b6f2-7f4ca98c4cf4")
 		(sheetname "Relay 2")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr exclude_from_bom)
 		(fp_rect
 			(start 0 -27.94)
@@ -14799,7 +14799,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/9f0ce1ac-0171-4d6a-8614-107d3aa07379/00cc5977-1ef1-4b4d-800b-5799d73d4ce7")
 		(sheetname "Relay 4")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.167621 -0.38)
@@ -15009,7 +15009,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/b1263d91-a8e6-4644-b570-390bb3eee6dd/00cc5977-1ef1-4b4d-800b-5799d73d4ce7")
 		(sheetname "Relay 5")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.167621 -0.38)
@@ -15989,7 +15989,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/11dbe9e5-d49b-44cb-87f2-d7d490f0e7d2/20848e4d-908a-48d6-8e36-7c85baf99ca2")
 		(sheetname "Relay 3")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.167621 -0.38)
@@ -16639,7 +16639,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/11dbe9e5-d49b-44cb-87f2-d7d490f0e7d2/26c29480-57a3-4938-af07-10ef495ff9b5")
 		(sheetname "Relay 3")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 1.33 -1.33)
@@ -18016,7 +18016,7 @@
 		(property ki_fp_filters "SOP*3.8x4.1mm*P2.54mm*")
 		(path "/9f0ce1ac-0171-4d6a-8614-107d3aa07379/78a068e6-f974-41b9-b29b-a9c65d70a9cb")
 		(sheetname "Relay 4")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -2.01 -2.16)
@@ -18449,7 +18449,7 @@
 		(property ki_fp_filters "SOP*3.8x4.1mm*P2.54mm*")
 		(path "/c93857e2-4cdb-4a73-87ff-b2446dc3a53c/78a068e6-f974-41b9-b29b-a9c65d70a9cb")
 		(sheetname "Relay 2")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -2.01 -2.16)
@@ -18762,7 +18762,7 @@
 		)
 		(path "/c46e2c0a-aed3-45f9-aed6-f4487bd59c11")
 		(sheetname "Root")
-		(sheetfile "pcb_dezentral.kicad_sch")
+		(sheetfile "pcb_octoprobe.kicad_sch")
 		(attr exclude_from_bom)
 		(fp_rect
 			(start 0 -27.94)
@@ -20431,7 +20431,7 @@
 		)
 		(path "/3a82e9ad-9a1c-4775-bcf5-55ea8fe3a71a/ae36fce0-176d-46e0-af8d-92e5d632eb8f")
 		(sheetname "3V3")
-		(sheetfile "pcb_dezentral_power.kicad_sch")
+		(sheetfile "pcb_octoprobe_power.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start 0 -1.56)
@@ -21245,7 +21245,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/c93857e2-4cdb-4a73-87ff-b2446dc3a53c/059c88cd-af1d-430d-884e-452633c52735")
 		(sheetname "Relay 2")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start -1.33 3.87)
@@ -21842,7 +21842,7 @@
 		)
 		(path "/9f0ce1ac-0171-4d6a-8614-107d3aa07379/278487ea-f1be-490e-b6f2-7f4ca98c4cf4")
 		(sheetname "Relay 4")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr exclude_from_bom)
 		(fp_rect
 			(start 0 -27.94)
@@ -22389,7 +22389,7 @@
 		(property ki_fp_filters "Pin* Test*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/f5d6c3b6-6c87-4278-bf25-a7daed68a0b8")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr exclude_from_pos_files exclude_from_bom)
 		(fp_circle
 			(center 0 0)
@@ -23599,7 +23599,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/b1549334-c2d7-4e3f-871b-afc0cb52e452/ba3ffad1-5a00-454e-994f-12f7ce3ed3f4")
 		(sheetname "5V")
-		(sheetfile "pcb_dezentral_power.kicad_sch")
+		(sheetfile "pcb_octoprobe_power.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.167621 -0.38)
@@ -24030,7 +24030,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/eae9b22e-f88c-4e2f-a734-a94b4000dbbe")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.115835 0.36)
@@ -24463,7 +24463,7 @@
 		)
 		(path "/b1549334-c2d7-4e3f-871b-afc0cb52e452/2168fc49-db60-4b13-8471-c171db2c08b8")
 		(sheetname "5V")
-		(sheetfile "pcb_dezentral_power.kicad_sch")
+		(sheetfile "pcb_octoprobe_power.kicad_sch")
 		(attr exclude_from_bom)
 		(fp_rect
 			(start 0 -27.94)
@@ -25228,7 +25228,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/9f0ce1ac-0171-4d6a-8614-107d3aa07379/20848e4d-908a-48d6-8e36-7c85baf99ca2")
 		(sheetname "Relay 4")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.167621 -0.38)
@@ -25548,7 +25548,7 @@
 		(property ki_fp_filters "Pin* Test*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/542972f0-5be2-4e66-91bc-95b84a19cb06")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr exclude_from_pos_files exclude_from_bom)
 		(fp_circle
 			(center 0 0)
@@ -26648,7 +26648,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/c4ea3607-6829-4db8-a901-90f37795c82a/6ac392eb-e6fd-4cc0-bf5b-43ec5bc2c4a7")
 		(sheetname "GND")
-		(sheetfile "pcb_dezentral_gnd.kicad_sch")
+		(sheetfile "pcb_octoprobe_gnd.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 1.33 -1.33)
@@ -27243,7 +27243,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/cae66469-1137-4696-b5d2-ea1b6b9bc591")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.115835 -0.36)
@@ -28224,7 +28224,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/6eebf3f2-db92-49ec-8ec2-502afbc46815")
 		(sheetname "Root")
-		(sheetfile "pcb_dezentral.kicad_sch")
+		(sheetfile "pcb_octoprobe.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.167621 -0.38)
@@ -29205,7 +29205,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/99919232-e576-46a3-bab8-0a33689cec30")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.115835 0.36)
@@ -29538,7 +29538,7 @@
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/11dbe9e5-d49b-44cb-87f2-d7d490f0e7d2/338ff49e-72ba-4038-a2c2-6f74f0fe7389")
 		(sheetname "Relay 3")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -1.485 -0.735)
@@ -30676,7 +30676,7 @@
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/c93857e2-4cdb-4a73-87ff-b2446dc3a53c/338ff49e-72ba-4038-a2c2-6f74f0fe7389")
 		(sheetname "Relay 2")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -1.485 -0.735)
@@ -32461,7 +32461,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/b1263d91-a8e6-4644-b570-390bb3eee6dd/4deba642-2c44-423a-b955-052ec928058c")
 		(sheetname "Relay 5")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 1.33 -1.33)
@@ -33176,7 +33176,7 @@
 		(property ki_fp_filters "SW*MEC*5G*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/42cfcb6b-cd75-4821-ac1d-3c371dd9c3ca")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -2.55 -1.18)
@@ -34158,7 +34158,7 @@
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/3a82e9ad-9a1c-4775-bcf5-55ea8fe3a71a/942b75a5-94e3-4066-938b-7ff7af737135")
 		(sheetname "3V3")
-		(sheetfile "pcb_dezentral_power.kicad_sch")
+		(sheetfile "pcb_octoprobe_power.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -1.485 -0.735)
@@ -35064,7 +35064,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/fb3d207e-7630-4841-b75e-8a1cee6163bf")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.115835 0.36)
@@ -35824,7 +35824,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/b1263d91-a8e6-4644-b570-390bb3eee6dd/20848e4d-908a-48d6-8e36-7c85baf99ca2")
 		(sheetname "Relay 5")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.167621 -0.38)
@@ -37945,7 +37945,7 @@
 		(property ki_fp_filters "SOT?223*TabPin2*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/d43526ef-efb7-492e-9d8f-208b85e2e503")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -1.91 -3.41)
@@ -38766,7 +38766,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/b1549334-c2d7-4e3f-871b-afc0cb52e452/2efff598-c01a-425e-9422-dd02205fb0c5")
 		(sheetname "5V")
-		(sheetfile "pcb_dezentral_power.kicad_sch")
+		(sheetfile "pcb_octoprobe_power.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start -1.33 3.87)
@@ -39251,7 +39251,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/1ead5abb-fa1d-47d2-b604-340a50997c3e")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.115835 -0.36)
@@ -40268,7 +40268,7 @@
 		(property ki_fp_filters "USB*C*Receptacle*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/9284c823-0b88-4345-84d9-e7740f1a9e50")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start 4.47 4.84)
@@ -41715,7 +41715,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/8301fea3-2631-4a39-82f3-f4769f80c7dc")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.167621 0.38)
@@ -43615,7 +43615,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/2e6060f4-032e-4dfe-ae30-1b9caa8dbdbd")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.167621 0.38)
@@ -43935,7 +43935,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/c4ea3607-6829-4db8-a901-90f37795c82a/f44499a6-547e-4847-bbae-a4aefff18ebc")
 		(sheetname "GND")
-		(sheetfile "pcb_dezentral_gnd.kicad_sch")
+		(sheetfile "pcb_octoprobe_gnd.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 1.33 -1.33)
@@ -45189,7 +45189,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/3a82e9ad-9a1c-4775-bcf5-55ea8fe3a71a/30d7f73d-d6cd-4fe5-99ef-1334b21c4119")
 		(sheetname "3V3")
-		(sheetfile "pcb_dezentral_power.kicad_sch")
+		(sheetfile "pcb_octoprobe_power.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 1.33 -1.33)
@@ -45454,7 +45454,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/d24386ab-b9df-4ab9-acb1-27f9796faeac")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.167621 0.38)
@@ -45664,7 +45664,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/c93857e2-4cdb-4a73-87ff-b2446dc3a53c/26c29480-57a3-4938-af07-10ef495ff9b5")
 		(sheetname "Relay 2")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 1.33 -1.33)
@@ -46478,7 +46478,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/b1263d91-a8e6-4644-b570-390bb3eee6dd/059c88cd-af1d-430d-884e-452633c52735")
 		(sheetname "Relay 5")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start -1.33 3.87)
@@ -47952,7 +47952,7 @@
 		(property ki_fp_filters "Pin* Test*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/77134fec-445a-4aec-9c63-073dd5f6fc99")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr exclude_from_pos_files exclude_from_bom)
 		(fp_circle
 			(center 0 0)
@@ -48065,7 +48065,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/d75e2f39-416d-43d7-9594-abcc4ea7defe")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.167621 0.38)
@@ -49486,7 +49486,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/e8647279-ddb9-447c-aad4-a057c882fb63")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.115835 -0.36)
@@ -49697,7 +49697,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/7c4c8ba8-e5bc-478c-95b0-415a6ee56a5b")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.115835 0.36)
@@ -49907,7 +49907,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/3a82e9ad-9a1c-4775-bcf5-55ea8fe3a71a/2efff598-c01a-425e-9422-dd02205fb0c5")
 		(sheetname "3V3")
-		(sheetfile "pcb_dezentral_power.kicad_sch")
+		(sheetfile "pcb_octoprobe_power.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start -1.33 3.87)
@@ -50514,7 +50514,7 @@
 		(property ki_fp_filters "Crystal*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/08549c87-022c-451e-974f-3d16c1753157")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -2 -1.65)
@@ -52855,7 +52855,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/9f0ce1ac-0171-4d6a-8614-107d3aa07379/059c88cd-af1d-430d-884e-452633c52735")
 		(sheetname "Relay 4")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start -1.33 3.87)
@@ -53450,7 +53450,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/52ba260b-0acd-4c6b-90ea-cb84c160eba7")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.167621 0.38)
@@ -53663,7 +53663,7 @@
 		)
 		(path "/c4ea3607-6829-4db8-a901-90f37795c82a/d0e58779-b97d-4b40-b9c5-cdfadf4bdbcf")
 		(sheetname "GND")
-		(sheetfile "pcb_dezentral_gnd.kicad_sch")
+		(sheetfile "pcb_octoprobe_gnd.kicad_sch")
 		(attr exclude_from_bom)
 		(fp_rect
 			(start 0 -27.94)
@@ -54213,7 +54213,7 @@
 		)
 		(path "/66635fca-a3f9-4b92-989f-2a94609b1714/278487ea-f1be-490e-b6f2-7f4ca98c4cf4")
 		(sheetname "Relay 1")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr exclude_from_bom)
 		(fp_rect
 			(start 0 -27.94)
@@ -55091,7 +55091,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/529f25c6-1fc3-4dc8-8865-99538a1e8255")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.115835 -0.36)
@@ -55411,7 +55411,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/3a82e9ad-9a1c-4775-bcf5-55ea8fe3a71a/abc32c86-930c-4269-8d64-a5a6c2bded06")
 		(sheetname "3V3")
-		(sheetfile "pcb_dezentral_power.kicad_sch")
+		(sheetfile "pcb_octoprobe_power.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 1.33 -1.33)
@@ -56885,7 +56885,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/11dbe9e5-d49b-44cb-87f2-d7d490f0e7d2/059c88cd-af1d-430d-884e-452633c52735")
 		(sheetname "Relay 3")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start -1.33 3.87)
@@ -58579,7 +58579,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/9f0ce1ac-0171-4d6a-8614-107d3aa07379/4deba642-2c44-423a-b955-052ec928058c")
 		(sheetname "Relay 4")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 1.33 -1.33)
@@ -59064,7 +59064,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/046ebab2-d067-4200-a276-79a330feeb4b")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.167621 0.38)
@@ -60705,7 +60705,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/e882a843-14a8-4642-b495-7acecc5be9f0")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.14058 0.51)
@@ -61038,7 +61038,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/11d7d975-5a99-4065-aa0b-4af86434880b")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.107836 0.36)
@@ -61371,7 +61371,7 @@
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/71a21007-e059-4eef-b5c6-e966e3ec45dd")
 		(sheetname "Root")
-		(sheetfile "pcb_dezentral.kicad_sch")
+		(sheetfile "pcb_octoprobe.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start 0.8 -0.735)
@@ -62606,7 +62606,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/c93857e2-4cdb-4a73-87ff-b2446dc3a53c/4deba642-2c44-423a-b955-052ec928058c")
 		(sheetname "Relay 2")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 1.33 -1.33)
@@ -63420,7 +63420,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/c93857e2-4cdb-4a73-87ff-b2446dc3a53c/00cc5977-1ef1-4b4d-800b-5799d73d4ce7")
 		(sheetname "Relay 2")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.167621 -0.38)
@@ -63850,7 +63850,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/c93857e2-4cdb-4a73-87ff-b2446dc3a53c/20848e4d-908a-48d6-8e36-7c85baf99ca2")
 		(sheetname "Relay 2")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.167621 -0.38)
@@ -64830,7 +64830,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/9f0ce1ac-0171-4d6a-8614-107d3aa07379/26c29480-57a3-4938-af07-10ef495ff9b5")
 		(sheetname "Relay 4")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 1.33 -1.33)
@@ -66317,7 +66317,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/b59ee490-7ced-4a2d-8f4f-0ff0dc5fbed5")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.107836 -0.36)
@@ -66760,7 +66760,7 @@
 		(property ki_fp_filters "SOP*3.8x4.1mm*P2.54mm*")
 		(path "/66635fca-a3f9-4b92-989f-2a94609b1714/78a068e6-f974-41b9-b29b-a9c65d70a9cb")
 		(sheetname "Relay 1")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -2.01 -2.16)
@@ -67962,7 +67962,7 @@
 		(property ki_fp_filters "TO-???* *_Diode_* *SingleDiode* D_*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/e07231c5-813f-43bd-ad25-ab931f3824f1")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -2.36 -1)
@@ -68807,7 +68807,7 @@
 		)
 		(path "/b1263d91-a8e6-4644-b570-390bb3eee6dd/278487ea-f1be-490e-b6f2-7f4ca98c4cf4")
 		(sheetname "Relay 5")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr exclude_from_bom)
 		(fp_rect
 			(start 0 -27.94)
@@ -69477,7 +69477,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/ecab2ebe-3536-4bb4-8dd9-b16b65714597")
 		(sheetname "Root")
-		(sheetfile "pcb_dezentral.kicad_sch")
+		(sheetfile "pcb_octoprobe.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start 1 -0.96)
@@ -70258,7 +70258,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/4ffbea0e-15d6-490e-bd05-1afb3fae01e8")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.115835 0.36)
@@ -70908,7 +70908,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/b1263d91-a8e6-4644-b570-390bb3eee6dd/26c29480-57a3-4938-af07-10ef495ff9b5")
 		(sheetname "Relay 5")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 1.33 -1.33)
@@ -72382,7 +72382,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/3a82e9ad-9a1c-4775-bcf5-55ea8fe3a71a/ba3ffad1-5a00-454e-994f-12f7ce3ed3f4")
 		(sheetname "3V3")
-		(sheetfile "pcb_dezentral_power.kicad_sch")
+		(sheetfile "pcb_octoprobe_power.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.167621 -0.38)
@@ -72812,7 +72812,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/11dbe9e5-d49b-44cb-87f2-d7d490f0e7d2/4deba642-2c44-423a-b955-052ec928058c")
 		(sheetname "Relay 3")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 1.33 -1.33)
@@ -73626,7 +73626,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/c4ea3607-6829-4db8-a901-90f37795c82a/d9bbc677-5c99-4309-b3e0-3522e6aa9485")
 		(sheetname "GND")
-		(sheetfile "pcb_dezentral_gnd.kicad_sch")
+		(sheetfile "pcb_octoprobe_gnd.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start -1.33 3.87)
@@ -74025,7 +74025,7 @@
 		(property ki_fp_filters "SOIC*5.23x5.23mm*P1.27mm*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/db2f8b6a-46c6-427f-8bd6-7adb361f5804")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -2.725 2.725)
@@ -74830,7 +74830,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/11dbe9e5-d49b-44cb-87f2-d7d490f0e7d2/00cc5977-1ef1-4b4d-800b-5799d73d4ce7")
 		(sheetname "Relay 3")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.167621 -0.38)
@@ -75263,7 +75263,7 @@
 		)
 		(path "/3a82e9ad-9a1c-4775-bcf5-55ea8fe3a71a/2168fc49-db60-4b13-8471-c171db2c08b8")
 		(sheetname "3V3")
-		(sheetfile "pcb_dezentral_power.kicad_sch")
+		(sheetfile "pcb_octoprobe_power.kicad_sch")
 		(attr exclude_from_bom)
 		(fp_rect
 			(start 0 -27.94)
@@ -76141,7 +76141,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/1f06093b-5aeb-4470-9ac7-371fda23fae2")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.115835 0.36)
@@ -77342,7 +77342,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/9135f783-e11c-48f8-a718-dd6742397a97")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.115835 0.36)
@@ -78005,7 +78005,7 @@
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/b1549334-c2d7-4e3f-871b-afc0cb52e452/942b75a5-94e3-4066-938b-7ff7af737135")
 		(sheetname "5V")
-		(sheetfile "pcb_dezentral_power.kicad_sch")
+		(sheetfile "pcb_octoprobe_power.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -1.485 -0.735)
@@ -78361,7 +78361,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/f90b9840-ba68-4cd1-a9ad-aa3749b6c86b")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.167621 0.38)
@@ -79671,7 +79671,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/66635fca-a3f9-4b92-989f-2a94609b1714/26c29480-57a3-4938-af07-10ef495ff9b5")
 		(sheetname "Relay 1")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 1.33 -1.33)
@@ -80828,7 +80828,7 @@
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/66635fca-a3f9-4b92-989f-2a94609b1714/338ff49e-72ba-4038-a2c2-6f74f0fe7389")
 		(sheetname "Relay 1")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -1.485 -0.735)
@@ -81232,7 +81232,7 @@
 		)
 		(path "/24d7d496-8920-4421-a637-0c9bf263a085/6c8799ef-27ee-4e5b-a81e-60809d52f2ec")
 		(sheetname "cpu")
-		(sheetfile "pcb_dezentral_cpu.kicad_sch")
+		(sheetfile "pcb_octoprobe_cpu.kicad_sch")
 		(zone_connect 2)
 		(attr smd)
 		(fp_line
@@ -82815,7 +82815,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/b1549334-c2d7-4e3f-871b-afc0cb52e452/30d7f73d-d6cd-4fe5-99ef-1334b21c4119")
 		(sheetname "5V")
-		(sheetfile "pcb_dezentral_power.kicad_sch")
+		(sheetfile "pcb_octoprobe_power.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 1.33 -1.33)
@@ -83192,7 +83192,7 @@
 		)
 		(path "/11dbe9e5-d49b-44cb-87f2-d7d490f0e7d2/278487ea-f1be-490e-b6f2-7f4ca98c4cf4")
 		(sheetname "Relay 3")
-		(sheetfile "pcb_dezentral_opto_relay.kicad_sch")
+		(sheetfile "pcb_octoprobe_opto_relay.kicad_sch")
 		(attr exclude_from_bom)
 		(fp_rect
 			(start 0 -27.94)

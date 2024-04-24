@@ -3515,7 +3515,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "pcb_dezentral_opto_relay.kicad_sch"
+		(property "Sheetfile" "pcb_octoprobe_opto_relay.kicad_sch"
 			(at 101.6 118.6946 0)
 			(effects
 				(font
@@ -3563,7 +3563,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "pcb_dezentral_cpu.kicad_sch"
+		(property "Sheetfile" "pcb_octoprobe_cpu.kicad_sch"
 			(at 23.622 61.2906 0)
 			(effects
 				(font
@@ -3601,7 +3601,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "pcb_dezentral_power.kicad_sch"
+		(property "Sheetfile" "pcb_octoprobe_power.kicad_sch"
 			(at 46.99 97.1046 0)
 			(effects
 				(font
@@ -3659,7 +3659,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "pcb_dezentral_opto_relay.kicad_sch"
+		(property "Sheetfile" "pcb_octoprobe_opto_relay.kicad_sch"
 			(at 101.6 84.4046 0)
 			(effects
 				(font
@@ -3707,7 +3707,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "pcb_dezentral_opto_relay.kicad_sch"
+		(property "Sheetfile" "pcb_octoprobe_opto_relay.kicad_sch"
 			(at 101.6 139.0146 0)
 			(effects
 				(font
@@ -3755,7 +3755,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "pcb_dezentral_opto_relay.kicad_sch"
+		(property "Sheetfile" "pcb_octoprobe_opto_relay.kicad_sch"
 			(at 101.6 158.0646 0)
 			(effects
 				(font
@@ -3803,7 +3803,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "pcb_dezentral_power.kicad_sch"
+		(property "Sheetfile" "pcb_octoprobe_power.kicad_sch"
 			(at 46.99 132.6646 0)
 			(effects
 				(font
@@ -3861,7 +3861,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "pcb_dezentral_gnd.kicad_sch"
+		(property "Sheetfile" "pcb_octoprobe_gnd.kicad_sch"
 			(at 46.99 164.4146 0)
 			(effects
 				(font
@@ -3899,7 +3899,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "pcb_dezentral_opto_relay.kicad_sch"
+		(property "Sheetfile" "pcb_octoprobe_opto_relay.kicad_sch"
 			(at 101.6 102.1846 0)
 			(effects
 				(font
