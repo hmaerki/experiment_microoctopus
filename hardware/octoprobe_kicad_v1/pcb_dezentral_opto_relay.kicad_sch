@@ -1509,6 +1509,25 @@
 		)
 		(uuid "ed54a00c-b22b-4cd1-9d6d-74dc5e29bade")
 	)
+	(text_box "Calculation of the input resistor\n\nVdiff = 3.3V - Vf = 3.3V- 1.2V = 2.1V\nI_Fon = 0.5mA\nR = 2.1V / 0.5mA = 4.2kOhm"
+		(exclude_from_sim no)
+		(at 31.75 96.52 0)
+		(size 53.34 27.94)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "6102fe92-0f43-4672-b591-16e9f978bab2")
+	)
 	(hierarchical_label "RELAY_IN"
 		(shape input)
 		(at 60.96 49.53 180)
@@ -1538,7 +1557,7 @@
 				)
 			)
 		)
-		(property "Value" "10K"
+		(property "Value" "4k2"
 			(at 92.71 64.6684 90)
 			(effects
 				(font
