@@ -4,6 +4,13 @@
 	(generator_version "8.0")
 	(uuid "73354360-dfb6-4b17-990a-8e04a4c3900d")
 	(paper "A4")
+	(title_block
+		(title "Octoprobe")
+		(date "2024-04-24")
+		(rev "1.0")
+		(company "Hans Märki, Märki Informatik")
+		(comment 1 "The MIT License (MIT)")
+	)
 	(lib_symbols
 		(symbol "00_project_library:LED"
 			(pin_numbers hide)
@@ -1401,7 +1408,7 @@
 			)
 		)
 		(instances
-			(project "pcb_dezentral"
+			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/3a82e9ad-9a1c-4775-bcf5-55ea8fe3a71a"
 					(reference "UR501")
 					(unit 1)
@@ -1475,7 +1482,7 @@
 			(uuid "6c86b64b-d98c-4fa4-8cab-a2d1d174124f")
 		)
 		(instances
-			(project "pcb_dezentral"
+			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/3a82e9ad-9a1c-4775-bcf5-55ea8fe3a71a"
 					(reference "J503")
 					(unit 1)
@@ -1549,7 +1556,7 @@
 			(uuid "ddb99b81-e942-418d-91fc-4d7c35048fbe")
 		)
 		(instances
-			(project "pcb_dezentral"
+			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/3a82e9ad-9a1c-4775-bcf5-55ea8fe3a71a"
 					(reference "J501")
 					(unit 1)
@@ -1629,7 +1636,7 @@
 			(uuid "7d9be8f4-e09d-4956-8e70-12f75eb0287b")
 		)
 		(instances
-			(project "pcb_dezentral"
+			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/3a82e9ad-9a1c-4775-bcf5-55ea8fe3a71a"
 					(reference "D501")
 					(unit 1)
@@ -1703,7 +1710,7 @@
 			(uuid "9a5b7578-c127-4aee-877f-5716b6280323")
 		)
 		(instances
-			(project "pcb_dezentral"
+			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/3a82e9ad-9a1c-4775-bcf5-55ea8fe3a71a"
 					(reference "J502")
 					(unit 1)
@@ -1807,7 +1814,7 @@
 			(uuid "269156a1-decb-4d0f-8f7e-7cf543e31041")
 		)
 		(instances
-			(project "pcb_dezentral"
+			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/3a82e9ad-9a1c-4775-bcf5-55ea8fe3a71a"
 					(reference "FanQ501")
 					(unit 1)
@@ -1878,7 +1885,7 @@
 			(uuid "c33e54ce-95cd-493d-b976-a24bfbdf2b76")
 		)
 		(instances
-			(project "pcb_dezentral"
+			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/3a82e9ad-9a1c-4775-bcf5-55ea8fe3a71a"
 					(reference "R501")
 					(unit 1)
@@ -1948,7 +1955,7 @@
 			(uuid "0fe64d1c-818a-4351-8d73-3a25b73370e7")
 		)
 		(instances
-			(project "pcb_dezentral"
+			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/3a82e9ad-9a1c-4775-bcf5-55ea8fe3a71a"
 					(reference "#PWR0501")
 					(unit 1)

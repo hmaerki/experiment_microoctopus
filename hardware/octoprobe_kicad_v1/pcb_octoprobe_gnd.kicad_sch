@@ -4,6 +4,13 @@
 	(generator_version "8.0")
 	(uuid "73354360-dfb6-4b17-990a-8e04a4c3900d")
 	(paper "A4")
+	(title_block
+		(title "Octoprobe")
+		(date "2024-04-24")
+		(rev "1.0")
+		(company "Hans Märki, Märki Informatik")
+		(comment 1 "The MIT License (MIT)")
+	)
 	(lib_symbols
 		(symbol "00_project_library:opctoprobe_relay"
 			(exclude_from_sim no)
@@ -697,7 +704,7 @@
 			(uuid "5db8fbd5-269d-44e1-a439-56743e64c91f")
 		)
 		(instances
-			(project "pcb_dezentral"
+			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/c4ea3607-6829-4db8-a901-90f37795c82a"
 					(reference "J801")
 					(unit 1)
@@ -763,7 +770,7 @@
 			(uuid "2d8a0343-113c-4592-9e92-eabdfbc2e587")
 		)
 		(instances
-			(project "pcb_dezentral"
+			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/c4ea3607-6829-4db8-a901-90f37795c82a"
 					(reference "#PWR0801")
 					(unit 1)
@@ -825,7 +832,7 @@
 			)
 		)
 		(instances
-			(project "pcb_dezentral"
+			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/c4ea3607-6829-4db8-a901-90f37795c82a"
 					(reference "UR801")
 					(unit 1)
@@ -895,7 +902,7 @@
 			(uuid "dca2b4f4-edc7-468b-aae4-423bc653e6c2")
 		)
 		(instances
-			(project "pcb_dezentral"
+			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/c4ea3607-6829-4db8-a901-90f37795c82a"
 					(reference "J803")
 					(unit 1)
@@ -965,7 +972,7 @@
 			(uuid "84ba8d14-0cb0-4e45-97b3-575a3035d072")
 		)
 		(instances
-			(project "pcb_dezentral"
+			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/c4ea3607-6829-4db8-a901-90f37795c82a"
 					(reference "J802")
 					(unit 1)
