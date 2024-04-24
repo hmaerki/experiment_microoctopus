@@ -796,7 +796,7 @@
 				)
 			)
 		)
-		(symbol "Relay_SolidState:CPC1002N"
+		(symbol "Relay_SolidState:TLP3123"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -809,7 +809,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "CPC1002N"
+			(property "Value" "TLP3123"
 				(at 0 5.08 0)
 				(effects
 					(font
@@ -818,7 +818,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_SO:SOP-4_3.8x4.1mm_P2.54mm"
+			(property "Footprint" "Package_SO:SO-4_4.4x3.9mm_P2.54mm"
 				(at -5.08 -5.08 0)
 				(effects
 					(font
@@ -829,7 +829,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://www.ixysic.com/home/pdfs.nsf/www/CPC1002N.pdf/$file/CPC1002N.pdf"
+			(property "Datasheet" "https://toshiba.semicon-storage.com/info/docget.jsp?did=10047&prodName=TLP3123"
 				(at 0 0 0)
 				(effects
 					(font
@@ -839,7 +839,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Form A, Solid State Relay (Photo MOSFET) 60V, 0.7A, 0.55Ohm, SOP-4"
+			(property "Description" "Solid State Relay (Photo MOSFET) 40V, 1A, 0.1Ohm, SO-4"
 				(at 0 0 0)
 				(effects
 					(font
@@ -857,7 +857,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "SOP*3.8x4.1mm*P2.54mm*"
+			(property "ki_fp_filters" "SO*4.4x3.9mm*P2.54mm*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -866,7 +866,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "CPC1002N_0_1"
+			(symbol "TLP3123_0_1"
 				(rectangle
 					(start -5.08 3.81)
 					(end 5.08 -3.81)
@@ -892,7 +892,7 @@
 				)
 				(polyline
 					(pts
-						(xy 1.016 0.762) (xy 1.016 -0.762)
+						(xy 1.016 -0.635) (xy 1.016 -2.159)
 					)
 					(stroke
 						(width 0.2032)
@@ -904,7 +904,31 @@
 				)
 				(polyline
 					(pts
-						(xy 1.524 -0.762) (xy 2.794 -0.762)
+						(xy 1.016 2.159) (xy 1.016 0.635)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 -0.508) (xy 1.524 -0.762)
+					)
+					(stroke
+						(width 0.3556)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.794 0) (xy 3.81 0)
 					)
 					(stroke
 						(width 0)
@@ -916,7 +940,7 @@
 				)
 				(polyline
 					(pts
-						(xy 3.429 0.381) (xy 4.191 0.381)
+						(xy 3.429 -1.651) (xy 4.191 -1.651)
 					)
 					(stroke
 						(width 0)
@@ -928,7 +952,31 @@
 				)
 				(polyline
 					(pts
-						(xy 1.524 -0.635) (xy 1.524 -0.889) (xy 1.524 -0.889)
+						(xy 3.429 1.651) (xy 4.191 1.651)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 -2.54) (xy 3.81 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 -2.032) (xy 1.524 -2.286) (xy 1.524 -2.286)
 					)
 					(stroke
 						(width 0.3556)
@@ -940,7 +988,7 @@
 				)
 				(polyline
 					(pts
-						(xy 1.524 0.127) (xy 1.524 -0.127) (xy 1.524 -0.127)
+						(xy 1.524 -1.27) (xy 1.524 -1.524) (xy 1.524 -1.524)
 					)
 					(stroke
 						(width 0.3556)
@@ -952,10 +1000,58 @@
 				)
 				(polyline
 					(pts
-						(xy 1.524 0.889) (xy 1.524 0.635) (xy 1.524 0.635)
+						(xy 1.524 0.762) (xy 1.524 0.508) (xy 1.524 0.508)
 					)
 					(stroke
 						(width 0.3556)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 1.524) (xy 1.524 1.27) (xy 1.524 1.27)
+					)
+					(stroke
+						(width 0.3556)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 2.286) (xy 1.524 2.032) (xy 1.524 2.032)
+					)
+					(stroke
+						(width 0.3556)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.651 -1.397) (xy 2.794 -1.397) (xy 2.794 -0.635)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.651 1.397) (xy 2.794 1.397) (xy 2.794 0.635)
+					)
+					(stroke
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -988,7 +1084,7 @@
 				)
 				(polyline
 					(pts
-						(xy 1.524 0) (xy 2.794 0) (xy 2.794 -2.54) (xy 5.08 -2.54)
+						(xy 1.651 -2.159) (xy 2.794 -2.159) (xy 2.794 -2.54) (xy 5.08 -2.54)
 					)
 					(stroke
 						(width 0)
@@ -1000,7 +1096,7 @@
 				)
 				(polyline
 					(pts
-						(xy 1.524 0.762) (xy 2.794 0.762) (xy 2.794 2.54) (xy 5.08 2.54)
+						(xy 1.651 -0.635) (xy 2.794 -0.635) (xy 2.794 0.635) (xy 1.651 0.635)
 					)
 					(stroke
 						(width 0)
@@ -1012,7 +1108,7 @@
 				)
 				(polyline
 					(pts
-						(xy 1.778 0) (xy 2.286 0.127) (xy 2.286 -0.127) (xy 1.778 0)
+						(xy 1.651 2.159) (xy 2.794 2.159) (xy 2.794 2.54) (xy 5.08 2.54)
 					)
 					(stroke
 						(width 0)
@@ -1024,7 +1120,7 @@
 				)
 				(polyline
 					(pts
-						(xy 2.794 -1.397) (xy 3.81 -1.397) (xy 3.81 1.397) (xy 2.794 1.397)
+						(xy 1.778 -1.397) (xy 2.286 -1.27) (xy 2.286 -1.524) (xy 1.778 -1.397)
 					)
 					(stroke
 						(width 0)
@@ -1036,7 +1132,31 @@
 				)
 				(polyline
 					(pts
-						(xy 3.81 0.381) (xy 3.429 -0.381) (xy 4.191 -0.381) (xy 3.81 0.381)
+						(xy 1.778 1.397) (xy 2.286 1.524) (xy 2.286 1.27) (xy 1.778 1.397)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 -1.651) (xy 3.429 -0.889) (xy 4.191 -0.889) (xy 3.81 -1.651)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 1.651) (xy 3.429 0.889) (xy 4.191 0.889) (xy 3.81 1.651)
 					)
 					(stroke
 						(width 0)
@@ -1071,7 +1191,7 @@
 					)
 				)
 				(circle
-					(center 2.794 -1.397)
+					(center 2.794 -0.635)
 					(radius 0.127)
 					(stroke
 						(width 0)
@@ -1082,7 +1202,7 @@
 					)
 				)
 				(circle
-					(center 2.794 -0.762)
+					(center 2.794 0)
 					(radius 0.127)
 					(stroke
 						(width 0)
@@ -1093,7 +1213,40 @@
 					)
 				)
 				(circle
-					(center 2.794 1.397)
+					(center 2.794 0.635)
+					(radius 0.127)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 3.81 -2.54)
+					(radius 0.127)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 3.81 0)
+					(radius 0.127)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 3.81 2.54)
 					(radius 0.127)
 					(stroke
 						(width 0)
@@ -1104,7 +1257,7 @@
 					)
 				)
 			)
-			(symbol "CPC1002N_1_1"
+			(symbol "TLP3123_1_1"
 				(pin passive line
 					(at -7.62 2.54 0)
 					(length 2.54)
@@ -2226,7 +2379,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Relay_SolidState:CPC1002N")
+		(lib_id "Relay_SolidState:TLP3123")
 		(at 104.14 67.31 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2272,7 +2425,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Form A, Solid State Relay (Photo MOSFET) 60V, 0.7A, 0.55Ohm, SOP-4"
+		(property "Description" "Solid State Relay (Photo MOSFET) 40V, 1A, 0.1Ohm, SO-4"
 			(at 104.14 67.31 0)
 			(effects
 				(font

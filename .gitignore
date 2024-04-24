@@ -2,8 +2,8 @@
 **/fp-info-cache
 **/fp-info-cache
 **/~*.lck
-hardware/micropython_testenvironment/parts/RPi_Hat_Template/*
 hardware/pcb_experiment_usb10.tgz
 hardware/octoprobe_kicad_v1/production/*
 hardware/octoprobe_kicad_v1/00_project_library.bak
 hardware/octoprobe_kicad_v1/replicate_layout.log
+hardware/octoprobe_kicad_v1/pcb_octoprobe.kicad_sch-bak
