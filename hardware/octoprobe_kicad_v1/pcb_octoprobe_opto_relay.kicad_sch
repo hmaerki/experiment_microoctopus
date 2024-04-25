@@ -202,7 +202,7 @@
 					)
 				)
 			)
-			(property "Value" ""
+			(property "Value" "42"
 				(at 0 0 0)
 				(effects
 					(font
@@ -235,14 +235,6 @@
 						(size 1.27 1.27)
 					)
 					(hide yes)
-				)
-			)
-			(property "RELAIS_NUMBER" "42"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
 				)
 			)
 			(symbol "opctoprobe_relay_0_1"
@@ -1020,9 +1012,9 @@
 		)
 		(symbol "power:GND"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1096,8 +1088,8 @@
 			(symbol "GND_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
-					(name "GND"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1433,7 +1425,7 @@
 		(fields_autoplaced yes)
 		(uuid "278487ea-f1be-490e-b6f2-7f4ca98c4cf4")
 		(property "Reference" "UR301"
-			(at 55.245 21.59 0)
+			(at 61.595 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1441,7 +1433,7 @@
 			)
 		)
 		(property "Value" "${RELAIS_NUMBER}"
-			(at 55.245 24.13 0)
+			(at 61.595 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1808,7 +1800,7 @@
 			(at 109.22 50.8 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
@@ -1817,12 +1809,12 @@
 			(at 109.22 50.8 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 109.22 50.8 0)
 			(effects
 				(font
@@ -1889,7 +1881,7 @@
 			(at 93.98 69.85 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
@@ -1898,12 +1890,12 @@
 			(at 93.98 69.85 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 93.98 69.85 0)
 			(effects
 				(font

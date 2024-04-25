@@ -2819,15 +2819,6 @@
 					(hide yes)
 				)
 			)
-			(property "JLC" "C97521"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
 			(property "ki_keywords" "flash memory SPI QPI DTR"
 				(at 0 0 0)
 				(effects
@@ -2997,6 +2988,108 @@
 						)
 					)
 					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "00_project_library:octoprobe_breakout_label"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.762) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "BP"
+				(at -10.414 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "octoprobe_prototype_board"
+				(at -25.146 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "00_project_library:octoprobe_breakout_label"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.roth-elektronik.com/de/produkte/detail/artnr/RE233-LF/category/Laborkarten+Dual+Inline"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Octoprobe Prototype Board"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Testpoint According to Roth Elektronik Prototyping Board"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "octoprobe_breakout_label_0_1"
+				(circle
+					(center -3.302 0)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "octoprobe_breakout_label_1_1"
+				(pin passive line
+					(at 0 0 180)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3536,9 +3629,9 @@
 		)
 		(symbol "power:+1V1"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -3636,8 +3729,8 @@
 			(symbol "+1V1_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
-					(name "+1V1"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3656,9 +3749,9 @@
 		)
 		(symbol "power:+3V3"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -3756,8 +3849,8 @@
 			(symbol "+3V3_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
-					(name "+3V3"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3776,9 +3869,9 @@
 		)
 		(symbol "power:+5V"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -3876,8 +3969,8 @@
 			(symbol "+5V_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
-					(name "+5V"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3896,9 +3989,9 @@
 		)
 		(symbol "power:GND"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -3972,8 +4065,8 @@
 			(symbol "GND_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
-					(name "GND"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4055,7 +4148,7 @@
 				(pin power_out line
 					(at 0 0 90)
 					(length 0)
-					(name "pwr"
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4400,32 +4493,88 @@
 		(uuid "ff4136aa-9ca4-446b-b5ed-4bdbc45958e9")
 	)
 	(no_connect
+		(at 44.45 95.25)
+		(uuid "1446ccde-a52e-443f-820e-2b50e46641fd")
+	)
+	(no_connect
 		(at 114.3 173.99)
 		(uuid "17f68887-f681-4fc0-bccf-a5231dca4a56")
+	)
+	(no_connect
+		(at 44.45 57.15)
+		(uuid "1e97323d-6731-4d91-b256-16886f85c44d")
+	)
+	(no_connect
+		(at 44.45 87.63)
+		(uuid "29820f5c-7ca7-43df-8ab7-50ccc3c8312c")
 	)
 	(no_connect
 		(at 114.3 171.45)
 		(uuid "2d11a149-7950-4b31-a8d4-0a8c16ad463b")
 	)
 	(no_connect
+		(at 115.57 102.87)
+		(uuid "2d8285a6-fd5c-4585-928f-e472d0c90e4f")
+	)
+	(no_connect
+		(at 44.45 105.41)
+		(uuid "2ff8ce15-b602-40c6-a169-f9f3f5cd6b76")
+	)
+	(no_connect
 		(at 115.57 52.07)
 		(uuid "387639f1-24fa-4d09-a757-907c398257c7")
+	)
+	(no_connect
+		(at 44.45 90.17)
+		(uuid "468850c9-25f7-4532-abd5-080fdf069318")
+	)
+	(no_connect
+		(at 44.45 54.61)
+		(uuid "479c58cd-69c3-445d-963c-0e71a8663a0b")
 	)
 	(no_connect
 		(at 44.45 100.33)
 		(uuid "48f349db-bb88-4bc9-9932-db1f1aa1893b")
 	)
 	(no_connect
+		(at 115.57 100.33)
+		(uuid "5861fc66-bcc7-4ed4-b23d-4b416b2ada4d")
+	)
+	(no_connect
+		(at 115.57 95.25)
+		(uuid "5f2be112-4520-47ce-a67d-25d93ea90e2f")
+	)
+	(no_connect
+		(at 115.57 105.41)
+		(uuid "84eea00d-7944-48a3-93da-16a29fa70738")
+	)
+	(no_connect
+		(at 115.57 92.71)
+		(uuid "97d6bd2a-bbd3-451a-86db-cc36ad0e4f24")
+	)
+	(no_connect
 		(at 115.57 54.61)
 		(uuid "9bb23423-548e-4a20-8501-77e415e3a920")
 	)
 	(no_connect
-		(at 44.45 54.61)
-		(uuid "ac8e3c62-dade-4e47-9b23-416d94d4ddb1")
+		(at 44.45 92.71)
+		(uuid "a64725d8-afb2-443b-b568-e876c1ee2d5b")
+	)
+	(no_connect
+		(at 44.45 102.87)
+		(uuid "b120d744-7a50-47be-bb77-9b3d49380ed7")
 	)
 	(no_connect
 		(at 44.45 59.69)
 		(uuid "c7b1a130-b487-4a46-a9d8-fc6584fa7f3a")
+	)
+	(no_connect
+		(at 44.45 97.79)
+		(uuid "dc521431-d917-45a9-80b1-140464716434")
+	)
+	(no_connect
+		(at 115.57 97.79)
+		(uuid "df1a26c7-b0e5-4e82-9e91-ceeee1b3c755")
 	)
 	(wire
 		(pts
@@ -5049,6 +5198,16 @@
 	)
 	(wire
 		(pts
+			(xy 156.21 172.72) (xy 156.21 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "58d0292d-fe42-4709-a665-03f73a23d5e3")
+	)
+	(wire
+		(pts
 			(xy 86.36 31.75) (xy 86.36 29.21)
 		)
 		(stroke
@@ -5519,16 +5678,6 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 171.45) (xy 156.21 175.26)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "a04a4a02-200e-4610-a1d8-22c4a148a332")
-	)
-	(wire
-		(pts
 			(xy 233.68 40.64) (xy 233.68 41.91)
 		)
 		(stroke
@@ -5616,6 +5765,16 @@
 			(type default)
 		)
 		(uuid "b26127f9-2d9a-476f-a7e3-871371990e52")
+	)
+	(wire
+		(pts
+			(xy 156.21 165.1) (xy 156.21 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b4a1cab5-ea36-4054-9227-859bfb2a9226")
 	)
 	(wire
 		(pts
@@ -6109,6 +6268,16 @@
 	)
 	(wire
 		(pts
+			(xy 156.21 181.61) (xy 156.21 182.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f83bfa6a-771d-4669-b7ed-849a06b38c63")
+	)
+	(wire
+		(pts
 			(xy 115.57 163.83) (xy 115.57 161.29)
 		)
 		(stroke
@@ -6267,12 +6436,12 @@
 	)
 	(text "Make sure 27R are close to RP2040"
 		(exclude_from_sim no)
-		(at 138.43 125.73 90)
+		(at 138.43 125.73 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "7dc724a4-6f8b-49c3-8db8-b608e9a15d1c")
 	)
@@ -6614,53 +6783,9 @@
 		)
 		(uuid "fb579e5b-0484-47e6-ac80-fd90c09da264")
 	)
-	(global_label "ds_3"
-		(shape bidirectional)
-		(at 115.57 100.33 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "1264fc36-6fd0-44af-9be8-74e089380cb3")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 124.0205 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "ZENTRALE_LED"
-		(shape input)
-		(at 44.45 57.15 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "2264a44c-b1fc-4add-b4ca-a9f1156a317f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 27.7627 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "MODBUS_DE"
+	(global_label "RELAIS_4"
 		(shape output)
-		(at 44.45 46.99 180)
+		(at 44.45 52.07 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6668,9 +6793,9 @@
 			)
 			(justify right)
 		)
-		(uuid "30f0a5c2-2c8b-40bf-8682-60f827b13e9f")
+		(uuid "09befffe-c5a6-4c98-bb9f-9144279ae84c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 30.1212 46.99 0)
+			(at 32.8426 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6680,95 +6805,7 @@
 			)
 		)
 	)
-	(global_label "ds_5"
-		(shape bidirectional)
-		(at 115.57 105.41 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "31994bbc-6c2d-4332-b822-83e559831732")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 124.0205 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "ds_7"
-		(shape bidirectional)
-		(at 44.45 102.87 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "55ad6f54-0700-4b08-9522-553311ab4922")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 35.9995 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "ds_1"
-		(shape bidirectional)
-		(at 115.57 95.25 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "7a9887e9-29a2-4ac8-90d5-6daf3e08ef97")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 124.0205 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "ds_2"
-		(shape bidirectional)
-		(at 115.57 97.79 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "835575f9-1e74-437e-b2b4-bdb40882cbdf")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 124.0205 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "RELAIS_0"
+	(global_label "ACTIVE_LED"
 		(shape output)
 		(at 44.45 41.91 180)
 		(fields_autoplaced yes)
@@ -6778,9 +6815,9 @@
 			)
 			(justify right)
 		)
-		(uuid "862eb1c1-1390-48c2-b27f-befa874f249e")
+		(uuid "94da958c-e5cf-4d7b-bc9d-5e3434aa8fb3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 32.8426 41.91 0)
+			(at 30.7864 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6790,7 +6827,7 @@
 			)
 		)
 	)
-	(global_label "rel"
+	(global_label "RELAIS_3"
 		(shape output)
 		(at 44.45 49.53 180)
 		(fields_autoplaced yes)
@@ -6800,9 +6837,9 @@
 			)
 			(justify right)
 		)
-		(uuid "a49bf463-5a36-45ce-b4c9-1ada775a8c33")
+		(uuid "99adcc95-b2d4-46fc-a8e5-f53cc65323c8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 38.8297 49.53 0)
+			(at 32.8426 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6812,9 +6849,9 @@
 			)
 		)
 	)
-	(global_label "ds_6"
-		(shape bidirectional)
-		(at 44.45 105.41 180)
+	(global_label "RELAIS_2"
+		(shape output)
+		(at 44.45 46.99 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6822,9 +6859,9 @@
 			)
 			(justify right)
 		)
-		(uuid "a5583c36-a790-4330-8935-bfd81c9d78aa")
+		(uuid "a47ca674-28a9-490f-9db7-fcc2edb5961b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 35.9995 105.41 0)
+			(at 32.8426 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6834,9 +6871,9 @@
 			)
 		)
 	)
-	(global_label "button"
-		(shape input)
-		(at 44.45 52.07 180)
+	(global_label "RELAIS_5"
+		(shape output)
+		(at 44.45 64.77 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6844,36 +6881,14 @@
 			)
 			(justify right)
 		)
-		(uuid "aabdb796-d60e-49f0-9ac6-eeae0a4c0daa")
+		(uuid "d94e14bb-2a8b-4230-8dd2-513949ef85a9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 35.3223 52.07 0)
+			(at 32.8426 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "ds_4"
-		(shape bidirectional)
-		(at 115.57 102.87 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "ce29071a-ed6c-4e95-af58-1f84c7309d8d")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 124.0205 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -6900,36 +6915,14 @@
 			)
 		)
 	)
-	(global_label "ds_0"
-		(shape bidirectional)
-		(at 115.57 92.71 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "f9160254-1f8b-480e-b7bb-31e3dd9fbe96")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 124.0205 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(symbol
 		(lib_id "Connector:Conn_01x02_Pin")
 		(at 180.34 99.06 180)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "0090aabf-8e7c-44b1-8250-ab7ecaaac694")
 		(property "Reference" "J203"
 			(at 180.848 98.044 0)
@@ -7250,7 +7243,7 @@
 			(at 156.21 163.83 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
@@ -7259,12 +7252,12 @@
 			(at 156.21 163.83 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
 			(at 156.21 163.83 0)
 			(effects
 				(font
@@ -7287,7 +7280,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 156.21 179.07 180)
+		(at 156.21 168.91 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7295,7 +7288,7 @@
 		(dnp no)
 		(uuid "17153a56-7276-4436-853e-3501679a187d")
 		(property "Reference" "R201"
-			(at 154.178 179.07 90)
+			(at 154.178 168.91 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7303,7 +7296,7 @@
 			)
 		)
 		(property "Value" "470R"
-			(at 156.1084 179.07 90)
+			(at 156.1084 168.91 90)
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -7311,7 +7304,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
-			(at 157.988 179.07 90)
+			(at 157.988 168.91 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7320,7 +7313,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 156.21 179.07 0)
+			(at 156.21 168.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7329,7 +7322,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 156.21 179.07 0)
+			(at 156.21 168.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7382,7 +7375,7 @@
 			(at 99.06 184.15 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
@@ -7391,12 +7384,12 @@
 			(at 99.06 184.15 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 99.06 184.15 0)
 			(effects
 				(font
@@ -7447,7 +7440,7 @@
 			(at 267.97 43.18 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
@@ -7456,12 +7449,12 @@
 			(at 267.97 43.18 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 267.97 43.18 0)
 			(effects
 				(font
@@ -7726,7 +7719,7 @@
 			(at 156.21 43.18 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
@@ -7735,12 +7728,12 @@
 			(at 156.21 43.18 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 156.21 43.18 0)
 			(effects
 				(font
@@ -7791,7 +7784,7 @@
 			(at 46.99 175.26 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
@@ -7800,12 +7793,12 @@
 			(at 46.99 175.26 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 46.99 175.26 0)
 			(effects
 				(font
@@ -7856,7 +7849,7 @@
 			(at 199.39 116.84 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
@@ -7865,12 +7858,12 @@
 			(at 199.39 116.84 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 199.39 116.84 0)
 			(effects
 				(font
@@ -7936,7 +7929,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
 			(at 229.87 69.85 0)
 			(effects
 				(font
@@ -8019,6 +8012,70 @@
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
 					(reference "R208")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "00_project_library:octoprobe_breakout_label")
+		(at 44.45 77.47 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "367afc46-363e-4339-a338-8a549e854723")
+		(property "Reference" "BP202"
+			(at 36.322 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GPIO13"
+			(at 28.448 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "00_project_library:octoprobe_breakout_label"
+			(at 49.53 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.roth-elektronik.com/de/produkte/detail/artnr/RE233-LF/category/Laborkarten+Dual+Inline"
+			(at 49.53 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Octoprobe Prototype Board"
+			(at 44.45 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b98d41ed-9c79-4cd8-aacf-4dc8b021b2de")
+		)
+		(instances
+			(project "pcb_octoprobe"
+				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
+					(reference "BP202")
 					(unit 1)
 				)
 			)
@@ -8221,7 +8278,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Special symbol for telling ERC where power comes from"
 			(at 128.27 143.51 0)
 			(effects
 				(font
@@ -8272,7 +8329,7 @@
 			(at 215.9 116.84 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
@@ -8281,12 +8338,12 @@
 			(at 215.9 116.84 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 215.9 116.84 0)
 			(effects
 				(font
@@ -8337,7 +8394,7 @@
 			(at 67.31 143.51 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
@@ -8346,12 +8403,12 @@
 			(at 67.31 143.51 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
 			(at 67.31 143.51 0)
 			(effects
 				(font
@@ -8471,7 +8528,7 @@
 			(at 54.61 175.26 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
@@ -8480,12 +8537,12 @@
 			(at 54.61 175.26 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 54.61 175.26 0)
 			(effects
 				(font
@@ -8536,7 +8593,7 @@
 			(at 274.32 71.12 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
@@ -8545,12 +8602,12 @@
 			(at 274.32 71.12 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 274.32 71.12 0)
 			(effects
 				(font
@@ -8601,7 +8658,7 @@
 			(at 261.62 100.33 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
@@ -8610,12 +8667,12 @@
 			(at 261.62 100.33 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 261.62 100.33 0)
 			(effects
 				(font
@@ -8947,7 +9004,7 @@
 			(at 175.26 115.57 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
@@ -8956,12 +9013,12 @@
 			(at 175.26 115.57 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 175.26 115.57 0)
 			(effects
 				(font
@@ -9012,7 +9069,7 @@
 			(at 261.62 67.31 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
@@ -9021,12 +9078,12 @@
 			(at 261.62 67.31 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
 			(at 261.62 67.31 0)
 			(effects
 				(font
@@ -9077,7 +9134,7 @@
 			(at 49.53 154.94 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
@@ -9086,12 +9143,12 @@
 			(at 49.53 154.94 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 49.53 154.94 0)
 			(effects
 				(font
@@ -9380,6 +9437,70 @@
 		)
 	)
 	(symbol
+		(lib_id "00_project_library:octoprobe_breakout_label")
+		(at 44.45 82.55 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6d1ba885-26da-4109-b33d-cb3fce45639e")
+		(property "Reference" "BP204"
+			(at 36.322 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GPIO15"
+			(at 28.448 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "00_project_library:octoprobe_breakout_label"
+			(at 49.53 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.roth-elektronik.com/de/produkte/detail/artnr/RE233-LF/category/Laborkarten+Dual+Inline"
+			(at 49.53 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Octoprobe Prototype Board"
+			(at 44.45 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0e010903-fe00-4a80-afc6-c3c5ed42f285")
+		)
+		(instances
+			(project "pcb_octoprobe"
+				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
+					(reference "BP204")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 133.35 43.18 90)
 		(unit 1)
@@ -9409,7 +9530,7 @@
 			(at 133.35 43.18 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
@@ -9418,12 +9539,12 @@
 			(at 133.35 43.18 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 133.35 43.18 0)
 			(effects
 				(font
@@ -9575,6 +9696,70 @@
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
 					(reference "R204")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "00_project_library:octoprobe_breakout_label")
+		(at 44.45 67.31 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8d6094d3-2946-481f-b66b-c4903f7c9bd6")
+		(property "Reference" "BP205"
+			(at 36.322 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GPIO9"
+			(at 28.448 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "00_project_library:octoprobe_breakout_label"
+			(at 49.53 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.roth-elektronik.com/de/produkte/detail/artnr/RE233-LF/category/Laborkarten+Dual+Inline"
+			(at 49.53 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Octoprobe Prototype Board"
+			(at 44.45 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d7d2c431-8e84-4d61-a850-065d487bff1d")
+		)
+		(instances
+			(project "pcb_octoprobe"
+				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
+					(reference "BP205")
 					(unit 1)
 				)
 			)
@@ -9939,6 +10124,134 @@
 		)
 	)
 	(symbol
+		(lib_id "00_project_library:octoprobe_breakout_label")
+		(at 44.45 72.39 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a0860d8d-0449-4d95-a157-8e809a4f5dcd")
+		(property "Reference" "BP207"
+			(at 36.322 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GPIO12"
+			(at 28.448 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "00_project_library:octoprobe_breakout_label"
+			(at 49.53 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.roth-elektronik.com/de/produkte/detail/artnr/RE233-LF/category/Laborkarten+Dual+Inline"
+			(at 49.53 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Octoprobe Prototype Board"
+			(at 44.45 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6d06227f-7f33-4484-9b0a-9d2c0d0f6d28")
+		)
+		(instances
+			(project "pcb_octoprobe"
+				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
+					(reference "BP207")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "00_project_library:octoprobe_breakout_label")
+		(at 44.45 80.01 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a267bccc-8c43-4619-8cbc-68b01185f74d")
+		(property "Reference" "BP203"
+			(at 36.322 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GPIO14"
+			(at 28.448 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "00_project_library:octoprobe_breakout_label"
+			(at 49.53 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.roth-elektronik.com/de/produkte/detail/artnr/RE233-LF/category/Laborkarten+Dual+Inline"
+			(at 49.53 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Octoprobe Prototype Board"
+			(at 44.45 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7bceeb18-f84b-4f44-b261-475cb78e820c")
+		)
+		(instances
+			(project "pcb_octoprobe"
+				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
+					(reference "BP203")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5V")
 		(at 129.54 143.51 270)
 		(unit 1)
@@ -9958,7 +10271,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 133.35 143.51 90)
+			(at 133.35 143.5099 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9984,7 +10297,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 129.54 143.51 0)
 			(effects
 				(font
@@ -10000,6 +10313,70 @@
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
 					(reference "#PWR0215")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "00_project_library:octoprobe_breakout_label")
+		(at 44.45 74.93 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "abd06dc8-e1dc-4584-8dbf-bdc0a609f1fe")
+		(property "Reference" "BP201"
+			(at 36.322 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GPIO12"
+			(at 28.448 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "00_project_library:octoprobe_breakout_label"
+			(at 49.53 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.roth-elektronik.com/de/produkte/detail/artnr/RE233-LF/category/Laborkarten+Dual+Inline"
+			(at 49.53 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Octoprobe Prototype Board"
+			(at 44.45 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7dda74fa-28d9-4187-ab30-d64fea8e5886")
+		)
+		(instances
+			(project "pcb_octoprobe"
+				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
+					(reference "BP201")
 					(unit 1)
 				)
 			)
@@ -10113,7 +10490,7 @@
 			(at 27.94 182.88 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
@@ -10122,12 +10499,12 @@
 			(at 27.94 182.88 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 27.94 182.88 0)
 			(effects
 				(font
@@ -10178,7 +10555,7 @@
 			(at 125.73 152.4 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
@@ -10187,12 +10564,12 @@
 			(at 125.73 152.4 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 125.73 152.4 0)
 			(effects
 				(font
@@ -10243,7 +10620,7 @@
 			(at 176.53 29.21 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
@@ -10252,12 +10629,12 @@
 			(at 176.53 29.21 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+1V1\""
 			(at 176.53 29.21 0)
 			(effects
 				(font
@@ -10308,7 +10685,7 @@
 			(at 80.01 123.19 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
@@ -10317,12 +10694,12 @@
 			(at 80.01 123.19 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 80.01 123.19 0)
 			(effects
 				(font
@@ -10432,7 +10809,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 29.21 143.51 90)
+			(at 29.21 143.5099 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10458,7 +10835,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 33.02 143.51 0)
 			(effects
 				(font
@@ -10736,7 +11113,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "128Mb Serial Flash Memory, Standard/Dual/Quad SPI, SOIC-8"
 			(at 261.62 86.36 0)
 			(effects
 				(font
@@ -10892,7 +11269,7 @@
 			(at 190.5 30.48 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
@@ -10901,12 +11278,12 @@
 			(at 190.5 30.48 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
 			(at 190.5 30.48 0)
 			(effects
 				(font
@@ -11034,7 +11411,7 @@
 			(at 156.21 182.88 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
@@ -11043,12 +11420,12 @@
 			(at 156.21 182.88 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 156.21 182.88 0)
 			(effects
 				(font
@@ -11306,7 +11683,7 @@
 			(at 63.5 26.67 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
@@ -11315,12 +11692,12 @@
 			(at 63.5 26.67 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+1V1\""
 			(at 63.5 26.67 0)
 			(effects
 				(font
@@ -11371,7 +11748,7 @@
 			(at 99.06 26.67 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
@@ -11380,12 +11757,12 @@
 			(at 99.06 26.67 0)
 			(effects
 				(font
-					(size 0.8 0.8)
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
 			(at 99.06 26.67 0)
 			(effects
 				(font
@@ -11407,8 +11784,72 @@
 		)
 	)
 	(symbol
+		(lib_id "00_project_library:octoprobe_breakout_label")
+		(at 44.45 69.85 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f2aad140-a679-42be-86e6-159ad316b582")
+		(property "Reference" "BP206"
+			(at 36.322 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GPIO10"
+			(at 28.448 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "00_project_library:octoprobe_breakout_label"
+			(at 49.53 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.roth-elektronik.com/de/produkte/detail/artnr/RE233-LF/category/Laborkarten+Dual+Inline"
+			(at 49.53 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Octoprobe Prototype Board"
+			(at 44.45 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "09e7cea1-3f73-415a-a5d1-24504822ce3e")
+		)
+		(instances
+			(project "pcb_octoprobe"
+				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
+					(reference "BP206")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "00_project_library:LED GREEN")
-		(at 156.21 167.64 90)
+		(at 156.21 177.8 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11416,7 +11857,7 @@
 		(dnp no)
 		(uuid "f2dcd3f6-7abb-4a9a-b4b6-2512b15506c6")
 		(property "Reference" "D201"
-			(at 153.67 167.64 0)
+			(at 153.67 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11424,7 +11865,7 @@
 			)
 		)
 		(property "Value" "LED GREEN"
-			(at 159.766 167.132 0)
+			(at 159.766 177.292 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11432,7 +11873,7 @@
 			)
 		)
 		(property "Footprint" "00_project_library:LED_0603_1608Metric"
-			(at 156.21 167.64 0)
+			(at 156.21 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11441,7 +11882,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 156.21 167.64 0)
+			(at 156.21 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11450,7 +11891,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 156.21 167.64 0)
+			(at 156.21 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11459,7 +11900,7 @@
 			)
 		)
 		(property "JLC" "C2297"
-			(at 156.21 167.64 0)
+			(at 156.21 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11502,7 +11943,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 102.87 181.61 90)
+			(at 102.87 181.6099 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11528,7 +11969,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Special symbol for telling ERC where power comes from"
 			(at 99.06 181.61 0)
 			(effects
 				(font
@@ -11554,9 +11995,9 @@
 		(at 222.25 88.9 180)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "f37e0a8f-098a-44e1-95e2-0ffea1f79e7b")
 		(property "Reference" "J202"
 			(at 222.758 87.884 0)
@@ -11623,9 +12064,9 @@
 		(at 222.25 109.22 180)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "f3fcb5c9-e6c7-48f9-8281-ceedee316506")
 		(property "Reference" "J204"
 			(at 222.758 108.204 0)
