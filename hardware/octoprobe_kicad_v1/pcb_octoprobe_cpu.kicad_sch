@@ -4416,14 +4416,6 @@
 		(uuid "48f349db-bb88-4bc9-9932-db1f1aa1893b")
 	)
 	(no_connect
-		(at 44.45 90.17)
-		(uuid "70c618c6-5df9-4317-b405-30ff3cacbfd2")
-	)
-	(no_connect
-		(at 44.45 87.63)
-		(uuid "7690e886-43d8-476c-90f2-fb6cbfb0308f")
-	)
-	(no_connect
 		(at 115.57 54.61)
 		(uuid "9bb23423-548e-4a20-8501-77e415e3a920")
 	)
@@ -5017,16 +5009,6 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 97.79) (xy 44.45 97.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "51703b24-99a9-4eec-a332-ec2e1ddb889f")
-	)
-	(wire
-		(pts
 			(xy 175.26 78.74) (xy 175.26 81.28)
 		)
 		(stroke
@@ -5407,16 +5389,6 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 95.25) (xy 44.45 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "892e4fc1-c238-4341-88d1-d26bb1ef3982")
-	)
-	(wire
-		(pts
 			(xy 50.8 180.34) (xy 55.88 180.34)
 		)
 		(stroke
@@ -5694,16 +5666,6 @@
 			(type solid)
 		)
 		(uuid "bb84795d-0298-4a7a-865a-0e16e56fe78b")
-	)
-	(wire
-		(pts
-			(xy 40.64 92.71) (xy 44.45 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bcc5bf95-40f2-429c-8cc9-b7b79b3a3b5e")
 	)
 	(wire
 		(pts
@@ -6652,50 +6614,6 @@
 		)
 		(uuid "fb579e5b-0484-47e6-ac80-fd90c09da264")
 	)
-	(global_label "modbus_addr_5"
-		(shape input)
-		(at 44.45 69.85 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "00f42557-2f74-4996-8061-74f1b7ea8c4e")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 26.6744 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "modbus_addr_4"
-		(shape input)
-		(at 44.45 72.39 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "1223c5f4-ad87-4552-ae15-57628f0c93d6")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 26.6744 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "ds_3"
 		(shape bidirectional)
 		(at 115.57 100.33 0)
@@ -6806,28 +6724,6 @@
 			)
 		)
 	)
-	(global_label "modbus_addr_2"
-		(shape input)
-		(at 44.45 77.47 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "78465632-7531-4a40-85d7-b5bf5fce2054")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 26.6744 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "ds_1"
 		(shape bidirectional)
 		(at 115.57 95.25 0)
@@ -6846,28 +6742,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "modbus_addr_3"
-		(shape input)
-		(at 44.45 74.93 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "808d35e9-47d5-455f-8be0-006b2776bb95")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 26.6744 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 				(hide yes)
 			)
 		)
@@ -6982,28 +6856,6 @@
 			)
 		)
 	)
-	(global_label "modbus_addr_7"
-		(shape input)
-		(at 44.45 64.77 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "b9067008-5081-4d98-b7e2-30ee664cc68c")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 26.6744 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "ds_4"
 		(shape bidirectional)
 		(at 115.57 102.87 0)
@@ -7022,72 +6874,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "modbus_addr_0"
-		(shape input)
-		(at 44.45 82.55 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "cf419c1b-acf1-4c03-9897-81be6524220b")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 26.6744 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "modbus_addr_1"
-		(shape input)
-		(at 44.45 80.01 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "de17c5c5-eabd-4418-8d41-aee1a845d4ae")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 26.6744 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "modbus_addr_6"
-		(shape input)
-		(at 44.45 67.31 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "eab9fbdb-f4d3-4a62-89d1-e836d96c737d")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 26.6744 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 				(hide yes)
 			)
 		)
@@ -9132,71 +8918,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 40.64 95.25 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(uuid "542972f0-5be2-4e66-91bc-95b84a19cb06")
-		(property "Reference" "IO202"
-			(at 34.29 95.25 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 37.338 92.71 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 40.64 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 40.64 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 40.64 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3261f3b6-0ec5-43b7-9375-471a5cde4fac")
-		)
-		(instances
-			(project "pcb_octoprobe"
-				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "IO202")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 175.26 115.57 0)
 		(unit 1)
@@ -9653,71 +9374,6 @@
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
 					(reference "U201")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 40.64 92.71 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(uuid "77134fec-445a-4aec-9c63-073dd5f6fc99")
-		(property "Reference" "IO201"
-			(at 34.29 92.71 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 37.338 90.17 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 40.64 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 40.64 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 40.64 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ebcf4251-91ad-417c-b20b-b6394bc2f812")
-		)
-		(instances
-			(project "pcb_octoprobe"
-				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "IO201")
 					(unit 1)
 				)
 			)
@@ -12026,71 +11682,6 @@
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
 					(reference "J204")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 40.64 97.79 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(uuid "f5d6c3b6-6c87-4278-bf25-a7daed68a0b8")
-		(property "Reference" "IO203"
-			(at 34.29 97.79 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 37.338 95.25 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 40.64 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 40.64 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 40.64 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5f48dbe6-863d-4fca-95c2-68af633fdb01")
-		)
-		(instances
-			(project "pcb_octoprobe"
-				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "IO203")
 					(unit 1)
 				)
 			)
