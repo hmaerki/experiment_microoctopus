@@ -21,6 +21,50 @@ On pcb:
  * Select all pads which are NOT GND
  * `Properties -> Basic Properties -> Net: <empty>`
 
-## Links
+## Hierarchical sheet
 
 * https://forum.kicad.info/t/variables-in-hierarchical-sheet-labels/41978
+
+In pcb, place all relais footprints (silkscreen) correctly.
+
+Select first pcb, `Tools -> External Plugins -> Replicate Layout`
+
+## Production
+
+### In schematics
+
+Menu `Inspect -> Electrical Rule Chacker`, button `Run ERC`, No violatons
+
+### Increment version number
+
+Update in all sheets
+
+### In pcb - final check and final commit
+
+Menu `Tools -> Update PCB from Schematic`, only one error `Error: Multiple footprings found for 'PB101'`
+
+Menu `Tools -> Cleanup Tracks & Vias`, select all,  `Build Changes`, No violatons
+
+Menu `Inspect -> Design Rules Chacker`, check `Refill all zones`, button `Run DRC . No errors, no warnings.
+
+Delete all files in directory `production`.
+
+Icon `Fabricaton Toolkit`, Options empty, check `Apply automatic translatons`, UNcheck `Exluce DNP components`.
+
+Rename production folder and add version number
+
+Export pdf from schematics & pcb
+
+### Upload to JLCPCB
+
+Accept these warnings:
+```
+The below parts won't be assembled due to data missing.
+J202,J203,J204,J103,J104,J101,J102,J105 designators don't exist in the BOM file.
+```
+
+Manual correction
+ * J201: USB Connector: Manual postition
+ * U202: 3V3 Regulator: Rotate
+ * U203: Flash: Rotate
+

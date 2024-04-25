@@ -251,108 +251,6 @@
 				)
 			)
 		)
-		(symbol "Connector:TestPoint"
-			(pin_numbers hide)
-			(pin_names
-				(offset 0.762) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "TP"
-				(at 0 6.858 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "TestPoint"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 5.08 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 5.08 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "test point"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "test point tp"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Pin* Test*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "TestPoint_0_1"
-				(circle
-					(center 0 3.302)
-					(radius 0.762)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "TestPoint_1_1"
-				(pin passive line
-					(at 0 0 90)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Device:R"
 			(pin_numbers hide)
 			(pin_names
@@ -1193,7 +1091,7 @@
 		)
 		(uuid "ec4a86c5-40a4-4964-b4bd-8fe955c2e207")
 	)
-	(text_box "Calculation of the input resistor\n\nVdiff = 3.3V - Vf = 3.3V- 1.2V = 2.1V\nI_Fon = 0.5mA\nR = 2.1V / 0.5mA = 4.2kOhm"
+	(text_box "Calculation of the input resistor\n\nVdiff = 3.3V - Vf = 3.3V- 1.2V = 2.1V\nI_Fon = 0.5mA\nR = 2.1V / 0.5mA = 4.2kOhm\n\nE12: 3.9kOhm"
 		(exclude_from_sim no)
 		(at 31.75 96.52 0)
 		(size 53.34 27.94)
@@ -1265,7 +1163,7 @@
 				)
 			)
 		)
-		(property "Value" "4k2"
+		(property "Value" "3k9"
 			(at 92.71 64.6684 90)
 			(effects
 				(font
@@ -1273,7 +1171,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 92.71 66.548 90)
 			(effects
 				(font
@@ -1356,7 +1254,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 91.44 47.752 90)
 			(effects
 				(font
@@ -1580,89 +1478,6 @@
 				)
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/b1263d91-a8e6-4644-b570-390bb3eee6dd"
 					(reference "D701")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 72.39 49.53 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "65823348-0144-4906-9397-65e0410e72f2")
-		(property "Reference" "TP401"
-			(at 74.93 44.9579 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 74.93 47.4979 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 77.47 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 77.47 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 72.39 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a526f843-5170-4a38-8f96-218659576722")
-		)
-		(instances
-			(project "pcb_octoprobe"
-				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/c93857e2-4cdb-4a73-87ff-b2446dc3a53c"
-					(reference "TP401")
-					(unit 1)
-				)
-				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/66635fca-a3f9-4b92-989f-2a94609b1714"
-					(reference "TP301")
-					(unit 1)
-				)
-				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/11dbe9e5-d49b-44cb-87f2-d7d490f0e7d2"
-					(reference "TP501")
-					(unit 1)
-				)
-				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/9f0ce1ac-0171-4d6a-8614-107d3aa07379"
-					(reference "TP601")
-					(unit 1)
-				)
-				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/b1263d91-a8e6-4644-b570-390bb3eee6dd"
-					(reference "TP701")
 					(unit 1)
 				)
 			)

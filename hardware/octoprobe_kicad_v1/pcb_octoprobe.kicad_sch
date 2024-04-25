@@ -258,6 +258,26 @@
 					(hide yes)
 				)
 			)
+			(symbol "octoprobe_MountingHole_0_0"
+				(pin power_in line
+					(at 0 0 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
 			(symbol "octoprobe_MountingHole_0_1"
 				(circle
 					(center 0 0)
@@ -2128,6 +2148,12 @@
 		(uuid "1fe2e5e2-0763-429c-98c1-bc1f1dd21ae2")
 	)
 	(junction
+		(at 229.87 40.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "203720fa-615f-4138-ae15-fc3662594864")
+	)
+	(junction
 		(at 220.98 138.43)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2242,6 +2268,12 @@
 		(uuid "422890e8-1de0-42e3-8970-a386cfeb7db0")
 	)
 	(junction
+		(at 229.87 45.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "441e54d9-7add-4eb3-afbd-e7e4aecf1724")
+	)
+	(junction
 		(at 233.68 107.95)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2324,6 +2356,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5f97c660-da93-4a75-bced-4e3f35bb7dbe")
+	)
+	(junction
+		(at 229.87 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "602b4b26-21ef-4485-bf3e-021aa4236aff")
 	)
 	(junction
 		(at 151.13 109.22)
@@ -2833,6 +2871,16 @@
 	)
 	(wire
 		(pts
+			(xy 229.87 35.56) (xy 234.95 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0e6a3223-f11d-499e-b825-d9a8a69e736f")
+	)
+	(wire
+		(pts
 			(xy 148.59 101.6) (xy 151.13 101.6)
 		)
 		(stroke
@@ -2893,6 +2941,16 @@
 	)
 	(wire
 		(pts
+			(xy 229.87 45.72) (xy 234.95 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18726d17-85bf-4a88-84fe-5917c13acd09")
+	)
+	(wire
+		(pts
 			(xy 151.13 99.06) (xy 163.83 99.06)
 		)
 		(stroke
@@ -2940,6 +2998,16 @@
 			(type default)
 		)
 		(uuid "1dbbf27c-d1d5-4c4b-b3ec-3e80502ca66a")
+	)
+	(wire
+		(pts
+			(xy 229.87 45.72) (xy 229.87 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ddcbe7a-6e1d-46ab-8d89-d46927a81b8a")
 	)
 	(wire
 		(pts
@@ -3060,6 +3128,16 @@
 			(type default)
 		)
 		(uuid "36bef666-9f93-41ea-baef-05c216674192")
+	)
+	(wire
+		(pts
+			(xy 234.95 30.48) (xy 229.87 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "38e8486e-f9d9-48e6-b9f1-bafa362788af")
 	)
 	(wire
 		(pts
@@ -3273,6 +3351,16 @@
 	)
 	(wire
 		(pts
+			(xy 229.87 30.48) (xy 229.87 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5a3bd450-9b3f-4db8-abdf-b8965d1ef08d")
+	)
+	(wire
+		(pts
 			(xy 73.66 106.68) (xy 135.89 106.68)
 		)
 		(stroke
@@ -3310,6 +3398,16 @@
 			(type default)
 		)
 		(uuid "5f8c711f-952b-495a-8e6e-9d1fce9db49e")
+	)
+	(wire
+		(pts
+			(xy 229.87 40.64) (xy 229.87 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "614301df-86b2-4abe-92d7-b56cc7ed69dc")
 	)
 	(wire
 		(pts
@@ -3630,6 +3728,16 @@
 			(type default)
 		)
 		(uuid "94960f7c-c756-4c72-ba2f-cd2483c683af")
+	)
+	(wire
+		(pts
+			(xy 229.87 35.56) (xy 229.87 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99a7c4a9-8c7c-48f6-b70b-b70ddf537128")
 	)
 	(wire
 		(pts
@@ -4220,6 +4328,16 @@
 			(type default)
 		)
 		(uuid "e54534b0-60a7-4b12-bbe3-df2373b3e86c")
+	)
+	(wire
+		(pts
+			(xy 229.87 40.64) (xy 234.95 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e68b04ea-1ce2-4ae4-92b7-7f30623cf401")
 	)
 	(wire
 		(pts
@@ -5197,6 +5315,9 @@
 				(hide yes)
 			)
 		)
+		(pin "1"
+			(uuid "f01ad877-f44f-4746-bf5e-1760e90d9d69")
+		)
 		(instances
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1"
@@ -5337,6 +5458,9 @@
 				)
 				(hide yes)
 			)
+		)
+		(pin "1"
+			(uuid "c9ff7129-3799-4060-bd16-f2ed9837856e")
 		)
 		(instances
 			(project "pcb_octoprobe"
@@ -5779,6 +5903,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 229.87 49.53 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "93df74c7-14ee-4edc-9d33-ae91b57e43a9")
+		(property "Reference" "#PWR0102"
+			(at 229.87 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 229.87 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 229.87 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 229.87 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 229.87 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7b80017e-b61c-45ab-93ad-bce6dce2d49a")
+		)
+		(instances
+			(project "pcb_octoprobe"
+				(path "/35c47459-45a7-4753-acae-c8b47e7575e1"
+					(reference "#PWR0102")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector_Generic:Conn_02x20_Odd_Even")
 		(at 140.97 114.3 0)
 		(unit 1)
@@ -6148,6 +6338,9 @@
 				(hide yes)
 			)
 		)
+		(pin "1"
+			(uuid "a5bd7059-2c15-47ca-837c-9bbb5030d940")
+		)
 		(instances
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1"
@@ -6211,6 +6404,9 @@
 				)
 				(hide yes)
 			)
+		)
+		(pin "1"
+			(uuid "26060b11-8a0e-4551-a454-5f343a2dee84")
 		)
 		(instances
 			(project "pcb_octoprobe"
