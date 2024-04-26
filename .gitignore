@@ -7,3 +7,4 @@ hardware/octoprobe_kicad_v1/production/*
 hardware/octoprobe_kicad_v1/00_project_library.bak
 hardware/octoprobe_kicad_v1/replicate_layout.log
 hardware/octoprobe_kicad_v1/pcb_octoprobe.kicad_sch-bak
+hardware/octoprobe_kicad_logo/*

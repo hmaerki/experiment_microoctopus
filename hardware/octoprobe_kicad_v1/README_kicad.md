@@ -53,7 +53,11 @@ Icon `Fabricaton Toolkit`, Options empty, check `Apply automatic translatons`, U
 
 Rename production folder and add version number
 
-Export pdf from schematics & pcb
+### Print schematics
+
+Schematics, Menu `File -> Print`, check 'Print drawing sheet - Color`, `Print`, `All Paages`, `Pirnt to File`.
+
+Move `~/Documents/output.pdf` to `hardware/octoprobe_kicad_v1/production_v1.0/schematics.pdf`
 
 ### Upload to JLCPCB
 
