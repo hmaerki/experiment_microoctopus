@@ -190,6 +190,88 @@
 				)
 			)
 		)
+		(symbol "00_project_library:octoprobe_CableTieHole"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(property "Reference" "H"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "octoprobe_CableTieHole"
+				(at 0 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "00_project_library:octoprobe_CableTieHole"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Mounting Hole without connection"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cable tie hole"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "octoprobe_CableTieHole_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+		)
 		(symbol "00_project_library:octoprobe_MountingHole"
 			(pin_names
 				(offset 1.016)
@@ -2148,7 +2230,7 @@
 		(uuid "1fe2e5e2-0763-429c-98c1-bc1f1dd21ae2")
 	)
 	(junction
-		(at 229.87 40.64)
+		(at 243.84 39.37)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "203720fa-615f-4138-ae15-fc3662594864")
@@ -2268,7 +2350,7 @@
 		(uuid "422890e8-1de0-42e3-8970-a386cfeb7db0")
 	)
 	(junction
-		(at 229.87 45.72)
+		(at 243.84 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "441e54d9-7add-4eb3-afbd-e7e4aecf1724")
@@ -2358,7 +2440,7 @@
 		(uuid "5f97c660-da93-4a75-bced-4e3f35bb7dbe")
 	)
 	(junction
-		(at 229.87 35.56)
+		(at 243.84 34.29)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "602b4b26-21ef-4485-bf3e-021aa4236aff")
@@ -2871,7 +2953,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 35.56) (xy 234.95 35.56)
+			(xy 243.84 34.29) (xy 248.92 34.29)
 		)
 		(stroke
 			(width 0)
@@ -2941,7 +3023,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 45.72) (xy 234.95 45.72)
+			(xy 243.84 44.45) (xy 248.92 44.45)
 		)
 		(stroke
 			(width 0)
@@ -3001,7 +3083,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 45.72) (xy 229.87 49.53)
+			(xy 243.84 44.45) (xy 243.84 48.26)
 		)
 		(stroke
 			(width 0)
@@ -3131,7 +3213,7 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 30.48) (xy 229.87 30.48)
+			(xy 248.92 29.21) (xy 243.84 29.21)
 		)
 		(stroke
 			(width 0)
@@ -3351,7 +3433,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 30.48) (xy 229.87 35.56)
+			(xy 243.84 29.21) (xy 243.84 34.29)
 		)
 		(stroke
 			(width 0)
@@ -3401,7 +3483,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 40.64) (xy 229.87 45.72)
+			(xy 243.84 39.37) (xy 243.84 44.45)
 		)
 		(stroke
 			(width 0)
@@ -3731,7 +3813,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 35.56) (xy 229.87 40.64)
+			(xy 243.84 34.29) (xy 243.84 39.37)
 		)
 		(stroke
 			(width 0)
@@ -4331,7 +4413,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 40.64) (xy 234.95 40.64)
+			(xy 243.84 39.37) (xy 248.92 39.37)
 		)
 		(stroke
 			(width 0)
@@ -4946,6 +5028,70 @@
 		)
 	)
 	(symbol
+		(lib_id "00_project_library:octoprobe_CableTieHole")
+		(at 186.69 29.21 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4ee7c5f6-4955-4352-ba97-bb858526424b")
+		(property "Reference" "H105"
+			(at 189.23 27.9399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "octoprobe_CableTieHole"
+			(at 189.23 30.4799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "00_project_library:octoprobe_CableTieHole"
+			(at 186.69 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 186.69 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 186.69 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "pcb_octoprobe"
+				(path "/35c47459-45a7-4753-acae-c8b47e7575e1"
+					(reference "H105")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector_Generic:Conn_02x20_Odd_Even")
 		(at 226.06 118.11 0)
 		(unit 1)
@@ -5128,6 +5274,134 @@
 		)
 	)
 	(symbol
+		(lib_id "00_project_library:octoprobe_CableTieHole")
+		(at 186.69 34.29 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "64df4b80-9ee0-42a5-96e9-a045e3b22202")
+		(property "Reference" "H106"
+			(at 189.23 33.0199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "octoprobe_CableTieHole"
+			(at 189.23 35.5599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "00_project_library:octoprobe_CableTieHole"
+			(at 186.69 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 186.69 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 186.69 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "pcb_octoprobe"
+				(path "/35c47459-45a7-4753-acae-c8b47e7575e1"
+					(reference "H106")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "00_project_library:octoprobe_CableTieHole")
+		(at 186.69 44.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6b17adb9-fdcf-474a-abcd-fa4d8ee07d78")
+		(property "Reference" "H108"
+			(at 189.23 43.1799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "octoprobe_CableTieHole"
+			(at 189.23 45.7199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "00_project_library:octoprobe_CableTieHole"
+			(at 186.69 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 186.69 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 186.69 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "pcb_octoprobe"
+				(path "/35c47459-45a7-4753-acae-c8b47e7575e1"
+					(reference "H108")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5V")
 		(at 135.89 101.6 90)
 		(unit 1)
@@ -5262,7 +5536,7 @@
 	)
 	(symbol
 		(lib_id "00_project_library:octoprobe_MountingHole")
-		(at 234.95 40.64 0)
+		(at 248.92 39.37 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5271,7 +5545,7 @@
 		(fields_autoplaced yes)
 		(uuid "6f15074e-5594-4936-9260-28a67aae5c9d")
 		(property "Reference" "H103"
-			(at 237.49 39.3699 0)
+			(at 251.46 38.0999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5280,7 +5554,7 @@
 			)
 		)
 		(property "Value" "octoprobe_MountingHole"
-			(at 237.49 41.9099 0)
+			(at 251.46 40.6399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5289,7 +5563,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad"
-			(at 234.95 40.64 0)
+			(at 248.92 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5298,7 +5572,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 234.95 40.64 0)
+			(at 248.92 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5307,7 +5581,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 234.95 40.64 0)
+			(at 248.92 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5406,7 +5680,7 @@
 	)
 	(symbol
 		(lib_id "00_project_library:octoprobe_MountingHole")
-		(at 234.95 45.72 0)
+		(at 248.92 44.45 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5415,7 +5689,7 @@
 		(fields_autoplaced yes)
 		(uuid "73c40359-e9a1-4334-b6d1-8c3bc7a747af")
 		(property "Reference" "H104"
-			(at 237.49 44.4499 0)
+			(at 251.46 43.1799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5424,7 +5698,7 @@
 			)
 		)
 		(property "Value" "octoprobe_MountingHole"
-			(at 237.49 46.9899 0)
+			(at 251.46 45.7199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5433,7 +5707,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad"
-			(at 234.95 45.72 0)
+			(at 248.92 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5442,7 +5716,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 234.95 45.72 0)
+			(at 248.92 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5451,7 +5725,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 234.95 45.72 0)
+			(at 248.92 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5473,7 +5747,7 @@
 	)
 	(symbol
 		(lib_id "00_project_library:octoprobe_breakout_BP")
-		(at 190.5 34.29 0)
+		(at 243.84 62.23 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5482,7 +5756,7 @@
 		(fields_autoplaced yes)
 		(uuid "7e073255-7b45-4236-a2b3-aae40d95a8dc")
 		(property "Reference" "BP101"
-			(at 193.04 29.7179 0)
+			(at 246.38 57.6579 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5491,7 +5765,7 @@
 			)
 		)
 		(property "Value" "octoprobe_prototype_board"
-			(at 193.04 32.2579 0)
+			(at 246.38 60.1979 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5500,7 +5774,7 @@
 			)
 		)
 		(property "Footprint" "00_project_library:octoprobe_breakout_PB"
-			(at 195.58 34.29 0)
+			(at 248.92 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5509,7 +5783,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.roth-elektronik.com/de/produkte/detail/artnr/RE233-LF/category/Laborkarten+Dual+Inline"
-			(at 195.58 34.29 0)
+			(at 248.92 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5518,7 +5792,7 @@
 			)
 		)
 		(property "Description" "Octoprobe Prototype Board"
-			(at 190.5 34.29 0)
+			(at 243.84 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5904,7 +6178,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 229.87 49.53 0)
+		(at 243.84 48.26 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5913,7 +6187,7 @@
 		(fields_autoplaced yes)
 		(uuid "93df74c7-14ee-4edc-9d33-ae91b57e43a9")
 		(property "Reference" "#PWR0102"
-			(at 229.87 55.88 0)
+			(at 243.84 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5922,7 +6196,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 229.87 54.61 0)
+			(at 243.84 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5930,7 +6204,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 229.87 49.53 0)
+			(at 243.84 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5939,7 +6213,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 229.87 49.53 0)
+			(at 243.84 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5948,7 +6222,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 229.87 49.53 0)
+			(at 243.84 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6285,7 +6559,7 @@
 	)
 	(symbol
 		(lib_id "00_project_library:octoprobe_MountingHole")
-		(at 234.95 30.48 0)
+		(at 248.92 29.21 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6294,7 +6568,7 @@
 		(fields_autoplaced yes)
 		(uuid "c5ba5956-728a-4ea8-bc26-5e54a4d66dd6")
 		(property "Reference" "H101"
-			(at 237.49 29.2099 0)
+			(at 251.46 27.9399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6303,7 +6577,7 @@
 			)
 		)
 		(property "Value" "octoprobe_MountingHole"
-			(at 237.49 31.7499 0)
+			(at 251.46 30.4799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6312,7 +6586,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad"
-			(at 234.95 30.48 0)
+			(at 248.92 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6321,7 +6595,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 234.95 30.48 0)
+			(at 248.92 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6330,7 +6604,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 234.95 30.48 0)
+			(at 248.92 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6352,7 +6626,7 @@
 	)
 	(symbol
 		(lib_id "00_project_library:octoprobe_MountingHole")
-		(at 234.95 35.56 0)
+		(at 248.92 34.29 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6361,7 +6635,7 @@
 		(fields_autoplaced yes)
 		(uuid "c5d63f68-bd53-42d2-9de4-f4fffc6aa97c")
 		(property "Reference" "H102"
-			(at 237.49 34.2899 0)
+			(at 251.46 33.0199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6370,7 +6644,7 @@
 			)
 		)
 		(property "Value" "octoprobe_MountingHole"
-			(at 237.49 36.8299 0)
+			(at 251.46 35.5599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6379,7 +6653,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad"
-			(at 234.95 35.56 0)
+			(at 248.92 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6388,7 +6662,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 234.95 35.56 0)
+			(at 248.92 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6397,7 +6671,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 234.95 35.56 0)
+			(at 248.92 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6419,7 +6693,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 190.5 34.29 0)
+		(at 243.84 62.23 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6428,7 +6702,7 @@
 		(fields_autoplaced yes)
 		(uuid "f2b5c7e2-f69e-4b51-aeb7-d15c59ffd15c")
 		(property "Reference" "#PWR0106"
-			(at 190.5 40.64 0)
+			(at 243.84 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6437,7 +6711,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 190.5 39.37 0)
+			(at 243.84 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6445,7 +6719,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 190.5 34.29 0)
+			(at 243.84 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6454,7 +6728,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 190.5 34.29 0)
+			(at 243.84 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6463,7 +6737,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 190.5 34.29 0)
+			(at 243.84 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6726,6 +7000,70 @@
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1"
 					(reference "J104")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "00_project_library:octoprobe_CableTieHole")
+		(at 186.69 39.37 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ffab566f-ccda-4cef-8e7e-858790df8e97")
+		(property "Reference" "H107"
+			(at 189.23 38.0999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "octoprobe_CableTieHole"
+			(at 189.23 40.6399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "00_project_library:octoprobe_CableTieHole"
+			(at 186.69 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 186.69 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 186.69 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "pcb_octoprobe"
+				(path "/35c47459-45a7-4753-acae-c8b47e7575e1"
+					(reference "H107")
 					(unit 1)
 				)
 			)
