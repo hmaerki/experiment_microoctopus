@@ -14,6 +14,7 @@ USD29
 * Positive: Port switching may be done on Hub and remotely
 * Negative: Ports are not numbered
 * Negative: Switching is very slow: 4s
+* Negative: No serial number
 
 ## Links where this HUB is mentioned
 
@@ -304,3 +305,14 @@ Device Qualifier (for other device speed):
 Device Status:     0x0001
   Self Powered
 ```
+
+
+## Datasheets
+
+[VL812 - Super Speed USB 3.0 Hub Controller](https://www.via-labs.com/product_show.php?id=41)
+
+[Datasheet](https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/1804162033_VIA-Tech-VL812_C69417.pdf)
+
+
+USB 0bda:5411 https://linux-hardware.org/?id=usb:0bda-5411
+[Realtek Semiconductor RTS5411 Hub](...)
