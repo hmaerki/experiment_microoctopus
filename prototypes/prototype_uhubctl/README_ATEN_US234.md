@@ -16,7 +16,7 @@ https://www.aten.com/de/de/products/usb-l%C3%B6sungen/docks-und-switches/us234/
 
 `sudo uhubctl --location xx --port xx --action=on``
 
-| port | location | port
+| plug | location | port
 |  - | - | - |
 |  1 | 3-1 | 1 |
 |  2 | 3-1 | 2 |

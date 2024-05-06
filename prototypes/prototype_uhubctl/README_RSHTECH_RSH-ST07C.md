@@ -23,7 +23,7 @@ USD29
 
 `sudo uhubctl --location xx --port xx --action=on``
 
-| port | location | port
+| plug | location | port
 |  - | - | - |
 |  1 USB3.2 C | 3-5.2.1.1 |  |
 |  2 USB3.2 C | 3-5.2.1.1 | 2 |
@@ -35,6 +35,8 @@ USD29
 
 
 ## Internals
+
+![Hubs](README_RSHTECH_RSH-ST07C.drawio.png)
 
 ```
 sudo uhubctl 

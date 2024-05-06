@@ -27,7 +27,7 @@ EUR63
 
 `sudo uhubctl --location xx --port xx --action=on``
 
-| port | location | port
+| plug | location | port
 |  - | - | - |
 |  1 | 4-1 | 1 |
 |  2 | 4-1 | 2 |
@@ -45,6 +45,34 @@ EUR63
 | 14 | 4-1.3.3 | 2 |
 | 15 | 4-1.3.3 | 3 |
 | 16 | 4-1.3.3 | 4 |
+
+## Hub structure
+
+H0: 0bda:5411 Realtek Semiconductor Corp. RTS5411 Hub
+H0-3: 0bda:5411 Realtek Semiconductor Corp. RTS5411 Hub
+H0-3-3: 0bda:5411 Realtek Semiconductor Corp. RTS5411 Hub
+H0-3-4: 0bda:5411 Realtek Semiconductor Corp. RTS5411 Hub
+H0-4: 0bda:5411 Realtek Semiconductor Corp. RTS5411 Hub
+
+| plug | hub-port |
+| - | - |
+| 01 | H0-1 |
+| 02 | H0-2 |
+| 03 | H0-4-1 |
+| 04 | H0-4-2 |
+| 05 | H0-4-3 |
+| 06 | H0-4-4 |
+| 07 | H0-3-1 |
+| 08 | H0-3-2 |
+| 09 | H0-3-4-1 |
+| 10 | H0-3-4-2 |
+| 11 | H0-3-4-3 |
+| 12 | H0-3-4-4 |
+| 13 | H0-4-4-1 |
+| 14 | H0-4-4-2 |
+| 15 | H0-4-4-3 |
+| 16 | H0-4-4-4 |
+
 
 ## Internals
 
