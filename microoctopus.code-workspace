@@ -2,7 +2,25 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../gits/pyusb"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"[python]": {
+			"editor.formatOnSave": true,
+			"editor.defaultFormatter": "charliermarsh.ruff"
+		},
+		"ruff.enable": true,
+		"ruff.fixAll": true,
+		"ruff.lint.enable": true,
+		"ruff.lint.run": "onSave",
+		"mpremote.srcSubdirectory": "src"
+	},
+	"extensions": {
+		"recommendations": [
+			"charliermarsh.ruff"
+		]
+	}
 }
