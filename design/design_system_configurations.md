@@ -11,7 +11,7 @@
 TentacleType(
     category="Micropython Board"
     label="pyboard_v1.0"
-    tags="programming=dfu-util"
+    tags="programmer=dfu-util"
     octobus="onewire,i2c,uart"
     relay_1="bootbutton"
     relay_2="onewire"
@@ -23,7 +23,7 @@ TentacleType(
 TentacleType(
     category="Micropython Board"
     label="esp32_v1.0"
-    tags="programming=esptool.py"
+    tags="programmer=esptool.py"
     octobus="onewire,i2c,uart"
     relay_1="bootbutton"
     relay_2="onewire"

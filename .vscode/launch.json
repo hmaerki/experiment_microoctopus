@@ -6,19 +6,28 @@
     "configurations": [
         
         {
-            "name": "Python Debugger: Current File",
+            "name": "Python: Current File",
             "type": "debugpy",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal"
         },
         {
-            "name": "Python Debugger: Current File with Arguments",
+            "name": "Python: Current File with Arguments",
             "type": "debugpy",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
             "args": "${command:pickArgs}"
+        },
+        {
+            "name": "Python: Octoprobe main",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "octoprobe.main",
+            "cwd": "${workspaceFolder}",
+            "env": {"PYTHONPATH":"${workspaceFolder}"},
+            "console": "integratedTerminal",
         }
     ]
 }

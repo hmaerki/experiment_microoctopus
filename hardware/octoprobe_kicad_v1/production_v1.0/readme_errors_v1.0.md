@@ -7,3 +7,5 @@
 * Fix2024-05-04d: Bigger font size for Relay etc
 
 * Fix2024-05-04e: Octoprobe (eyes/holes got lost)
+
+* Fix2024-05-17a: All connections should be labeled. For example 'relay 1a' / 'relay 1b'

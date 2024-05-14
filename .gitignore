@@ -2,6 +2,7 @@
 **/fp-info-cache
 **/fp-info-cache
 **/~*.lck
+**/__pycache__/
 hardware/pcb_experiment_usb10.tgz
 hardware/octoprobe_kicad_v1/production/*
 hardware/octoprobe_kicad_v1/00_project_library.bak
