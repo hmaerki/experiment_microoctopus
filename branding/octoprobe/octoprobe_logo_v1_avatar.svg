@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1">
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.8;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       d="m 90.538532,188.06467 v 0.11 z"
+       id="path1494" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.8;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       d="m 88.862132,188.08167 v 0.11 z"
+       id="path1495" />
+    <g
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       id="g1496"
+       transform="translate(-3.1591677,5.1712667)">
+      <path
+         d="m 95.0078,181.3806 a 2.16645,2.16645 0 0 0 -4.3329,0"
+         id="path1496" />
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.93379;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       d="m 91.819534,186.64525 h 0.06621 v 4.53719 h -0.06621 z"
+       id="path1499" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       d="m 89.649532,189.71567 h 0.0254 v 1.4224 h -0.0254 z"
+       id="path1501" />
+    <g
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       id="g1521"
+       transform="translate(-3.0475314,5.2064447)">
+      <circle
+         cx="94.891502"
+         cy="187.84641"
+         r="0.63499999"
+         id="circle1520" />
+    </g>
+    <circle
+       cx="87.513847"
+       cy="193.03548"
+       r="0.63499999"
+       id="circle1529"
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+    <circle
+       cx="89.700333"
+       cy="193.01767"
+       r="0.63499999"
+       id="circle1530"
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.976183;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       d="m 87.504023,186.65576 h 0.02382 v 4.49134 h -0.02382 z"
+       id="path1541" />
+    <text
+       x="112.3032"
+       y="185.35719"
+       textLength="34.618999"
+       font-size="6.6667px"
+       lengthAdjust="spacingAndGlyphs"
+       text-anchor="middle"
+       opacity="0"
+       id="text2125"
+       transform="translate(-3.1591677,5.1712667)"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1">ctoprobe</text>
+  </g>
+</svg>
