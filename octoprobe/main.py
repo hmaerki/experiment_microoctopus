@@ -1,14 +1,14 @@
 import time
 import logging
 
-from octoprobe.config.config_infrastructure_davos_a import (
+from octoprobe.config.config_infrastructure_wetzikon_a import (
     INFRASTRUCTURE,
     tentacle_pyboard,
     tentacle_seed_pico,
 )
 from octoprobe.octoprobe import Runner
 
-from pyhubctl.util_logging import init_logging
+from usbhubctl.util_logging import init_logging
 
 logger = logging.getLogger(__file__)
 
@@ -27,7 +27,7 @@ def main():
     runner = Runner(
         infrastructure=INFRASTRUCTURE,
         active_tentacles=[
-            # tentacle_pyboard,
+            tentacle_pyboard,
             tentacle_seed_pico,
         ],
     )

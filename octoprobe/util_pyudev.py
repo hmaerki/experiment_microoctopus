@@ -111,15 +111,24 @@ class UdevPoller:
     def expect_event(
         self,
         udev_filter: UdevFilter,
+        text_where: str,
+        text_expect: str,
         timeout_s: float = 1.0,
     ) -> UdevEventBase:
         while True:
-            for event in self._do_poll(filters=[udev_filter], timeout_s=timeout_s):
+            for event in self._do_poll(
+                filters=[udev_filter],
+                text_where=text_where,
+                text_expect=text_expect,
+                timeout_s=timeout_s,
+            ):
                 return event
 
     def _do_poll(
         self,
         filters: list[UdevFilter],
+        text_where: str,
+        text_expect: str,
         fail_filters: None | list[UdevFilter] = None,
         timeout_s: float = 1.0,
     ) -> Iterator[UdevEventBase]:
@@ -137,7 +146,7 @@ class UdevPoller:
             duration_s = time.monotonic() - begin_s
             if duration_s > timeout_s:
                 raise TimeoutError(
-                    f"duration_s {duration_s:0.3f}s of {timeout_s:0.3f}s."
+                    f"{text_where}: {text_expect}: duration_s {duration_s:0.3f}s of {timeout_s:0.3f}s."
                 )
             events = self.epoll.poll(timeout=0.5)
             if len(events) == 0:

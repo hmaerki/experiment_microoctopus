@@ -3,7 +3,7 @@ import dataclasses
 import io
 from typing import Optional
 
-import pyhubctl
+import usbhubctl
 
 from .util_constants import DIRECTORY_DOWNLOADS
 
@@ -45,6 +45,18 @@ class Tentacle:
         f.write(f"  plug_dut: {self.plug_dut.description_short}\n")
 
         return f.getvalue()
+
+    def _label(self, dut: bool) -> str:
+        dut_text = "DUT" if dut else "INFRA"
+        return f"Tentacle {dut_text} {self.infra_rp2_unique_id}({self.tentacle_type.label})"
+
+    @property
+    def label_dut(self) -> str:
+        return self._label(dut=True)
+
+    @property
+    def label_infra(self) -> str:
+        return self._label(dut=False)
 
     def infra_relay(self, number: int, close: bool):
         assert self.mp_remote_infra is not None
@@ -112,12 +124,22 @@ def get_unique_id():
         with udev.guard as guard:
             self.plug_infra.power = True
 
-            event = guard.expect_event(UDEV_FILTER_RP2_BOOT_MODE, timeout_s=2.0)
+            event = guard.expect_event(
+                UDEV_FILTER_RP2_BOOT_MODE,
+                text_where=self.label_infra,
+                text_expect="Expect RpPico to become visible on udev after power on",
+                timeout_s=2.0,
+            )
 
         with udev.guard as guard:
             rp2_flash_micropython(event, DIRECTORY_DOWNLOADS / "firmware.uf2")
 
-            event = udev.expect_event(UDEV_FILTER_RP2_APPLICATION_MODE, timeout_s=3.0)
+            event = udev.expect_event(
+                UDEV_FILTER_RP2_APPLICATION_MODE,
+                text_where=self.label_infra,
+                text_expect="Expect RpPico to become visible on udev after programming ",
+                timeout_s=3.0,
+            )
 
         unique_id = self.rp2_get_unique_id(event)
         assert unique_id == self.infra_rp2_unique_id
@@ -145,11 +167,13 @@ class Tentacles:
 @dataclasses.dataclass
 class UsbHub:
     label: str
-    model: pyhubctl.Hub
-    connected_hub: None | pyhubctl.DualConnectedHub = None
+    model: usbhubctl.Hub
+    connected_hub: None | usbhubctl.DualConnectedHub = None
 
     def get_plug(self, plug_number: int) -> "UsbPlug":
-        assert 1 <= plug_number <= self.model.plug_count
+        assert (
+            1 <= plug_number <= self.model.plug_count
+        ), f"{self.model.model}: Plug {plug_number} does not exit! Valid plugs [0..{self.model.plug_count}]."
         return UsbPlug(usb_hub=self, plug_number=plug_number)
 
     def setup(self) -> None:

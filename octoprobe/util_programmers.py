@@ -3,7 +3,14 @@ import pathlib
 import time
 import typing
 
+from usbhubctl.util_subprocess import subprocess_run
+
+from .util_baseclasses import PropertyString
 from .util_constants import DIRECTORY_DOWNLOADS
+from .util_pyboard import (
+    UDEV_FILTER_PYBOARD_APPLICATION_MODE,
+    UDEV_FILTER_PYBOARD_BOOT_MODE,
+)
 from .util_rp2 import (
     UDEV_FILTER_RP2_APPLICATION_MODE,
     UDEV_FILTER_RP2_BOOT_MODE,
@@ -11,16 +18,9 @@ from .util_rp2 import (
     UdevBootModeEvent,
     rp2_flash_micropython,
 )
-from pyhubctl.util_subprocess import subprocess_run
-
-from .util_pyboard import (
-    UDEV_FILTER_PYBOARD_APPLICATION_MODE,
-    UDEV_FILTER_PYBOARD_BOOT_MODE,
-)
-from .util_baseclasses import PropertyString
 
 if typing.TYPE_CHECKING:
-    from .lib_tentacle import UsbPlug, Tentacle
+    from .lib_tentacle import Tentacle, UsbPlug
     from .util_pyudev import UdevPoller
 
 TAG_PROGRAMMER = "programmer"
@@ -38,7 +38,6 @@ class DutProgrammerDfuUtil(abc.ABC):
         """
         Example return: /dev/ttyACM1
         """
-
         tentacle.infra_relay(number=1, close=True)
 
         with udev.guard as guard:
@@ -46,6 +45,8 @@ class DutProgrammerDfuUtil(abc.ABC):
 
             event = guard.expect_event(
                 UDEV_FILTER_PYBOARD_BOOT_MODE,
+                text_where=tentacle.label_dut,
+                text_expect="Expect mcu to become visible on udev after power on",
                 timeout_s=3.0,
             )
 
@@ -70,6 +71,8 @@ class DutProgrammerDfuUtil(abc.ABC):
 
             event = guard.expect_event(
                 UDEV_FILTER_PYBOARD_APPLICATION_MODE,
+                text_where=tentacle.label_dut,
+                text_expect="Expect mcu to become visible on udev after DfuUtil programming",
                 timeout_s=3.0,
             )
 
@@ -91,6 +94,8 @@ class DutProgrammerPicotool(abc.ABC):
 
             event = guard.expect_event(
                 UDEV_FILTER_RP2_BOOT_MODE,
+                text_where=tentacle.label_dut,
+                text_expect="Expect RpPico to become visible on udev after power on",
                 timeout_s=2.0,
             )
 
@@ -103,7 +108,12 @@ class DutProgrammerPicotool(abc.ABC):
                 event, DIRECTORY_DOWNLOADS / "RPI_PICO-20240222-v1.22.2.uf2"
             )
 
-            event = udev.expect_event(UDEV_FILTER_RP2_APPLICATION_MODE, timeout_s=4.0)
+            event = udev.expect_event(
+                UDEV_FILTER_RP2_APPLICATION_MODE,
+                text_where=tentacle.label_dut,
+                text_expect="Expect RpPico to become visible on udev after power on",
+                timeout_s=4.0,
+            )
 
         with udev.guard as guard:
             plug.power = False
@@ -111,6 +121,8 @@ class DutProgrammerPicotool(abc.ABC):
 
             event = guard.expect_event(
                 UDEV_FILTER_RP2_APPLICATION_MODE,
+                text_where=tentacle.label_dut,
+                text_expect="Expect RpPico to become visible on udev after power on",
                 timeout_s=3.0,
             )
 
