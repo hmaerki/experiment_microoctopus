@@ -7,7 +7,7 @@ Sequence:
 """
 
 import dataclasses
-from typing import Dict, Iterator, List, Tuple, Union
+from typing import Iterator, Tuple, Union
 
 
 @dataclasses.dataclass(frozen=True, repr=True, eq=True)
@@ -109,17 +109,17 @@ class Chip:
     """
 
     product: str
-    plug_or_chip: Tuple[Union[int, "Chip"], ...]
+    plug_or_chip: tuple[Union[int, "Chip"], ...]
 
     product_id: ProductId = None
 
-    def __post_init__(self):
+    def __post_init__(self) -> None:
         self.product_id = ProductId.parse(self.product)
-        assert isinstance(self.plug_or_chip, Tuple)
+        assert isinstance(self.plug_or_chip, tuple)
         for port in self.plug_or_chip:
             assert isinstance(port, (int, Chip))
 
-    def _register(self, hub: "Hub", path: List[int]) -> None:
+    def _register(self, hub: "Hub", path: list[int]) -> None:
         for port_number0, plug_or_chip in enumerate(self.plug_or_chip):
             _path = path + [port_number0 + 1]
             if isinstance(plug_or_chip, int):
@@ -133,7 +133,7 @@ class Chip:
 @dataclasses.dataclass
 class Plug:
     plug: int
-    path: List[int]
+    path: list[int]
 
 
 @dataclasses.dataclass
@@ -152,7 +152,7 @@ class Hub:
     The key is the plug number (starting from 1).
     """
 
-    def __post_init__(self):
+    def __post_init__(self) -> None:
         assert isinstance(self.manufacturer, str)
         assert isinstance(self.model, str)
         assert isinstance(self.plug_count, int)
@@ -181,9 +181,9 @@ class Hub:
 
     @property
     def hub_tree(self) -> Structure:
-        list_chip_path: List[ChipPath] = []
+        list_chip_path: list[ChipPath] = []
 
-        def downstream(chip: "Chip", path: Tuple[int, ...]) -> None:
+        def downstream(chip: "Chip", path: tuple[int, ...]) -> None:
             list_chip_path.append(ChipPath(product_id=chip.product_id, path=path))
             for port_number0, plug_or_chip in enumerate(chip.plug_or_chip):
                 if isinstance(plug_or_chip, Chip):
@@ -195,7 +195,7 @@ class Hub:
         return Structure(list_chip_path)
 
     @property
-    def hub_tree2(self) -> List[str]:
+    def hub_tree2(self) -> list[str]:
         return [chip_path.text for chip_path in self.hub_tree.list_chip_path]
 
     def __repr__(self) -> str:

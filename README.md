@@ -1,5 +1,5 @@
 
-# microOctopus - Micropython Testenvironment
+# microOctopus - Micropython Testinfrastructure
 
 Ideas on how to set up a micropython testenvironment
 
@@ -85,3 +85,15 @@ sequenceDiagram
 
     U-->>github: testresults
 ```
+
+# This is tentacle v0.1
+
+Side view:
+
+![](hardware/octoprobe_kicad_v1/production_v1.0/pcb_octoprobe_v1.0_side.png)
+
+Tope view:
+![](hardware/octoprobe_kicad_v1/production_v1.0/pcb_octoprobe_v1.0_top.png)
+
+
+

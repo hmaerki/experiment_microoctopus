@@ -1,29 +1,26 @@
-"""
-Preparation:
-  sudo chown root:root octoprobe/downloads/picotool
-  sudo chmod u+s octoprobe/downloads/picotool
-"""
+from __future__ import annotations
 
-import dataclasses
-
-from octoprobe.lib_mpremote import MpRemote
 from .lib_infrastructure import Infrastructure
-from .lib_tentacle import Tentacles
+from .lib_tentacle import Tentacle, Tentacles
 from .util_pyudev import UdevPoller
-from .util_programmers import programmer_factory
 
 
-@dataclasses.dataclass
 class Runner:
-    infrastructure: Infrastructure
-    active_tentacles: Tentacles
-    udev_poller: None | UdevPoller = None
-
-    def __post_init__(self):
-        assert isinstance(self.infrastructure, Infrastructure)
-        if isinstance(self.active_tentacles, list | tuple):
-            self.active_tentacles = Tentacles(tentacles=self.active_tentacles)
-        assert isinstance(self.active_tentacles, Tentacles)
+    def __init__(
+        self,
+        infrastructure: Infrastructure,
+        active_tentacles: list[Tentacle],
+        udev_poller: UdevPoller | None = None,
+    ) -> None:
+        assert isinstance(infrastructure, Infrastructure)
+        self.infrastructure = infrastructure
+        assert isinstance(active_tentacles, list | tuple)
+        for tentacle in active_tentacles:
+            assert (
+                tentacle in infrastructure.tentacles
+            ), f"Tentacle '{tentacle.label}' is missing in the infrastructure."
+        self.active_tentacles = Tentacles(tentacles=active_tentacles)
+        self.udev_poller = udev_poller
 
     def reset_infa_dut(self) -> None:
         for hub in self.infrastructure.hubs:
@@ -56,5 +53,6 @@ class Runner:
             self.udev_poller.close()
 
     def setup_dut(self) -> None:
+        assert self.udev_poller is not None
         for tentacle in self.active_tentacles.tentacles:
             tentacle.flash_dut(udev=self.udev_poller)

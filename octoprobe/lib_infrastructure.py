@@ -1,6 +1,6 @@
 import dataclasses
-import textwrap
 import io
+import textwrap
 
 from octoprobe.lib_tentacle import Tentacle, UsbHub
 

@@ -1,9 +1,7 @@
-import os
 import dataclasses
 import select
 import subprocess
-from typing import List
-import pyudev
+import pyudev # type: ignore
 import time
 import pathlib
 import syslog
@@ -29,7 +27,7 @@ class UdevFilter:
     id_product: int
     subsystem: str
     device_type: str
-    actions: List[str]
+    actions: list[str]
     label: str
 
     @property
@@ -84,19 +82,19 @@ UDEV_FILTERS = (
 )
 
 
-def log(entry, eol="\n"):
+def log(entry:str, eol: str="\n")->None:
     global LOG_FILE
     if entry[-1] == "\r":
         entry = entry[:-1]
     print(entry, end=eol, file=LOG_FILE)
 
 
-def log_print(entry, eol="\n"):
+def log_print(entry: str, eol:str="\n")->None:
     print(entry, end=eol)
     log(entry, eol=eol)
 
 
-def is_usb_serial(device, serial_num=None, vendor=None):
+def is_usb_serial(device, serial_num:int=None, vendor:int=None)->bool:
     """Checks device to see if its a USB Serial device.
 
     The caller already filters on the subsystem being "tty".
@@ -116,7 +114,7 @@ def is_usb_serial(device, serial_num=None, vendor=None):
     return True
 
 
-def extra_info(device):
+def extra_info(device)->None:
     extra_items = []
     if "ID_VENDOR" in device:
         extra_items.append("vendor '{0}'".format(device["ID_VENDOR"]))
@@ -127,7 +125,7 @@ def extra_info(device):
     return ""
 
 
-def main():
+def main()->None:
     context = pyudev.Context()
     context.log_priority = syslog.LOG_NOTICE
 
@@ -159,7 +157,7 @@ def main():
                                 #
                                 # sudo chown root:root bin/picotool
                                 # sudo chmod a+s bin/picotool
-                                def subprocess_run(args):
+                                def subprocess_run(args:list[str])->None:
                                     begin_s = time.monotonic()
                                     proc = subprocess.run(
                                         args,

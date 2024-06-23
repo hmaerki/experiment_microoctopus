@@ -4,7 +4,33 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
+        {
+            "name": "Ruff",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "ruff",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "check",
+                "--config",
+                "pyproject.toml",
+                "--fix",
+            ],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "Mypy",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "mypy",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "--config-file",
+                "pyproject.toml",
+                "octoprobe",
+            ],
+            "console": "integratedTerminal",
+        },
         {
             "name": "Python: Current File",
             "type": "debugpy",
@@ -27,7 +53,9 @@
             "request": "launch",
             "module": "octoprobe.main",
             "cwd": "${workspaceFolder}",
-            "env": {"PYTHONPATH":"${workspaceFolder}"},
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            },
             "console": "integratedTerminal",
         }
     ]

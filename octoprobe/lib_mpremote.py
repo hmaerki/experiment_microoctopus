@@ -1,9 +1,8 @@
 import logging
-from typing import Self
+from typing import Any, Self
 
-from mpremote.main import State
-
-from mpremote.transport_serial import SerialTransport, TransportError
+from mpremote.main import State  # type: ignore
+from mpremote.transport_serial import SerialTransport, TransportError  # type: ignore
 
 logger = logging.getLogger(__file__)
 
@@ -21,17 +20,17 @@ class ExceptionTransport(ExceptionMpRemote):
 
 
 class MpRemote:
-    def __init__(self, tty: str, baudrate=115200):
+    def __init__(self, tty: str, baudrate: int = 115200) -> None:
         self.state = State()
         self.state.transport = SerialTransport(tty, baudrate=baudrate)
 
     def __enter__(self) -> Self:
         return self
 
-    def __exit__(self, exc_type, exc_val, exc_tb) -> None:
+    def __exit__(self, exc_type: Any, exc_val: Any, exc_tb: Any) -> None:
         self.close()
 
-    def exec_raw(self, cmd: str, follow=True) -> str:
+    def exec_raw(self, cmd: str, follow: bool = True) -> str:
         """
         Derived from mpremote.commands.do_exec / do_execbuffer
         """
@@ -50,7 +49,8 @@ class MpRemote:
             logger.warning(er)
             raise ExceptionTransport(er) from er
 
+        assert isinstance(ret, bytes)
         return ret.decode("utf-8")
 
-    def close(self):
+    def close(self) -> None:
         self.state.transport.close()

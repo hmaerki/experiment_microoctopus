@@ -5,22 +5,24 @@ pip install mpremote
 
 mpremote run test_gpio.py
 """
-from machine import Pin
+
 import time
+
+from machine import Pin
 
 ACTIVE_LED = "GPIO0"
 
-pin_active_led = Pin(ACTIVE_LED, Pin.OUT)    # create output pin on GPIO0
+pin_active_led = Pin(ACTIVE_LED, Pin.OUT)  # create output pin on GPIO0
 for _ in range(4):
     pin_active_led.toggle()
     time.sleep(0.5)
 
-gpio_relais= (
-     "GPIO1",
-     "GPIO2",
-     "GPIO3",
-     "GPIO4",
-     "GPIO8",
+gpio_relais = (
+    "GPIO1",
+    "GPIO2",
+    "GPIO3",
+    "GPIO4",
+    "GPIO8",
 )
 pin_relais = [Pin(pin, Pin.OUT) for pin in gpio_relais]
 
