@@ -1,5 +1,5 @@
 
-# microOctopus - Micropython Testenvironment
+# microOctopus - Micropython Testinfrastructure
 
 Ideas on how to set up a micropython testenvironment
 
@@ -48,6 +48,20 @@ Tentacles side by side connected by a 40 pin ribbon cable
 Tentacles stacked
 
 ![tentacle right all](README_images/uoctopus_tentacle_right-all.png)
+
+
+### Above images are just concepts. Below is tentacle v0.1 which I am currently testing.
+
+**Side view**
+
+![](hardware/octoprobe_kicad_v1/production_v1.0/pcb_octoprobe_v1.0_side.png)
+
+**Top view**
+
+![](hardware/octoprobe_kicad_v1/production_v1.0/pcb_octoprobe_v1.0_top.png)
+
+
+
 
 ## Test flow
 

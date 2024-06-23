@@ -1,6 +1,6 @@
-from octoprobe.lib_tentacle import TentacleType
+from octoprobe.util_baseclasses import TentacleType
 
-"""
+DOC_TENTACLE_PYBOARD = """
 https://micropython.org/resources/PYBv11-schematics.pdf
 https://micropython.org/resources/pybv11-pinout.jpg
 
@@ -12,6 +12,7 @@ relay 1   | 3V3
 tentacle_type_pyboard = TentacleType(
     category="Micropython Board",
     label="pyboard_v1.0",
+    doc=DOC_TENTACLE_PYBOARD,
     tags="programmer=dfu-util",
     octobus="onewire,i2c,uart",
     relay_1="bootbutton",
@@ -22,7 +23,7 @@ tentacle_type_pyboard = TentacleType(
     relay_6="uart.tx",
 )
 
-"""
+DOC_TENTACLE_SEED_PICO = """
 https://files.seeedstudio.com/wiki/XIAO-RP2040/res/Seeed-Studio-XIAO-RP2040-v1.3.pdf
 https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xinpin.jpg
 
@@ -34,6 +35,7 @@ relay 1   | RP2040_BOOT (requires soldering)
 tentacle_type_seed_pico = TentacleType(
     category="Micropython Board",
     label="seed_pico_v1.0",
+    doc=DOC_TENTACLE_SEED_PICO,
     tags="programmer=picotool",
     octobus="onewire,i2c,uart",
     relay_1="bootbutton",

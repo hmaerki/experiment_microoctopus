@@ -1,9 +1,10 @@
 import pathlib
+
+import pyudev  # type: ignore
+from usbhubctl.util_subprocess import assert_root_and_s_bit, subprocess_run
+
 from .util_constants import DIRECTORY_DOWNLOADS
 from .util_pyudev import UdevEventBase, UdevFilter
-
-import pyudev
-from usbhubctl.util_subprocess import subprocess_run, assert_root_and_s_bit
 
 RP2_VENDOR = 0x2E8A
 RP2_PRODUCT_BOOT_MODE = 0x0003
@@ -53,7 +54,7 @@ UDEV_FILTER_RP2_APPLICATION_MODE = UdevFilter(
 )
 
 
-def rp2_flash_micropython(event: UdevEventBase, filename_uf2: pathlib.Path):
+def rp2_flash_micropython(event: UdevEventBase, filename_uf2: pathlib.Path) -> None:
     assert isinstance(event, UdevBootModeEvent)
     assert filename_uf2.is_file()
 

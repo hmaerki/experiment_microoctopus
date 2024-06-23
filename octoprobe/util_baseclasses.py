@@ -24,6 +24,7 @@ class PropertyString:
 class TentacleType:
     category: str
     label: str
+    doc: str
     tags: str
     octobus: str
     relay_1: str

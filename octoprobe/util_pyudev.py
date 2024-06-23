@@ -1,18 +1,15 @@
-"""
-sudo chown root:root bin/picotool
-sudo chmod a+s bin/picotool
-"""
+from __future__ import annotations
 
-from collections.abc import Iterator
+import abc
 import dataclasses
 import logging
 import select
-import time
-from typing import Self, Type
 import syslog
-import abc
+import time
+from collections.abc import Iterator
+from typing import Any, Self
 
-import pyudev
+import pyudev  # type: ignore
 
 logger = logging.getLogger(__file__)
 
@@ -29,7 +26,7 @@ class UdevEventBase(abc.ABC):
 @dataclasses.dataclass
 class UdevFilter:
     label: str
-    udev_event_class: Type[UdevEventBase]
+    udev_event_class: type[UdevEventBase]
     id_vendor: int
     id_product: int
     subsystem: str
@@ -69,18 +66,18 @@ class Guard:
     This is to avoid race or out of sync conditions.
     """
 
-    def __init__(self, udev_poller: "UdevPoller"):
+    def __init__(self, udev_poller: UdevPoller):
         self._udev_poller = udev_poller
 
-    def __enter__(self) -> "UdevPoller":
+    def __enter__(self) -> UdevPoller:
         return self._udev_poller
 
-    def __exit__(self, exc_type, exc_val, exc_tb) -> None:
+    def __exit__(self, exc_type: Any, exc_val: Any, exc_tb: Any) -> None:
         pass
 
 
 class UdevPoller:
-    def __init__(self):
+    def __init__(self) -> None:
         self.context = pyudev.Context()
         self.context.log_priority = syslog.LOG_NOTICE
 
@@ -94,7 +91,8 @@ class UdevPoller:
     def __enter__(self) -> Self:
         return self
 
-    def __exit__(self, exc_type, exc_val, exc_tb) -> None:
+    # mypy: allow-untyped-def
+    def __exit__(self, exc_type: Any, exc_val: Any, exc_tb: Any) -> None:
         self.close()
 
     def flush_events(self) -> None:
@@ -176,7 +174,7 @@ class UdevPoller:
         self.epoll.close()
 
 
-def main():
+def main() -> None:
     pass
 
 

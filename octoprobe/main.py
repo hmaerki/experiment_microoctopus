@@ -1,5 +1,7 @@
-import time
 import logging
+import time
+
+from usbhubctl.util_logging import init_logging
 
 from octoprobe.config.config_infrastructure_wetzikon_a import (
     INFRASTRUCTURE,
@@ -7,8 +9,6 @@ from octoprobe.config.config_infrastructure_wetzikon_a import (
     tentacle_seed_pico,
 )
 from octoprobe.octoprobe import Runner
-
-from usbhubctl.util_logging import init_logging
 
 logger = logging.getLogger(__file__)
 
@@ -18,7 +18,7 @@ class DutPyboard:
         self.runner = runner
 
 
-def main():
+def main() -> None:
     init_logging()
 
     start_s = time.monotonic()

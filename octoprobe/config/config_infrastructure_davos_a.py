@@ -1,12 +1,11 @@
-from usbhubctl.known_hubs import rsh_a10, rsh_st07c
+from usbhubctl.known_hubs import rsh_st07c
 
 from octoprobe.config.config_tentacles import (
     tentacle_type_pyboard,
     tentacle_type_seed_pico,
 )
-
-from octoprobe.lib_tentacle import Tentacle, UsbHub
 from octoprobe.lib_infrastructure import Infrastructure
+from octoprobe.lib_tentacle import Tentacle, UsbHub
 
 hub = UsbHub(
     label="Hub A",

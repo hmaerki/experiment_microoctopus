@@ -33,7 +33,7 @@ class DutProgrammer(abc.ABC):
     ) -> str: ...
 
 
-class DutProgrammerDfuUtil(abc.ABC):
+class DutProgrammerDfuUtil(DutProgrammer):
     def flash(self, tentacle: "Tentacle", udev: "UdevPoller", plug: "UsbPlug") -> str:
         """
         Example return: /dev/ttyACM1
@@ -78,10 +78,12 @@ class DutProgrammerDfuUtil(abc.ABC):
 
         print(f"EVENT PYBOARD: {event}")
         assert isinstance(event, UdevApplicationModeEvent)
-        return event.tty
+        tty = event.tty
+        assert isinstance(tty, str)
+        return tty
 
 
-class DutProgrammerPicotool(abc.ABC):
+class DutProgrammerPicotool(DutProgrammer):
     def flash(self, tentacle: "Tentacle", udev: "UdevPoller", plug: "UsbPlug") -> str:
         """
         Example return: /dev/ttyACM1
@@ -95,7 +97,7 @@ class DutProgrammerPicotool(abc.ABC):
             event = guard.expect_event(
                 UDEV_FILTER_RP2_BOOT_MODE,
                 text_where=tentacle.label_dut,
-                text_expect="Expect RpPico to become visible on udev after power on",
+                text_expect="Expect RP2 to become visible on udev after power on",
                 timeout_s=2.0,
             )
 
@@ -111,7 +113,7 @@ class DutProgrammerPicotool(abc.ABC):
             event = udev.expect_event(
                 UDEV_FILTER_RP2_APPLICATION_MODE,
                 text_where=tentacle.label_dut,
-                text_expect="Expect RpPico to become visible on udev after power on",
+                text_expect="Expect RP2 to become visible on udev after power on",
                 timeout_s=4.0,
             )
 
@@ -122,16 +124,18 @@ class DutProgrammerPicotool(abc.ABC):
             event = guard.expect_event(
                 UDEV_FILTER_RP2_APPLICATION_MODE,
                 text_where=tentacle.label_dut,
-                text_expect="Expect RpPico to become visible on udev after power on",
+                text_expect="Expect RP2 to become visible on udev after power on",
                 timeout_s=3.0,
             )
 
         print(f"EVENT RP2: {event}")
         assert isinstance(event, UdevApplicationModeEvent)
+        tty = event.tty
+        assert isinstance(tty, str)
 
         # TODO: Why?
         time.sleep(2.0)
-        return event.tty
+        return tty
 
 
 def programmer_factory(tags: str) -> None | DutProgrammer:
