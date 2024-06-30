@@ -1,0 +1,3 @@
+set -euox pipefail
+
+true
