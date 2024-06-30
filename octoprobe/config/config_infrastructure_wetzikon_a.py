@@ -7,23 +7,26 @@ from octoprobe.config.config_tentacles import (
 from octoprobe.lib_infrastructure import Infrastructure
 from octoprobe.lib_tentacle import Tentacle, UsbHub
 
-hub = UsbHub(
-    label="Hub A",
+hub1 = UsbHub(
+    label="Hub 1",
     model=octohub4,
-    model=rsh_a10,
+)
+hub2 = UsbHub(
+    label="Hub ",
+    model=octohub4,
 )
 
 tentacle_pyboard = Tentacle(
     infra_rp2_unique_id="E463541647612835",
     tentacle_type=tentacle_type_pyboard,
-    plug_infra=hub.get_plug(1),
-    plug_dut=hub.get_plug(2),
+    plug_infra=hub1.get_plug(1),
+    plug_dut=hub1.get_plug(2),
 )
 tentacle_seed_pico = Tentacle(
     infra_rp2_unique_id="E463541647173F34",
     tentacle_type=tentacle_type_seed_pico,
-    plug_infra=hub.get_plug(3),
-    plug_dut=hub.get_plug(4),
+    plug_infra=hub2.get_plug(1),
+    plug_dut=hub2.get_plug(2),
 )
 
 
@@ -32,5 +35,5 @@ INFRASTRUCTURE = Infrastructure(
         tentacle_seed_pico,
         tentacle_pyboard,
     ],
-    hubs=[hub],
+    hubs=[hub2],
 )
