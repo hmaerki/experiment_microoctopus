@@ -32,7 +32,7 @@ def main() -> None:
         ],
     )
 
-    runner.reset_infa_dut()
+    runner.find_active_tentacles()
 
     runner.setup_infra()
 

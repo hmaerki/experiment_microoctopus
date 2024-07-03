@@ -1,5 +1,11 @@
 from __future__ import annotations
 
+import time
+
+from usbhubctl import util_octohub4
+
+from octoprobe.util_tentacle_discovery import QuerySerial
+
 from .lib_infrastructure import Infrastructure
 from .lib_tentacle import Tentacle, Tentacles
 from .util_pyudev import UdevPoller
@@ -22,12 +28,25 @@ class Runner:
         self.active_tentacles = Tentacles(tentacles=active_tentacles)
         self.udev_poller = udev_poller
 
-    def reset_infa_dut(self) -> None:
-        for hub in self.infrastructure.hubs:
-            hub.setup()
+    def find_active_tentacles(self) -> None:
+        """
+        Powers all RP2 infra.
+        Finds all tentacle by finding rp2_unique_id of the RP2 infra.
+        """
+        octohubs4 = util_octohub4.Octohubs()
+        # We have to reset the power for all rp2-infra to become visible
+        octohubs4.set_power(plug_on={}, default_on=False)
+        time.sleep(0.1)
+        octohubs4.reset_power()
+        time.sleep(0.1)
 
+        qs = QuerySerial()
+        qs.print_rp2_application_mode()
         for tentacle in self.infrastructure.tentacles:
-            tentacle.reset_infa_dut()
+            connected_rp2 = qs.find(rp2_unique_id=tentacle.infra_rp2_unique_id)
+            connected_hub = octohubs4.find(usb_path_rp2=connected_rp2.usb_path)
+            tentacle.assign_connected_hub(connected_hub=connected_hub)
+            pass
 
     def setup_infra(self) -> None:
         """
