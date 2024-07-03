@@ -57,7 +57,7 @@ Rename production folder and add version number
 
 Schematics, Menu `File -> Print`, check 'Print drawing sheet - Color`, `Print`, `All Paages`, `Pirnt to File`.
 
-Move `~/Documents/output.pdf` to `hardware/octoprobe_kicad_v1/production_v1.0/schematics.pdf`
+Move `~/Documents/output.pdf` to `hardware/octoprobe_kicad_v0.1/production_v1.0/schematics.pdf`
 
 ### Upload to JLCPCB
 

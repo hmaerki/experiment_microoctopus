@@ -54,11 +54,11 @@ Tentacles stacked
 
 **Side view**
 
-![](hardware/octoprobe_kicad_v1/production_v1.0/pcb_octoprobe_v1.0_side.png)
+![](hardware/octoprobe_kicad_v0.1/production_v1.0/pcb_octoprobe_v1.0_side.png)
 
 **Top view**
 
-![](hardware/octoprobe_kicad_v1/production_v1.0/pcb_octoprobe_v1.0_top.png)
+![](hardware/octoprobe_kicad_v0.1/production_v1.0/pcb_octoprobe_v1.0_top.png)
 
 
 

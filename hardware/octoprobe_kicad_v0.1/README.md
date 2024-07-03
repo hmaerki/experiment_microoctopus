@@ -1,4 +1,4 @@
-# Octoprobe v1
+# Octoprobe Tentacle v0.1
 
 ## Terms
 `opto-pico`: The raspberry pi pico which controls the tentacle
