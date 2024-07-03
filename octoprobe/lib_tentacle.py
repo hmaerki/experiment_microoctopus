@@ -4,7 +4,7 @@ import dataclasses
 import io
 from collections.abc import Iterator
 
-import usbhubctl
+from usbhubctl import DualConnectedHub, Hub
 
 from .lib_mpremote import MpRemote
 from .util_baseclasses import TentacleType
@@ -23,11 +23,22 @@ from .util_rp2 import (
 class Tentacle:
     infra_rp2_unique_id: str
     tentacle_type: TentacleType
+    builtin_hub: UsbHub | None = None
     plug_infra: UsbPlug | None = None
     plug_dut: UsbPlug | None = None
     mp_remote_infra: MpRemote | None = None
     mp_remote_dut: MpRemote | None = None
     programmer_dut: DutProgrammer | None = None
+
+    def __post_init__(self) -> None:
+        if self.builtin_hub is None:
+            assert isinstance(self.plug_infra, UsbPlug)
+            assert isinstance(self.plug_dut, UsbPlug)
+            return
+        assert self.plug_infra is None
+        assert self.plug_dut is None
+        self.plug_infra = self.builtin_hub.get_plug(1)
+        self.plug_dut = self.builtin_hub.get_plug(3)
 
     @property
     def description_short(self) -> str:
@@ -57,6 +68,10 @@ class Tentacle:
     @property
     def label_infra(self) -> str:
         return self._label(dut_or_infra="INFRA ")
+
+    def assign_connected_hub(self, connected_hub: DualConnectedHub) -> None:
+        assert self.builtin_hub is not None
+        self.builtin_hub.connected_hub = connected_hub
 
     def infra_relay(self, number: int, close: bool) -> None:
         assert self.mp_remote_infra is not None
@@ -97,9 +112,6 @@ pin_relay1.value({int(close)})
             if plug is not None:
                 plug.power = False
 
-    def reset_infa_dut(self) -> None:
-        self.all_plugs_power_off()
-
     def rp2_get_unique_id(self, event: UdevEventBase) -> str:
         assert isinstance(event, UdevApplicationModeEvent)
 
@@ -120,6 +132,9 @@ def get_unique_id():
     def setup_infra(self, udev: UdevPoller) -> None:
         if self.plug_infra is None:
             return
+
+        # Tentacle v0.2: remove return
+        return
 
         with udev.guard as guard:
             self.plug_infra.power = True
@@ -167,8 +182,8 @@ class Tentacles:
 @dataclasses.dataclass
 class UsbHub:
     label: str
-    model: usbhubctl.Hub
-    connected_hub: None | usbhubctl.DualConnectedHub = None
+    model: Hub
+    connected_hub: None | DualConnectedHub = None
 
     def get_plug(self, plug_number: int) -> UsbPlug:
         assert (
@@ -178,7 +193,7 @@ class UsbHub:
 
     def setup(self) -> None:
         connected_hubs = self.model.find_connected_dualhubs()
-        self.connected_hub = connected_hubs.get_one()
+        self.connected_hub = connected_hubs.expect_one()
 
     def teardown(self) -> None:
         pass

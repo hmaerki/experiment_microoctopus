@@ -10,6 +10,14 @@ class Infrastructure:
     tentacles: list[Tentacle]
     hubs: list[UsbHub]
 
+    def __post_init__(self) -> None:
+        for tentacle in self.tentacles:
+            if tentacle.builtin_hub is None:
+                continue
+            for hub in self.hubs:
+                assert hub is not tentacle.builtin_hub
+            self.hubs.append(tentacle.builtin_hub)
+
     @property
     def description_short(self) -> str:
         f = io.StringIO()

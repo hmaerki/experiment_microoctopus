@@ -34,7 +34,7 @@ relay 1   | RP2040_BOOT (requires soldering)
 """
 tentacle_type_seed_pico = TentacleType(
     category="Micropython Board",
-    label="seed_pico_v1.0",
+    label="seeed_pico_v1.0",
     doc=DOC_TENTACLE_SEED_PICO,
     tags="programmer=picotool",
     octobus="onewire,i2c,uart",
