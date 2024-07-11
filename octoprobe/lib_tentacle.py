@@ -178,7 +178,7 @@ class UsbHub:
 
     def setup(self) -> None:
         connected_hubs = self.model.find_connected_dualhubs()
-        self.connected_hub = connected_hubs.get_one()
+        self.connected_hub = connected_hubs.expect_one()
 
     def teardown(self) -> None:
         pass

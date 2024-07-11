@@ -10,7 +10,7 @@ from octoprobe.lib_tentacle import Tentacle, UsbHub
 hub = UsbHub(
     label="Hub A",
     model=octohub4,
-    model=rsh_a10,
+    # model=rsh_a10,
 )
 
 tentacle_pyboard = Tentacle(

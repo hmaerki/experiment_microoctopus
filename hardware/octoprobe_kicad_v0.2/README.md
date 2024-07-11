@@ -11,6 +11,6 @@ Online order at JLCPCB
 
 | Pieces | Production | DHL to Switzerland | per piece |
 | - | - | - | - |
-| 5 | USD90 | USD18 | USD22 |
+| 5 | USD90 | USD18 | USD22 |  TODO: USB43
 | 30 | USD266 | USD83 | USD12 |
 

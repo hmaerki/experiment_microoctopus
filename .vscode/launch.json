@@ -57,6 +57,74 @@
                 "PYTHONPATH": "${workspaceFolder}"
             },
             "console": "integratedTerminal",
+        },
+        {
+            "name": "Python: op cycle dut",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "octoprobe.scripts.op",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "cycle",
+                "dut",
+            ],
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            },
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "Python: op cycle infra --serial xxx",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "octoprobe.scripts.op",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "cycle",
+                "infra",
+                "--serial",
+                // "d32",
+                "e4636874db405d32",
+                "--serial",
+                "e4636874db124f35",
+            ],
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            },
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "Python: op power",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "octoprobe.scripts.op",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "power",
+                "--off",
+                "infraboot",
+                "--off",
+                "dut",
+            ],
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            },
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "Python: op query",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "octoprobe.scripts.op",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "query",
+                "--verbose",
+            ],
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            },
+            "console": "integratedTerminal",
         }
     ]
 }

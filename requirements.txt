@@ -1,3 +1,4 @@
 git+https://github.com/octoprobe/usbhubctl
 pyudev
 mpremote
+typer-slim

@@ -37,6 +37,7 @@ class MpRemote:
         self.state.ensure_raw_repl()
         self.state.did_action()
 
+        ret = None
         try:
             self.state.transport.exec_raw_no_follow(cmd)
             if follow:
