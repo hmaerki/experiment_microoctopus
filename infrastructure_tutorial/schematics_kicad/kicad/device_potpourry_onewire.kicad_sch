@@ -1,0 +1,25 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "0fd0bbbb-d22f-43f7-93d7-78cd0648f2c7")
+	(paper "A4")
+	(title_block
+		(date "2024-07-16")
+		(company "Hans Märki, Märki Informatik")
+		(comment 1 "The MIT License (MIT)")
+	)
+	(lib_symbols)
+	(hierarchical_label "data"
+		(shape input)
+		(at 43.18 40.64 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3f799c24-bbca-43b1-9d99-470db35265ee")
+	)
+)

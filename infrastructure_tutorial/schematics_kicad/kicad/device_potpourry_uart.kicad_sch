@@ -1,0 +1,37 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "122d382b-3b64-4c1d-ad76-2f190d571852")
+	(paper "A4")
+	(title_block
+		(date "2024-07-16")
+		(company "Hans Märki, Märki Informatik")
+		(comment 1 "The MIT License (MIT)")
+	)
+	(lib_symbols)
+	(hierarchical_label "TX"
+		(shape input)
+		(at 59.69 40.64 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0ea9aafc-96b2-43ee-98cd-320678da66f9")
+	)
+	(hierarchical_label "RX"
+		(shape input)
+		(at 59.69 46.99 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4d4eefed-de71-4364-89e2-e9609e58796d")
+	)
+)
