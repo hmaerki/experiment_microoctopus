@@ -10,7 +10,7 @@
 		(comment 1 "The MIT License (MIT)")
 	)
 	(lib_symbols)
-	(hierarchical_label "26 {slash} GP20 {slash} trigger1"
+	(hierarchical_label "GP20 {slash} trigger1"
 		(shape input)
 		(at 82.55 64.77 0)
 		(fields_autoplaced yes)
@@ -22,9 +22,9 @@
 		)
 		(uuid "376f06aa-459c-4b76-b7d5-c0d1aad2d41d")
 	)
-	(hierarchical_label "25 {slash} GP19 {slash} SCL"
+	(hierarchical_label "GP19 {slash} SCL"
 		(shape input)
-		(at 82.55 86.36 0)
+		(at 82.55 83.82 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -34,9 +34,9 @@
 		)
 		(uuid "38b44045-9cf7-4540-a856-7795a52e1042")
 	)
-	(hierarchical_label "19 {slash} GP14 {slash} onewire"
+	(hierarchical_label "GP14 {slash} onewire"
 		(shape input)
-		(at 82.55 91.44 0)
+		(at 82.55 87.63 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -46,9 +46,9 @@
 		)
 		(uuid "5b54f01c-d3ad-489b-b65b-e5a8e319f019")
 	)
-	(hierarchical_label "24 {slash} GP18 {slash} SDA"
+	(hierarchical_label "GP18 {slash} SDA"
 		(shape input)
-		(at 82.55 81.28 0)
+		(at 82.55 80.01 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -58,7 +58,7 @@
 		)
 		(uuid "9d5ee2c7-4ae0-4d2a-bd14-9e2e542724e0")
 	)
-	(hierarchical_label "22 {slash} GP17 {slash} RX"
+	(hierarchical_label "GP17 {slash} RX"
 		(shape input)
 		(at 82.55 76.2 0)
 		(fields_autoplaced yes)
@@ -82,7 +82,7 @@
 		)
 		(uuid "b3b4b5cf-022a-4c23-acd9-10947a887f7f")
 	)
-	(hierarchical_label "27 {slash} GP21 {slash} trigger2"
+	(hierarchical_label "GP21 {slash} trigger2"
 		(shape input)
 		(at 82.55 68.58 0)
 		(fields_autoplaced yes)
@@ -94,7 +94,7 @@
 		)
 		(uuid "b47cb48e-ebe0-4a5d-b539-2e8214688fdd")
 	)
-	(hierarchical_label "21 {slash} GP16 {slash} TX"
+	(hierarchical_label "GP16 {slash} TX"
 		(shape input)
 		(at 82.55 72.39 0)
 		(fields_autoplaced yes)

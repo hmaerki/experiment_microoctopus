@@ -2276,7 +2276,7 @@
 	)
 	(sheet
 		(at 185.42 49.53)
-		(size 40.64 35.56)
+		(size 33.02 36.83)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -2297,7 +2297,7 @@
 			)
 		)
 		(property "Sheetfile" "mcu_raspberry_rp2.kicad_sch"
-			(at 185.42 85.6746 0)
+			(at 185.42 86.9446 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2305,7 +2305,7 @@
 				(justify left top)
 			)
 		)
-		(pin "21 {slash} GP16 {slash} TX" input
+		(pin "GP16 {slash} TX" input
 			(at 185.42 68.58 180)
 			(effects
 				(font
@@ -2315,7 +2315,7 @@
 			)
 			(uuid "e86c2470-c361-4591-ba33-20ba8fb444ec")
 		)
-		(pin "26 {slash} GP20 {slash} trigger1" input
+		(pin "GP20 {slash} trigger1" input
 			(at 185.42 58.42 180)
 			(effects
 				(font
@@ -2335,7 +2335,7 @@
 			)
 			(uuid "c423c852-181c-4978-8f36-efa0415bf8e6")
 		)
-		(pin "27 {slash} GP21 {slash} trigger2" input
+		(pin "GP21 {slash} trigger2" input
 			(at 185.42 63.5 180)
 			(effects
 				(font
@@ -2345,7 +2345,7 @@
 			)
 			(uuid "89a1a0c8-6224-4af2-b660-becef588685f")
 		)
-		(pin "22 {slash} GP17 {slash} RX" input
+		(pin "GP17 {slash} RX" input
 			(at 185.42 78.74 180)
 			(effects
 				(font
@@ -2355,7 +2355,7 @@
 			)
 			(uuid "5e9222c6-9506-49d6-b985-7df7473560cd")
 		)
-		(pin "24 {slash} GP18 {slash} SDA" input
+		(pin "GP18 {slash} SDA" input
 			(at 185.42 81.28 180)
 			(effects
 				(font
@@ -2365,7 +2365,7 @@
 			)
 			(uuid "5bd19942-cd6b-4fbe-9f89-b69ec37f3755")
 		)
-		(pin "25 {slash} GP19 {slash} SCL" input
+		(pin "GP19 {slash} SCL" input
 			(at 185.42 71.12 180)
 			(effects
 				(font
@@ -2375,7 +2375,7 @@
 			)
 			(uuid "095d4420-8dc3-4ba6-b136-84ed81bf8556")
 		)
-		(pin "19 {slash} GP14 {slash} onewire" input
+		(pin "GP14 {slash} onewire" input
 			(at 185.42 73.66 180)
 			(effects
 				(font

@@ -1,6 +1,6 @@
 # `TENTACLE_MCU_GROBOTICS_PYBAORD`
 
-![](tentacle_layout.jpg)
+![](top_view.jpg)
 
 
 ![](https://micropython.org/resources/pybv11-pinout.jpg)

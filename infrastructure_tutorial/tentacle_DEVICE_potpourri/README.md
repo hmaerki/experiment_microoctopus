@@ -2,13 +2,8 @@
 
 This tentacle comines many features, thus `potpourry`.
 
-![](tentacle_layout.jpg)
+![](top_view.jpg)
 
-## DAQ
-
-The DAQ is read out using sigrok.
-
-In a prober design, the DAQ would be on its own tentacle. But for now it is ok to  
 
 ## FUT - Feature Tnder Test
 

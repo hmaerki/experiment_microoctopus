@@ -15,17 +15,20 @@ Another aspect is how the documention/specification of the infrastructure and te
 
 ## How to use this specification / rationale
 
-* Define `signal_labels`: These labels have to be used in
+* Define **signal_labels**: These labels have to be used in
   * tentacle schematics
   * test source code
+  * Example `SIGNAL_DATA1`
 
-* Define `fut_labels` (`FUT`: Feature Under Test):
+* Define **fut_labels** (`FUT`: Feature Under Test):
   * These labels have to be used in
     * tentacle configuration
     * test code markers
+  * Example `FUT_I2C`
 
-* Define `tentacle_role`: These labels have to be used in
+* Define **tentacle_role**: These labels have to be used in
   * tentacle configuration
+  * Example `TENTACLE_MCU_xxx`/`TENTACLE_DEVICE_xxx`
 
 Define what may be tested with this infrastructure.
 
@@ -143,14 +146,18 @@ How to electrically override `SIGNAL_DATA1/2`:
 
 [Schematics](schematics_kicad/schematics.pdf)
 
-## Implementation `TENTACLE_DEVICE_GROBOTICS_PYBAORD`
+## Implementation `TENTACLE_MCU_GROBOTICS_PYBAORD`
 
-[README.md](tenacle_MCU_grobotics_pyboard/README.md)
+[README.md](tentacle_MCU_grobotics_pyboard/README.md)
 
-## Implementation `TENTACLE_DEVICE_RASPBERRY_PICO`
+## Implementation `TENTACLE_MCU_RASPBERRY_PICO`
 
-[README.md](tenacle_MCU_raspberry_pico/README.md)
+[README.md](tentacle_MCU_raspberry_pico/README.md)
 
 ## Implementation `TENTACLE_DEVICE_POTPOURRY`
 
 [README.md](tentacle_DEVICE_potpourri/README.md)
+
+## Implementation `TENTACLE_DAQ_SALEAE`
+
+[README.md](tentacle_DAQ_saleae/README.md)
