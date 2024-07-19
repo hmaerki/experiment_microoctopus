@@ -70,6 +70,18 @@
 		)
 		(uuid "a542c905-abf1-4f07-ac8f-80c94ce1cbb3")
 	)
+	(hierarchical_label "GND"
+		(shape input)
+		(at 69.85 77.47 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "bae17a63-2f6c-41b6-8fa5-034cb4427b83")
+	)
 	(hierarchical_label "X3 {slash} tx"
 		(shape input)
 		(at 69.85 69.85 0)

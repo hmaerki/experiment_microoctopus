@@ -10,6 +10,18 @@
 		(comment 1 "The MIT License (MIT)")
 	)
 	(lib_symbols)
+	(hierarchical_label "GND"
+		(shape input)
+		(at 82.55 91.44 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "06ab8b17-c692-402f-9380-e576860b1a63")
+	)
 	(hierarchical_label "GP20 {slash} trigger1"
 		(shape input)
 		(at 82.55 64.77 0)

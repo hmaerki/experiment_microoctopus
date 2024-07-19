@@ -1583,6 +1583,16 @@
 	)
 	(wire
 		(pts
+			(xy 179.07 91.44) (xy 173.99 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "45e5a9e1-a234-402d-9030-f5dcbb8a3141")
+	)
+	(wire
+		(pts
 			(xy 72.39 69.85) (xy 74.93 69.85)
 		)
 		(stroke
@@ -1630,6 +1640,16 @@
 			(type default)
 		)
 		(uuid "8b63298f-9097-4b95-b060-82a5547d88ce")
+	)
+	(wire
+		(pts
+			(xy 173.99 91.44) (xy 173.99 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "95ef3e1e-b8a1-4711-b7a9-4cad1d44fc87")
 	)
 	(wire
 		(pts
@@ -2139,6 +2159,72 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 173.99 93.98 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "871a0f5f-3621-4ecb-93f4-0b0087b7a94e")
+		(property "Reference" "#PWR0303"
+			(at 173.99 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 173.99 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 173.99 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 173.99 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 173.99 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ae969526-9fe0-41ba-a89a-80c09dda58d1")
+		)
+		(instances
+			(project "infrastructure"
+				(path "/188054c4-74b7-429a-b3f5-c6f3151e27de/a196d1ad-2a7e-47a3-8a53-65ea8ad08c90"
+					(reference "#PWR0303")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 48.26 100.33 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2371,6 +2457,16 @@
 				(justify left)
 			)
 			(uuid "8c4d8834-a697-485e-ad03-f646eda51e35")
+		)
+		(pin "GND" input
+			(at 179.07 91.44 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "aac3484d-a171-4236-82b9-db61e778003e")
 		)
 		(instances
 			(project "infrastructure"
