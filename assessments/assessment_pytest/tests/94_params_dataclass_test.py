@@ -9,6 +9,7 @@ Benefits are:
 * Ease to control the id (in pytest displayed within [])
 * May be used in standalone tests without pytest.
 """
+
 from dataclasses import dataclass
 import pytest
 

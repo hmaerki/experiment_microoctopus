@@ -5,13 +5,15 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Assessment pytest",
+            "name": "pytest assessment_pytest",
             "type": "debugpy",
             "request": "launch",
             "module": "pytest",
             "cwd": "${workspaceFolder}/assessments/assessment_pytest",
             "args": [
                 "-v",
+                "-s",
+                "tests/test_fut_uart2.py"
             ],
             "console": "integratedTerminal",
             "justMyCode": false

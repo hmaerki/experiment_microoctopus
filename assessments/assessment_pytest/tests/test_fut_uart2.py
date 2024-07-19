@@ -146,7 +146,7 @@ class ParameterTentacles:
         return ident
 
     @classmethod
-    def add_marker(cls, list_parameters: list[ParameterTentacles]) -> None:
+    def add_marker(cls, list_parameters: list[ParameterTentacles]) -> list:
         """
         The list of parameters is wrapped with 'pytest.param' which
         allows to add markers and the id.
@@ -178,7 +178,7 @@ class ParameterTentacles:
 
 
 def pytest_generate_tests(metafunc: pytest.Metafunc) -> None:
-    if "param" in metafunc.fixturenames:
+    if "param2" in metafunc.fixturenames:
         # Generate test cases based on the user_roles list
 
         print(metafunc.definition.nodeid)
@@ -191,14 +191,9 @@ def pytest_generate_tests(metafunc: pytest.Metafunc) -> None:
                     return marker
             assert False
 
-        marker_required_tentacles = get_marker(name="required_tentacles")
-        tentacle_types = marker_required_tentacles.kwargs["tentacle_types"]
-        assert isinstance(tentacle_types, list)
-
-        marker_required_futs = get_marker(name="required_futs")
-        futs_types = marker_required_futs.kwargs["fut_types"]
-        assert isinstance(futs_types, list)
-        required = Required(tentacle_types=tentacle_types, fut_types=futs_types)
+        marker_required = get_marker(name="required")
+        required = marker_required.kwargs["required"]
+        assert isinstance(required, Required)
 
         list_tentacles_selected = INFRASTRUCTURE.select_tentacles(required=required)
 
@@ -213,54 +208,62 @@ def pytest_generate_tests(metafunc: pytest.Metafunc) -> None:
                 )
             )
 
-        metafunc.parametrize("param", ParameterTentacles.add_marker(list_test_runs))
+        metafunc.parametrize("param2", ParameterTentacles.add_marker(list_test_runs))
 
 
-@pytest.mark.required_tentacles(
-    tentacle_types=[
-        TentacleType.TENTACLE_MCU,
-        TentacleType.TENTACLE_DEVICE,
-        TentacleType.TENTACLE_DAQ,
-    ]
+@pytest.mark.required(required=
+    Required(
+        tentacle_types=[
+            TentacleType.TENTACLE_MCU,
+            TentacleType.TENTACLE_DEVICE,
+            TentacleType.TENTACLE_DAQ,
+        ],
+        fut_types=[EnumFut.FUT_UART],
+    )
 )
-@pytest.mark.required_futs(fut_types=[EnumFut.FUT_UART])
-def test_uart(param: ParameterTentacles) -> None:
-    if "TENTACLE_MCU_RP2" in param.tentacle_mcu.tag:
+def test_uart(param2: ParameterTentacles) -> None:
+    if "TENTACLE_MCU_RP2" in param2.tentacle_mcu.tag:
         pytest.skip("mcu not supported")
-    print(param.tentacle_mcu.tag)
+    print(param2.tentacle_mcu.tag)
 
 
-@pytest.mark.required_tentacles(
-    tentacle_types=[
-        TentacleType.TENTACLE_MCU,
-        TentacleType.TENTACLE_DEVICE,
-        TentacleType.TENTACLE_DAQ,
-    ]
+@pytest.mark.required(required=
+    Required(
+        tentacle_types=[
+            TentacleType.TENTACLE_MCU,
+            TentacleType.TENTACLE_DEVICE,
+            TentacleType.TENTACLE_DAQ,
+        ],
+        fut_types=[EnumFut.FUT_I2C],
+    )
 )
-@pytest.mark.required_futs(fut_types=[EnumFut.FUT_I2C])
-def test_i2c(param: ParameterTentacles) -> None:
-    if "TENTACLE_MCU_RP2" in param.tentacle_mcu.tag:
+def test_i2c(param2: ParameterTentacles) -> None:
+    if "TENTACLE_MCU_RP2" in param2.tentacle_mcu.tag:
         pytest.skip("mcu not supported")
-    print(param.tentacle_mcu.tag)
+    print(param2.tentacle_mcu.tag)
 
 
 class TestPotpourry:
-    @pytest.mark.required_tentacles(
-        tentacle_types=[
-            TentacleType.TENTACLE_MCU,
-            TentacleType.TENTACLE_DEVICE,
-        ]
+    @pytest.mark.required(required=
+        Required(
+            tentacle_types=[
+                TentacleType.TENTACLE_MCU,
+                TentacleType.TENTACLE_DEVICE,
+            ],
+            fut_types=[EnumFut.FUT_UART],
+        )
     )
-    @pytest.mark.required_futs(fut_types=[EnumFut.FUT_UART])
-    def test_uart(self, param: ParameterTentacles) -> None:
+    def test_uart(self, param2: ParameterTentacles) -> None:
         pass
 
-    @pytest.mark.required_tentacles(
-        tentacle_types=[
-            TentacleType.TENTACLE_MCU,
-            TentacleType.TENTACLE_DEVICE,
-        ]
+    @pytest.mark.required(required=
+        Required(
+            tentacle_types=[
+                TentacleType.TENTACLE_MCU,
+                TentacleType.TENTACLE_DEVICE,
+            ],
+            fut_types=[EnumFut.FUT_I2C],
+        )
     )
-    @pytest.mark.required_futs(fut_types=[EnumFut.FUT_I2C])
-    def test_i2c(self, param: ParameterTentacles) -> None:
+    def test_i2c(self, param2: ParameterTentacles) -> None:
         pass
