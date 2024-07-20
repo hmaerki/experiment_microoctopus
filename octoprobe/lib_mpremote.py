@@ -1,8 +1,11 @@
+from __future__ import annotations
+
 import logging
 from typing import Any, Self
 
 from mpremote.main import State  # type: ignore
 from mpremote.transport_serial import SerialTransport, TransportError  # type: ignore
+from .util_jinja2 import render
 
 logger = logging.getLogger(__file__)
 
@@ -30,6 +33,10 @@ class MpRemote:
     def __exit__(self, exc_type: Any, exc_val: Any, exc_tb: Any) -> None:
         self.close()
 
+    def exec_render(self, micropython_code: str, follow: bool = True, **kwargs) -> str:
+        mp_program = render(micropython_code=micropython_code, **kwargs)
+        self.exec_raw(mp_program)
+
     def exec_raw(self, cmd: str, follow: bool = True) -> str:
         """
         Derived from mpremote.commands.do_exec / do_execbuffer
@@ -52,6 +59,36 @@ class MpRemote:
 
         assert isinstance(ret, bytes)
         return ret.decode("utf-8")
+
+    def _read_var(self, name: str) -> Any:
+        value_text = self.exec_raw(f"print({name})")
+        return eval(value_text)
+        return value
+
+    def read_int(self, name: str) -> int:
+        v = self._read_var(name)
+        assert isinstance(v, int)
+        return v
+
+    def read_float(self, name: str) -> float:
+        v = self._read_var(name)
+        assert isinstance(v, float)
+        return v
+
+    def read_str(self, name: str) -> str:
+        v = self._read_var(name)
+        assert isinstance(v, str)
+        return v
+
+    def read_bytes(self, name: str) -> bytes:
+        v = self._read_var(name)
+        assert isinstance(v, bytes)
+        return v
+
+    def read_list(self, name: str) -> list:
+        v = self._read_var(name)
+        assert isinstance(v, list | tuple)
+        return v
 
     def close(self) -> None:
         self.state.transport.close()

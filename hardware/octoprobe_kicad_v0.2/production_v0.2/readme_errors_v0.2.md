@@ -10,3 +10,9 @@ Relay Vorwiderstand: 3k9 / 390. Schema: (3.3V-1.25V)/5mA=409Ohm
 
 Octobus: switch 1 and 2: Do NOT mirror!
 Octobus: white dot on both sides (possibly 1, 2, 40)
+Octobus: silkscreen on back
+
+Silkscreen Relay nach oben
+LED Relay nach oben
+
+Relay silkscreen labels on back

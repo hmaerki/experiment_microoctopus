@@ -2,14 +2,23 @@ from __future__ import annotations
 
 import dataclasses
 import io
+import logging
+import time
 from collections.abc import Iterator
+from contextlib import contextmanager
 
 from usbhubctl import DualConnectedHub, Hub
 
+from octoprobe import util_usb_serial
+from octoprobe.infrastructure_tutorial.config_constants import EnumFut
+from octoprobe.lib_infra_mcu import McuInfra
+
+from . import util_power
 from .lib_mpremote import MpRemote
-from .util_baseclasses import TentacleType
+from .util_baseclasses import TentacleSpec
 from .util_constants import DIRECTORY_DOWNLOADS
-from .util_programmers import DutProgrammer, programmer_factory
+from .util_dut_mcu import DutMcu, TAG_MCU, dut_mcu_factory
+from .util_dut_programmers import DutProgrammer, FirmwareSpec, dut_programmer_factory
 from .util_pyudev import UdevEventBase, UdevPoller
 from .util_rp2 import (
     UDEV_FILTER_RP2_APPLICATION_MODE,
@@ -18,44 +27,80 @@ from .util_rp2 import (
     rp2_flash_micropython,
 )
 
+logger = logging.getLogger(__file__)
 
-@dataclasses.dataclass
-class Tentacle:
-    infra_rp2_unique_id: str
-    tentacle_type: TentacleType
-    builtin_hub: UsbHub | None = None
-    plug_infra: UsbPlug | None = None
-    plug_dut: UsbPlug | None = None
-    mp_remote_infra: MpRemote | None = None
-    mp_remote_dut: MpRemote | None = None
-    programmer_dut: DutProgrammer | None = None
+
+class Tentacle[T]:
+    RELAY_COUNT = 5
+    LIST_ALL_RELAYS = list(range(1, RELAY_COUNT + 1))
+
+    @staticmethod
+    def is_valid_relay_index(i: int) -> bool:
+        return 1 <= i <= Tentacle.RELAY_COUNT
+
+    def __init__(
+        self,
+        tentacle_serial_number: str,
+        tentacle_spec: TentacleSpec[T],
+        firmware_spec: FirmwareSpec | None = None,
+    ) -> None:
+        self.tentacle_serial_number = tentacle_serial_number
+        self.tentacle_spec = tentacle_spec
+        self.hub: util_usb_serial.QueryResultTentacle | None = None
+        self.mp_remote_infra: MpRemote | None = None
+        self.mp_remote_dut: MpRemote | None = None
+        self._dut_programmer: DutProgrammer | None = None
+        self._dut_mcu: DutMcu | None = None
+        self._power: util_power.TentaclePlugsPower | None = None
+        self.firmware_spec = firmware_spec
+        self.mcu_infra: McuInfra = McuInfra(self)
 
     def __post_init__(self) -> None:
-        if self.builtin_hub is None:
-            assert isinstance(self.plug_infra, UsbPlug)
-            assert isinstance(self.plug_dut, UsbPlug)
-            return
-        assert self.plug_infra is None
-        assert self.plug_dut is None
-        self.plug_infra = self.builtin_hub.get_plug(1)
-        self.plug_dut = self.builtin_hub.get_plug(3)
+        assert (
+            self.tentacle_serial_number == self.tentacle_serial_number.lower()
+        ), f"Must not contain upper case letters: {self.tentacle_serial_number}"
+        if self.firmware_spec is not None:
+            assert self.firmware_spec.filename.is_file(), str(
+                self.firmware_spec.filename
+            )
 
     @property
     def description_short(self) -> str:
-        assert self.plug_infra is not None
-        assert self.plug_dut is not None
-
         f = io.StringIO()
-        f.write(f"Label {self.tentacle_type.label}\n")
-        f.write(f"  infra unique id {self.infra_rp2_unique_id}\n")
-
-        f.write(f"  plug_infra: {self.plug_infra.description_short}\n")
-        f.write(f"  plug_dut: {self.plug_dut.description_short}\n")
+        f.write(f"Label {self.tentacle_spec.label}\n")
+        f.write(f"  tentacle_serial_number {self.tentacle_serial_number}\n")
 
         return f.getvalue()
 
     def _label(self, dut_or_infra: str) -> str:
-        return f"Tentacle {dut_or_infra} {self.infra_rp2_unique_id}({self.tentacle_type.label})"
+        return f"Tentacle {dut_or_infra} {self.tentacle_serial_number}({self.tentacle_spec.label})"
+
+    def has_required_futs(self, required_futs: list[EnumFut]) -> bool:
+        for required_fut in required_futs:
+            if required_fut in self.tentacle_spec.futs:
+                return True
+        return False
+
+    @property
+    def dut_programmer(self) -> DutProgrammer:
+        if self._dut_programmer is None:
+            self._dut_programmer = dut_programmer_factory(tags=self.tentacle_spec.tags)
+        return self._dut_programmer
+
+    @property
+    def dut_mcu(self) -> DutMcu:
+        if self._dut_mcu is None:
+            self._dut_mcu = dut_mcu_factory(tags=self.tentacle_spec.tags)
+        return self._dut_mcu
+
+    @property
+    def power(self) -> util_power.TentaclePlugsPower:
+        assert self.hub is not None
+        if self._power is None:
+            self._power = util_power.TentaclePlugsPower(
+                hub_location=self.hub.hub_location
+            )
+        return self._power
 
     @property
     def label(self) -> str:
@@ -69,50 +114,124 @@ class Tentacle:
     def label_infra(self) -> str:
         return self._label(dut_or_infra="INFRA ")
 
-    def assign_connected_hub(self, connected_hub: DualConnectedHub) -> None:
-        assert self.builtin_hub is not None
-        self.builtin_hub.connected_hub = connected_hub
+    def power_dut_off_and_wait(self) -> None:
+        """
+        Use this instead of 'self.power.dut = False'
+        """
+        if self.power.dut:
+            self.power.dut = False
+            self.mp_remote_dut = None
+            time.sleep(0.5)
 
-    def infra_relay(self, number: int, close: bool) -> None:
-        assert self.mp_remote_infra is not None
+    def assign_connected_hub(
+        self,
+        query_result_tentacle: util_usb_serial.QueryResultTentacle,
+    ) -> None:
+        assert isinstance(query_result_tentacle, util_usb_serial.QueryResultTentacle)
+        self.hub = query_result_tentacle
 
-        gpio = {
-            1: "GPIO1",
-            2: "GPIO2",
-            3: "GPIO3",
-            4: "GPIO4",
-            5: "GPIO8",
-        }[number]
-        cmd_relay = f"""
-from machine import Pin
+    @property
+    def pytest_id(self) -> str:
+        name = self.tentacle_spec.tentacle_type.name
+        if name.startswith("TENTACLE_MCU"):
+            name = self.tentacle_spec.get_property(TAG_MCU)
+            assert name is not None
+        name = name.replace("TENTACLE_DEVICE_", "").replace("TENTACLE_", "")
+        return name + "_" + self.tentacle_serial_number[-4:]
 
-pin_relay1 = Pin('{gpio}', Pin.OUT)
-pin_relay1.value({int(close)})
-"""
-        self.mp_remote_infra.exec_raw(cmd=cmd_relay)
+    def get_property(self, tag: str) -> str | None:
+        return self.tentacle_spec.get_property(tag=tag)
 
-    def flash_dut(self, udev: UdevPoller) -> None:
-        if self.plug_dut is None:
-            return
+    @property
+    @contextmanager
+    def active_led(self) -> None:
+        try:
+            self.mcu_infra.active_led(on=True)
+            yield
+        finally:
+            self.mcu_infra.active_led(on=False)
 
-        self.programmer_dut = programmer_factory(tags=self.tentacle_type.tags)
-        if self.programmer_dut is None:
-            return
-
-        tty = self.programmer_dut.flash(tentacle=self, udev=udev, plug=self.plug_dut)
-
+    def boot_and_init_mp_remote_dut(self, udev: UdevPoller) -> None:
         assert self.mp_remote_dut is None
+        tty = self.dut_mcu.application_mode_power_up(tentacle=self, udev=udev)
         self.mp_remote_dut = MpRemote(tty=tty)
 
-        hallo = self.mp_remote_dut.exec_raw("print('Hallo')").strip()
-        assert hallo == "Hallo"
+    def dut_installed_firmware_version(self) -> str:
+        """
+        Example:
+        >>> import sys
+        >>> sys.version
+        '3.4.0; MicroPython v1.20.0 on 2023-04-26'
+        """
+        assert self.mp_remote_dut is not None
+        version = self.mp_remote_dut.exec_raw("import sys; print(sys.version)")
+        return version.strip()
 
-    def all_plugs_power_off(self) -> None:
-        for plug in (self.plug_infra, self.plug_dut):
-            if plug is not None:
-                plug.power = False
+    def dut_required_firmware_already_installed(
+        self, exception_text: str | None = None
+    ) -> bool:
+        installed_version = self.dut_installed_firmware_version()
+        assert self.firmware_spec is not None
+        assert self.firmware_spec.micropython_version_text is not None
+        versions_equal = (
+            self.firmware_spec.micropython_version_text == installed_version
+        )
+        if exception_text is not None:
+            if not versions_equal:
+                raise ValueError(
+                    f"{exception_text}: Version installed '{installed_version}', but expected '{self.firmware_spec.micropython_version_text}'!"
+                )
+        return versions_equal
 
-    def rp2_get_unique_id(self, event: UdevEventBase) -> str:
+    def flash_dut(self, udev: UdevPoller) -> None:
+        assert self.hub is not None
+        if self.firmware_spec is None:
+            return
+
+        try:
+            self.boot_and_init_mp_remote_dut(udev=udev)
+            if self.dut_required_firmware_already_installed():
+                logger.info(f"{self.label_dut}: firmware is already installed")
+                return
+
+        except TimeoutError as e:
+            logger.debug(f"DUT seems not to have firmware installed: {e!r}")
+
+        tty = self.dut_programmer.flash(tentacle=self, udev=udev)
+        self.mp_remote_dut = MpRemote(tty=tty)
+
+        self.dut_required_firmware_already_installed(
+            exception_text=f"DUT: After installing {self.firmware_spec.filename}"
+        )
+
+    def dut_power_off(self) -> None:
+        self.power.dut = False
+        self.mp_remote_dut = None
+
+    def rp2_test_mp_remote(self) -> None:
+        assert self.mp_remote_infra is None
+        assert self.hub is not None
+        assert self.hub.rp2_serial_port is not None
+        self.mp_remote_infra = MpRemote(tty=self.hub.rp2_serial_port)
+        mp_program = """
+import machine
+import ubinascii
+
+def get_unique_id():
+    return ubinascii.hexlify(machine.unique_id()).decode('ascii')
+"""
+        self.mp_remote_infra.exec_raw(mp_program)
+        unique_id = self.mp_remote_infra.exec_raw("print(get_unique_id())")
+        unique_id = unique_id.strip()
+        assert self.hub.rp2_serial_number == unique_id
+
+        main_exists = self.mp_remote_infra.exec_raw(
+            "import os; print('main.py' in os.listdir())"
+        )
+        if eval(main_exists):
+            raise ValueError(f"{self.label_infra}: Found 'main.py': Please remove it!")
+
+    def rp2_get_unique_id_obsolete(self, event: UdevEventBase) -> str:
         assert isinstance(event, UdevApplicationModeEvent)
 
         assert self.mp_remote_infra is None
@@ -130,14 +249,14 @@ def get_unique_id():
         return unique_id.strip()
 
     def setup_infra(self, udev: UdevPoller) -> None:
-        if self.plug_infra is None:
-            return
-
-        # Tentacle v0.2: remove return
+        self.rp2_test_mp_remote()
         return
 
+        if self.hub is None:
+            return
+
         with udev.guard as guard:
-            self.plug_infra.power = True
+            self.power_(plugs={util_power.UsbPlug.INFRA, True})
 
             event = guard.expect_event(
                 UDEV_FILTER_RP2_BOOT_MODE,
@@ -157,7 +276,7 @@ def get_unique_id():
             )
 
         unique_id = self.rp2_get_unique_id(event)
-        assert unique_id == self.infra_rp2_unique_id
+        assert unique_id == self.tentacle_serial_number
 
 
 @dataclasses.dataclass

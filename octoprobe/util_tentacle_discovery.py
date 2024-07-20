@@ -88,9 +88,9 @@ class QuerySerial:
                 print("  Not connected to octohub!")
                 continue
 
-    def find(self, rp2_unique_id: str) -> ConnectedRP2:
+    def find(self, tentacle_serial_number: str) -> ConnectedRP2:
         for rp2 in self.list_rp2_mode_application:
-            if rp2.serial_number.upper() == rp2_unique_id:
+            if rp2.serial_number.upper() == tentacle_serial_number:
                 # def location_2_path(location: str) -> usbhubctl.Path:
                 #     # Example rp2.location: '3-1.4.1.1:1.0'
                 #     location, _, _ = location.partition(":")
@@ -109,8 +109,10 @@ class QuerySerial:
                 # )
                 usb_path = usbhubctl.Path.serial_factory(location=rp2.location)
                 return ConnectedRP2(
-                    rp2_unique_id=rp2_unique_id,
+                    rp2_unique_id=tentacle_serial_number,
                     uart=rp2.device,
                     usb_path=usb_path,
                 )
-        raise IndexError(f"Tentacle with rp2_unique_id={rp2_unique_id} not found!")
+        raise IndexError(
+            f"Tentacle with rp2_unique_id={tentacle_serial_number} not found!"
+        )

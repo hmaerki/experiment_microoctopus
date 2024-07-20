@@ -1,5 +1,7 @@
 import dataclasses
 
+from octoprobe.infrastructure_tutorial.config_constants import EnumFut, TentacleType
+
 
 @dataclasses.dataclass(frozen=True)
 class PropertyString:
@@ -21,15 +23,15 @@ class PropertyString:
 
 
 @dataclasses.dataclass
-class TentacleType:
+class TentacleSpec[T]:
+    tentacle_type: TentacleType
+    futs: list[EnumFut]
     category: str
     label: str
     doc: str
     tags: str
-    octobus: str
-    relay_1: str | None = None
-    relay_2: str | None = None
-    relay_3: str | None = None
-    relay_4: str | None = None
-    relay_5: str | None = None
-    relay_6: str | None = None
+    relays_closed: dict[EnumFut, list[int]]
+    mcu_config: T | None = None
+
+    def get_property(self, tag: str) -> str | None:
+        return PropertyString(self.tags).get_tag(tag)

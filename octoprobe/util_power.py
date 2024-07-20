@@ -65,6 +65,7 @@ class UsbPlugs:
         return sign + up.value
 
     def power(self, hub_location: Location) -> None:
+        assert isinstance(hub_location, Location)
         connected_hub = util_octohub4.location_2_connected_hub(location=hub_location)
         for plug, on in self.plugs.items():
             p = connected_hub.get_plug(plug.nummer)
@@ -81,3 +82,46 @@ class UsbPlugs:
     @classmethod
     def default_off(cls) -> UsbPlugs:
         return UsbPlugs(plugs=cls._DICT_DEFAULT_OFF)
+
+
+class TentaclePlugsPower:
+    def __init__(self, hub_location: Location) -> None:
+        self._hub_location = hub_location
+        self._plugs = UsbPlugs()
+
+    @property
+    def infra(self) -> bool:
+        return self._plugs.plugs[UsbPlug.INFRA]
+
+    @infra.setter
+    def infra(self, on: bool) -> None:
+        self._power(UsbPlug.INFRA, on)
+
+    @property
+    def infraboot(self) -> bool:
+        return self._plugs.plugs[UsbPlug.INFRABOOT]
+
+    @infraboot.setter
+    def infraboot(self, on: bool) -> None:
+        self._power(UsbPlug.INFRABOOT, on)
+
+    @property
+    def dut(self) -> bool:
+        return self._plugs.plugs[UsbPlug.DUT]
+
+    @dut.setter
+    def dut(self, on: bool) -> None:
+        self._power(UsbPlug.DUT, on)
+
+    @property
+    def error(self) -> bool:
+        return self._plugs.plugs[UsbPlug.ERROR]
+
+    @error.setter
+    def error(self, on: bool) -> None:
+        self._power(UsbPlug.ERROR, on)
+
+    def _power(self, plug: UsbPlug, on: bool) -> None:
+        plugs = UsbPlugs(plugs={plug: on})
+        plugs.power(self._hub_location)
+        self._plugs.plugs[plug] = on

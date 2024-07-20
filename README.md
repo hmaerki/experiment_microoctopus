@@ -1,6 +1,8 @@
 
 # microOctopus - Micropython Testinfrastructure
 
+** microOctopus has been renamed to OctoProbe. This repo will be moved to github/octoprobe **
+
 Ideas on how to set up a micropython testenvironment
 
 ![microOctopus](branding/images/uOctopus-pytest.png)

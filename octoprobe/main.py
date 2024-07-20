@@ -3,18 +3,16 @@ import time
 
 from usbhubctl.util_logging import init_logging
 
-from octoprobe.config.config_infrastructure_wetzikon_a import (
+from octoprobe.infrastructure_tutorial.config_workplace_ch_wetzikon import (
     INFRASTRUCTURE,
-    tentacle_pyboard,
-    tentacle_seed_pico,
 )
-from octoprobe.octoprobe import Runner
+from octoprobe.octoprobe import NTestRun
 
 logger = logging.getLogger(__file__)
 
 
 class DutPyboard:
-    def __init__(self, runner: Runner):
+    def __init__(self, runner: NTestRun):
         self.runner = runner
 
 
@@ -24,21 +22,17 @@ def main() -> None:
     start_s = time.monotonic()
     print(INFRASTRUCTURE.description_short)
 
-    runner = Runner(
-        infrastructure=INFRASTRUCTURE,
-        active_tentacles=[
-            tentacle_pyboard,
-            tentacle_seed_pico,
-        ],
-    )
+    runner = NTestRun(infrastructure=INFRASTRUCTURE)
 
-    runner.find_active_tentacles()
+    runner.session_powercycle_tentacles()
 
-    runner.setup_infra()
+    runner.function_prepare_dut()
+    runner.function_setup_infra()
+    runner.function_setup_dut()
 
-    runner.setup_dut()
+    runner.run()
 
-    runner.teardown()
+    runner.session_teardown()
     logger.info(f"duration {time.monotonic()-start_s:0.1f}s")
 
 

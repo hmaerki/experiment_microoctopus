@@ -60,8 +60,8 @@ Tentacle roles
 | Tentacle role | Comment |
 | - | - |
 | `TENTACLE_MCU` | A microprocessor tentacle |
-| `TENTACLE_DEVICE` | A device tentacle |
-| `TENTACLE_DAQ` | Dataaquisition and error provoking |
+| `TENTACLE_DEVICE_POTPOURRY` | A tentacle with several devices |
+| `TENTACLE_DAQ_SALEAE` | Dataaquisition and error provoking |
 
 
 
@@ -70,18 +70,18 @@ Tentacle roles
 * Test proposals
   * Clock dividers, timers
     * stimuly: `TENTACLE_MCU` generates pulse or PWM on `SIGNAL_TRIGGER1/2`.
-    * expected: `TENTACLE_DAQ` verifies this pulse.
+    * expected: `TENTACLE_DAQ_SALEAE` verifies this pulse.
 
 
 ## Feature under test `FUT_I2C`.
 
 * Electrical setup
   * Exacly one `TENTACLE_MCU` connects to `SIGNAL_DATA1/2`.
-  * Exactly one `TENTACLE_DEVICE` connects to `SIGNAL_DATA1/2`. This tentacle must provide the I2C pull ups.
+  * Exactly one `TENTACLE_DEVICE_POTPOURRY` connects to `SIGNAL_DATA1/2`. This tentacle must provide the I2C pull ups.
 
 * Test proposals
   * Datatransfer
-    * stimuly: `TENTACLE_MCU` acts as a I2C-controller and the `TENTACLE_DEVICE` as a I2C-target.
+    * stimuly: `TENTACLE_MCU` acts as a I2C-controller and the `TENTACLE_DEVICE_POTPOURRY` as a I2C-target.
     * expected: meaningful data
   * Errors
     * See comments below
@@ -91,8 +91,8 @@ Tentacle roles
 
 * Electrical setup
   * Exacly one `TENTACLE_MCU` connects to `SIGNAL_DATA1/2` and `SIGNAL_TRIGGER1/2`.
-    * The TX pin of `TENTACLE_MCU` / `TENTACLE_DEVICE` requires a serial 1k resistor. This allows the `TENTACLE_DAQ` to destroy the signal.
-  * Exactly one `TENTACLE_DEVICE` connects to `SIGNAL_DATA1/2`.
+    * The TX pin of `TENTACLE_MCU` / `TENTACLE_DEVICE_POTPOURRY` requires a serial 1k resistor. This allows the `TENTACLE_DAQ_SALEAE` to destroy the signal.
+  * Exactly one `TENTACLE_DEVICE_POTPOURRY` connects to `SIGNAL_DATA1/2`.
 
 * Test proposals
   * Timing test sequence:
@@ -112,7 +112,7 @@ Tentacle roles
 
 * Electrical setup
   * Exacly one `TENTACLE_MCU` connects to `SIGNAL_DATA1`.
-  * Exactly one `TENTACLE_DEVICE` connects to `SIGNAL_DATA1`. This tentacle must provide the onewire pull up.
+  * Exactly one `TENTACLE_DEVICE_POTPOURRY` connects to `SIGNAL_DATA1`. This tentacle must provide the onewire pull up.
 
 * Test proposals
   * OneWire scan without response
@@ -131,7 +131,7 @@ Tentacle roles
 
 * Test proposals
   * Recovering from errors
-    * stimuly: I2C/UART/ONEWIRE communication. Now `TENTACLE_DAQ` tentacle overrides `SIGNAL_DATA1/2` to provoke errors.
+    * stimuly: I2C/UART/ONEWIRE communication. Now `TENTACLE_DAQ_SALEAE` tentacle overrides `SIGNAL_DATA1/2` to provoke errors.
     * expected: Error and recover.
     * challenge
       * How to introduce errors without introducing flakyness?
@@ -139,8 +139,8 @@ Tentacle roles
       * How to provoke protocol errors (timeouts, start/stop bit missing)?
 
 How to electrically override `SIGNAL_DATA1/2`:
-  * I2C/ONEWIRE: `SIGNAL_DATA1/2` are pulled up. `TENTACLE_DAQ` may just override these outputs.
-  * UART: The TX-signals outputs have low impedance. A serial 1k resitor is added (see `TENTACLE_MCU_x`/`TENTACLE_DEVICE_x`) which then allows `TENTACLE_DAQ` to override both TX-signals.
+  * I2C/ONEWIRE: `SIGNAL_DATA1/2` are pulled up. `TENTACLE_DAQ_SALEAE` may just override these outputs.
+  * UART: The TX-signals outputs have low impedance. A serial 1k resitor is added (see `TENTACLE_MCU_x`/`TENTACLE_DEVICE_x`) which then allows `TENTACLE_DAQ_SALEAE` to override both TX-signals.
 
 # Impelmentation `INFRASTRUCTURE_TUTORIAL`
 

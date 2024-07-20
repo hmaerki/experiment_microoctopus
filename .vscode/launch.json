@@ -13,7 +13,22 @@
             "args": [
                 "-v",
                 "-s",
-                "tests/test_fut_uart2.py"
+                // "tests/test_fut_uart4.py"
+                "tests/test_fixture.py"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            "name": "pytest infrastructure_tutorial",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pytest",
+            "cwd": "${workspaceFolder}/octoprobe/infrastructure_tutorial",
+            "args": [
+                "-v",
+                "-s",
+                "tests/test_simple.py"
             ],
             "console": "integratedTerminal",
             "justMyCode": false
@@ -96,11 +111,11 @@
             "args": [
                 "cycle",
                 "infra",
-                "--serial",
+                // "--serial",
                 // "d32",
-                "e4636874db405d32",
-                "--serial",
-                "e4636874db124f35",
+                // "e4636874db405d32",
+                // "--serial",
+                // "e4636874db124f35",
             ],
             "env": {
                 "PYTHONPATH": "${workspaceFolder}"

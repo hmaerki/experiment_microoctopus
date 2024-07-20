@@ -19,6 +19,10 @@ from .util_power import PowerCycle, UsbPlug, UsbPlugs
 from .util_rp2 import RP2_PRODUCT_APPLICATION_MODE, RP2_PRODUCT_BOOT_MODE, RP2_VENDOR
 
 
+class SerialNumberNotFoundException(Exception):
+    pass
+
+
 class QueryPySerial:
     """
     Do a query using the 'pyserial' package.
@@ -131,6 +135,12 @@ class QueryResultTentacles(list[QueryResultTentacle]):
     Usb has been scanned using 'pyusb' and 'usb' packages.
     This is the result of this scan.
     """
+
+    def get(self, serial_number: str) -> QueryResultTentacle:
+        for result in self:
+            if result.rp2_serial_number == serial_number:
+                return result
+        raise SerialNumberNotFoundException(f"{serial_number}")
 
     def select(self, serials: list[str] | None) -> QueryResultTentacles:
         """
