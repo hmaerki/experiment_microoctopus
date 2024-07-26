@@ -29,4 +29,10 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Send greeting
-      run: echo "Hello ${{ inputs.name }}"
+      run: |
+        mkdir -p artifact
+        echo "Hello ${{ inputs.name }}" > artifact/greeting.out
+    - uses: actions/upload-artifact@v4
+      with:
+        name: greeting-artifact
+        path: artifact/greeting.out
