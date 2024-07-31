@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 1.152,
-          "height": 1.152,
-          "width": 1.152
+          "drill": 3.5,
+          "height": 3.7,
+          "width": 3.7
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -807,6 +807,18 @@
       "RP2 CPU"
     ],
     [
+      "cff48fa5-514e-40a1-9e85-b0c2e53fd5a3",
+      "USB Hub Chip"
+    ],
+    [
+      "9cc2153c-44b9-4e7f-8961-835664992a07",
+      "USB Power Switch RP2"
+    ],
+    [
+      "6546fe85-dd41-453d-98b0-9b6f35fb87fd",
+      "Relay Breakout"
+    ],
+    [
       "ef104267-4346-4f2e-9eff-a3788359729c",
       "Relay 1"
     ],
@@ -827,16 +839,12 @@
       "Relay 5"
     ],
     [
-      "cff48fa5-514e-40a1-9e85-b0c2e53fd5a3",
-      "USB Hub Chip"
+      "401258f3-4e65-4224-8043-f8fa2b007639",
+      "Relay 6"
     ],
     [
-      "9cc2153c-44b9-4e7f-8961-835664992a07",
-      "USB Power Switch RP2"
-    ],
-    [
-      "6546fe85-dd41-453d-98b0-9b6f35fb87fd",
-      "Relay Breakout"
+      "aa228a66-0806-4820-976d-dd91b57f82ce",
+      "Relay 7"
     ],
     [
       "290edc0f-259a-4a81-bb28-767ae8aa5342",

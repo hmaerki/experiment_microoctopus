@@ -17,24 +17,22 @@
   * silkscreen
 
 
-
 TODO: USB Connector DUT: Vertical takes too much height: Vertical!
-TODO: Octobus: Pins 5/6 should not be connected!
-TODO: PCB: GPIO12 exists twice on silkscreen: Should be GPIO11
+DONE: Kabelbinder moved to the right
+DONE: PCB: GPIO12 exists twice on silkscreen: Should be GPIO11
 
-TODO: Pad for relay is too small.
-TODO: Pad on octobus has to be bigger for manual soldering iron.
+DONE: Octobus: Pin40: mirrored -> not mirrored
+DONE: Octobus: switch 1 and 2: Do NOT mirror!
+DONE: Octobus: white dot on both sides (possibly 1, 2, 40)
+DONE: Octobus: silkscreen on back
+DONE: Pad on octobus has to be bigger for manual soldering iron.
+DONE: Octobus: Pins 5/6 should not be connected!
+DONE: Pad for relay is too small.
+DONE: Relay Vorwiderstand: 3k9 -> 390. Schema: (3.3V-1.25V)/5mA=409Ohm
 
-TODO: Relay Vorwiderstand: 3k9 / 390. Schema: (3.3V-1.25V)/5mA=409Ohm
-
-TODO: Octobus: switch 1 and 2: Do NOT mirror!
-TODO: Octobus: white dot on both sides (possibly 1, 2, 40)
-TODO: Octobus: silkscreen on back
-
-TODO: Silkscreen Relay nach oben
-TODO: LED Relay nach oben
-
-TODO: Relay silkscreen labels on back
+DONE: Silkscreen Relay nach oben
+DONE: LED Relay nach oben
+DONE: Relay silkscreen labels on back
 
 TODO: Silkscreen Add "Open Hardware"
 

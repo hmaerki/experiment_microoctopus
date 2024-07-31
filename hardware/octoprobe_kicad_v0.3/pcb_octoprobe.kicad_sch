@@ -3731,7 +3731,7 @@
 		(instances
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1"
-					(page "11")
+					(page "13")
 				)
 			)
 		)
@@ -3789,7 +3789,7 @@
 		(instances
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1"
-					(page "12")
+					(page "14")
 				)
 			)
 		)
@@ -3827,7 +3827,7 @@
 		(instances
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1"
-					(page "11")
+					(page "5")
 				)
 			)
 		)
@@ -3885,7 +3885,7 @@
 		(instances
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1"
-					(page "9")
+					(page "4")
 				)
 			)
 		)
@@ -4043,7 +4043,7 @@
 		(instances
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1"
-					(page "8")
+					(page "3")
 				)
 			)
 		)

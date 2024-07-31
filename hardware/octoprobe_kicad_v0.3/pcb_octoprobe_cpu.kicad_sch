@@ -3851,16 +3851,16 @@
 		(uuid "1446ccde-a52e-443f-820e-2b50e46641fd")
 	)
 	(no_connect
-		(at 44.45 57.15)
-		(uuid "1e97323d-6731-4d91-b256-16886f85c44d")
-	)
-	(no_connect
 		(at 44.45 87.63)
 		(uuid "29820f5c-7ca7-43df-8ab7-50ccc3c8312c")
 	)
 	(no_connect
 		(at 115.57 102.87)
 		(uuid "2d8285a6-fd5c-4585-928f-e472d0c90e4f")
+	)
+	(no_connect
+		(at 44.45 64.77)
+		(uuid "327c87f6-fc98-4d76-a7f4-33047ce64301")
 	)
 	(no_connect
 		(at 115.57 52.07)
@@ -3873,10 +3873,6 @@
 	(no_connect
 		(at 44.45 90.17)
 		(uuid "468850c9-25f7-4532-abd5-080fdf069318")
-	)
-	(no_connect
-		(at 44.45 54.61)
-		(uuid "479c58cd-69c3-445d-963c-0e71a8663a0b")
 	)
 	(no_connect
 		(at 44.45 100.33)
@@ -3905,10 +3901,6 @@
 	(no_connect
 		(at 44.45 102.87)
 		(uuid "b120d744-7a50-47be-bb77-9b3d49380ed7")
-	)
-	(no_connect
-		(at 44.45 59.69)
-		(uuid "c7b1a130-b487-4a46-a9d8-fc6584fa7f3a")
 	)
 	(no_connect
 		(at 44.45 97.79)
@@ -5804,6 +5796,50 @@
 			)
 		)
 	)
+	(global_label "RELAIS_7"
+		(shape output)
+		(at 44.45 59.69 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "21a6a129-c499-45c3-aebc-1dee1d530e7e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 32.8426 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "RELAIS_6"
+		(shape output)
+		(at 44.45 57.15 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4e62d326-264a-4a72-a228-f1ad4f4fd3da")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 32.8426 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "RP2-USB-DP"
 		(shape input)
 		(at 123.19 85.09 0)
@@ -5872,7 +5908,7 @@
 	)
 	(global_label "RELAIS_5"
 		(shape output)
-		(at 44.45 64.77 180)
+		(at 44.45 54.61 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5880,9 +5916,9 @@
 			)
 			(justify right)
 		)
-		(uuid "d94e14bb-2a8b-4230-8dd2-513949ef85a9")
+		(uuid "cc17c430-0c2c-4c97-845d-6e7d0de59fe2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 32.8426 64.77 0)
+			(at 32.8426 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8827,7 +8863,7 @@
 				)
 			)
 		)
-		(property "Value" "GPIO12"
+		(property "Value" "GPIO11"
 			(at 28.448 72.39 0)
 			(effects
 				(font
