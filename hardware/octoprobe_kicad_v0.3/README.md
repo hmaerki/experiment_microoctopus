@@ -34,7 +34,7 @@ DONE: Silkscreen Relay nach oben
 DONE: LED Relay nach oben
 DONE: Relay silkscreen labels on back
 
-TODO: Silkscreen Add "Open Hardware"
+DONE: Silkscreen Add "Open Hardware"
 
 ## Cost of the assembled PCB
 
