@@ -293,220 +293,6 @@
 				)
 			)
 		)
-		(symbol "00_project_library:Crystal_GND24_Small"
-			(pin_names
-				(offset 1.016) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "Y"
-				(at 1.27 4.445 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "Crystal_GND24_Small"
-				(at 1.27 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "00_project_library:Crystal_SMD_3225-4Pin_3.2x2.5mm"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Four pin crystal, GND on pins 2 and 4, small symbol"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "JLC" "C9002"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "quartz ceramic resonator oscillator"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Crystal*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Crystal_GND24_Small_0_1"
-				(rectangle
-					(start -0.762 -1.524)
-					(end 0.762 1.524)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -0.762) (xy -1.27 0.762)
-					)
-					(stroke
-						(width 0.381)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -0.762) (xy 1.27 0.762)
-					)
-					(stroke
-						(width 0.381)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -1.27) (xy -1.27 -1.905) (xy 1.27 -1.905) (xy 1.27 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 1.27) (xy -1.27 1.905) (xy 1.27 1.905) (xy 1.27 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Crystal_GND24_Small_1_1"
-				(pin passive line
-					(at -2.54 0 0)
-					(length 1.27)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 0.762 0.762)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -2.54 90)
-					(length 0.635)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 0.762 0.762)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 0 180)
-					(length 1.27)
-					(name "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 0.762 0.762)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 2.54 270)
-					(length 0.635)
-					(name "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 0.762 0.762)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "00_project_library:LED BLUE"
 			(pin_numbers hide)
 			(pin_names
@@ -988,6 +774,192 @@
 						)
 					)
 					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "00_project_library:Oscillator-12MHz"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "X"
+				(at -5.08 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "Oscillator-12MHz"
+				(at 1.27 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Oscillator:Oscillator_SMD_ECS_2520MV-xxx-xx-4Pin_2.5x2.0mm"
+				(at 11.43 -8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2110101030_Shenzhen-SCTF-Elec-SX2M12-000M20F30TNN_C2901596.pdf"
+				(at -4.445 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "HCMOS Crystal Clock Oscillator, 2.5x2.0 mm SMD"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet_ori" "https://www.ecsxtal.com/store/pdf/ECS-2520MV.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "JLC" "C2901596"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Crystal Clock Oscillator ECS SMD"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Oscillator*SMD*ECS*2520MV*2.5x2.0mm*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Oscillator-12MHz_0_1"
+				(rectangle
+					(start -7.62 5.08)
+					(end 7.62 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -4.445 2.54) (xy -3.81 2.54) (xy -3.81 3.81) (xy -3.175 3.81) (xy -3.175 2.54) (xy -2.54 2.54)
+						(xy -2.54 3.81) (xy -1.905 3.81) (xy -1.905 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Oscillator-12MHz_1_1"
+				(pin input line
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "OE"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "OUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 7.62 270)
+					(length 2.54)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3783,18 +3755,6 @@
 		(uuid "ca9a5fb2-47c3-4d8d-be33-ea9ac55e1aa2")
 	)
 	(junction
-		(at 50.8 170.18)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "cc0da6bb-87c3-4b59-a222-32cc080e8e96")
-	)
-	(junction
-		(at 27.94 180.34)
-		(diameter 1.016)
-		(color 0 0 0 0)
-		(uuid "cd90ebf9-a9c3-42d2-bf31-bf5822a27c18")
-	)
-	(junction
 		(at 256.54 41.91)
 		(diameter 1.016)
 		(color 0 0 0 0)
@@ -3823,12 +3783,6 @@
 		(diameter 1.016)
 		(color 0 0 0 0)
 		(uuid "ea108f45-beaf-4425-97b2-62e71bb6951d")
-	)
-	(junction
-		(at 50.8 180.34)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ebe5c4d4-9a6e-4c8e-a34e-e5401f46f3f2")
 	)
 	(junction
 		(at 167.64 31.75)
@@ -3887,6 +3841,10 @@
 		(uuid "5f2be112-4520-47ce-a67d-25d93ea90e2f")
 	)
 	(no_connect
+		(at 115.57 59.69)
+		(uuid "8158809a-f0b8-4660-a091-46167db45e2c")
+	)
+	(no_connect
 		(at 115.57 92.71)
 		(uuid "97d6bd2a-bbd3-451a-86db-cc36ad0e4f24")
 	)
@@ -3909,6 +3867,10 @@
 	(no_connect
 		(at 115.57 97.79)
 		(uuid "df1a26c7-b0e5-4e82-9e91-ceeee1b3c755")
+	)
+	(no_connect
+		(at 29.21 180.34)
+		(uuid "fe54da61-d4d4-4afe-9f98-43413fe82fab")
 	)
 	(wire
 		(pts
@@ -4242,16 +4204,6 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 59.69) (xy 127 59.69)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "33edce22-874c-4f38-8741-6c2db7530bfa")
-	)
-	(wire
-		(pts
 			(xy 80.01 123.19) (xy 80.01 120.65)
 		)
 		(stroke
@@ -4269,16 +4221,6 @@
 			(type default)
 		)
 		(uuid "360cf4a2-987d-4403-a1d2-1527dbd20ebc")
-	)
-	(wire
-		(pts
-			(xy 39.37 180.34) (xy 50.8 180.34)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "3638c378-456b-401b-ab21-a20df5153b68")
 	)
 	(wire
 		(pts
@@ -4472,6 +4414,16 @@
 	)
 	(wire
 		(pts
+			(xy 55.88 180.34) (xy 49.53 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ee9d3a1-c257-4387-97d1-9207a1acd76f")
+	)
+	(wire
+		(pts
 			(xy 77.47 120.65) (xy 77.47 118.11)
 		)
 		(stroke
@@ -4489,16 +4441,6 @@
 			(type default)
 		)
 		(uuid "514bc2c5-923b-474c-87dc-615f121a0392")
-	)
-	(wire
-		(pts
-			(xy 50.8 177.8) (xy 50.8 180.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "56004e6f-0660-4904-91ab-5815bfb210a3")
 	)
 	(wire
 		(pts
@@ -4542,16 +4484,6 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 180.34) (xy 27.94 180.34)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "6704008f-540b-4962-a5bb-56ccd146b7d3")
-	)
-	(wire
-		(pts
 			(xy 267.97 33.02) (xy 267.97 31.75)
 		)
 		(stroke
@@ -4592,16 +4524,6 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 175.26) (xy 48.26 175.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6cbc1a57-689f-4aa6-b968-72cc765c0c0e")
-	)
-	(wire
-		(pts
 			(xy 190.5 31.75) (xy 199.39 31.75)
 		)
 		(stroke
@@ -4619,16 +4541,6 @@
 			(type solid)
 		)
 		(uuid "7135f6d2-9d34-496c-bda6-f31bca0bd952")
-	)
-	(wire
-		(pts
-			(xy 31.75 170.18) (xy 27.94 170.18)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "720c8187-810d-4c1e-85a9-4b68ca2a0c1c")
 	)
 	(wire
 		(pts
@@ -4712,16 +4624,6 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 180.34) (xy 69.85 180.34)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "7e9ff913-c681-4a40-bc0e-f002a79b17c7")
-	)
-	(wire
-		(pts
 			(xy 224.79 110.49) (xy 224.79 121.92)
 		)
 		(stroke
@@ -4739,16 +4641,6 @@
 			(type default)
 		)
 		(uuid "80f4cfbd-e70b-44a3-b924-81174467d66d")
-	)
-	(wire
-		(pts
-			(xy 27.94 180.34) (xy 27.94 182.88)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "8154233c-68f1-4423-b0da-d620ba1fd644")
 	)
 	(wire
 		(pts
@@ -4802,16 +4694,6 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 180.34) (xy 55.88 180.34)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "8a179d16-4808-4994-8146-fe61e581ca8f")
-	)
-	(wire
-		(pts
 			(xy 33.02 143.51) (xy 36.83 143.51)
 		)
 		(stroke
@@ -4829,16 +4711,6 @@
 			(type solid)
 		)
 		(uuid "9918bf7d-0a7a-4425-9b66-c0dc535f643c")
-	)
-	(wire
-		(pts
-			(xy 50.8 170.18) (xy 50.8 172.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "99a1bf3c-7410-4f18-910d-22856a4c8e24")
 	)
 	(wire
 		(pts
@@ -5192,26 +5064,6 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 175.26) (xy 54.61 175.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dd7f29f7-69df-4474-8570-308ec79a56e3")
-	)
-	(wire
-		(pts
-			(xy 27.94 170.18) (xy 27.94 180.34)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "e1790c3b-9bc1-4af0-ac53-8143802a4481")
-	)
-	(wire
-		(pts
 			(xy 115.57 80.01) (xy 127 80.01)
 		)
 		(stroke
@@ -5282,16 +5134,6 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 170.18) (xy 50.8 170.18)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "ee04b5c7-1501-4e9b-b85d-1403094b43e2")
-	)
-	(wire
-		(pts
 			(xy 190.5 30.48) (xy 190.5 31.75)
 		)
 		(stroke
@@ -5329,16 +5171,6 @@
 			(type solid)
 		)
 		(uuid "f6e2c245-3731-4ead-9da3-f8a462f7e767")
-	)
-	(wire
-		(pts
-			(xy 50.8 170.18) (xy 68.58 170.18)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "f76b70ff-3dc6-4df5-b44d-e075d1c1350d")
 	)
 	(wire
 		(pts
@@ -5381,18 +5213,6 @@
 		(uuid "fdb0a934-411b-4dc5-8e44-1cb0bf1a8aec")
 	)
 	(rectangle
-		(start 16.383 163.83)
-		(end 79.248 193.167)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 04acc334-0b17-441b-ada8-cf48f9c43983)
-	)
-	(rectangle
 		(start 147.32 59.1509)
 		(end 278.638 139.7)
 		(stroke
@@ -5428,6 +5248,18 @@
 		)
 		(uuid 7292d872-c472-4521-b74b-b003791d322a)
 	)
+	(rectangle
+		(start 16.51 162.56)
+		(end 123.19 193.167)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 9c899bbc-a279-44b9-9df3-7643e7edb641)
+	)
 	(text_box "Input CS\n0.4V RP2_BOOT, USB2514B.pdf, Low Output Level Lov\n0.3V Diode, Forward Voltage, Fv\n0.7V Total\n\n1.1V W25Q128JVS, Input Low Voltage Vil = Vcc*0.3\n"
 		(exclude_from_sim no)
 		(at 222.25 142.24 0)
@@ -5447,9 +5279,9 @@
 		)
 		(uuid "8978c09d-5470-4ae3-ae7f-30b6e1bb7877")
 	)
-	(text "Crystal"
+	(text "Oscillator"
 		(exclude_from_sim no)
-		(at 20.066 167.132 0)
+		(at 20.828 167.64 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5458,7 +5290,20 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "7043b2f3-9e62-4a70-b47e-422232e13ec6")
+		(uuid "09864d65-f1f4-4962-93a0-9b0fa2f727da")
+	)
+	(text "JLC alternatives\n\n| jlc | USD/Stock | Package | Comments |\n| - | - | - | - |\n| C2901596  | 0.37/1k  | SMD2520-4P | 1th |\n| C437139   | 0.29/188 | SMD2520-4P | 2nd |\n| C2831468  | 0.37/1k  | SMD2520-4P | 2nd |\n| C387449   | 0.49/3k  | SMD2520-4P | 2nd |\n| C409301   | 0.55/2k  | SMD2520-4P | 2nd |"
+		(exclude_from_sim no)
+		(at 67.818 188.722 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "6ef2c456-b730-4ca1-b0ad-ceded9764c6a")
 	)
 	(text "Make sure 27R are\nclose to RP2040"
 		(exclude_from_sim no)
@@ -5571,17 +5416,6 @@
 		)
 		(uuid "fc59a5ab-883a-4117-8d51-6348c00645e0")
 	)
-	(text "C1, C2 = 2*CL - 2*Cs\n\nCL = 20pF, Cs can be ~5pF"
-		(exclude_from_sim no)
-		(at 20.32 191.77 0)
-		(effects
-			(font
-				(size 0.6 0.6)
-			)
-			(justify left bottom)
-		)
-		(uuid "ff090b98-a63b-4e86-a02e-39f3cb5321a4")
-	)
 	(label "QSPI_SCLK"
 		(at 127 80.01 180)
 		(fields_autoplaced yes)
@@ -5654,18 +5488,6 @@
 		)
 		(uuid "50032782-dba8-41c6-97ff-d3e995fb6dcd")
 	)
-	(label "XOUT"
-		(at 69.85 180.34 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(italic yes)
-			)
-			(justify right bottom)
-		)
-		(uuid "58de53e6-99b9-40d2-ae49-d174db3bf630")
-	)
 	(label "QSPI_SD1"
 		(at 127 72.39 180)
 		(fields_autoplaced yes)
@@ -5678,6 +5500,18 @@
 		)
 		(uuid "5a5c336d-b7ae-4b92-802a-d6b894cc0905")
 	)
+	(label "XIN"
+		(at 55.88 180.34 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(italic yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "6191760d-9e65-4835-b61e-d9128daa3716")
+	)
 	(label "QSPI_SD0"
 		(at 247.65 100.33 180)
 		(fields_autoplaced yes)
@@ -5689,18 +5523,6 @@
 			(justify right bottom)
 		)
 		(uuid "63f22e3b-809f-49c0-b904-f365a6a09aa0")
-	)
-	(label "XIN"
-		(at 68.58 170.18 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(italic yes)
-			)
-			(justify right bottom)
-		)
-		(uuid "858c6a20-d9c1-43fc-b739-2b25f6133b75")
 	)
 	(label "QSPI_SCLK"
 		(at 247.65 97.79 180)
@@ -5737,18 +5559,6 @@
 			(justify right bottom)
 		)
 		(uuid "98cf5b74-aa85-46af-96e4-88a48c16f1e2")
-	)
-	(label "XOUT"
-		(at 127 59.69 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(italic yes)
-			)
-			(justify right bottom)
-		)
-		(uuid "bf125fa6-73ff-4035-bdf3-10a63ba1247c")
 	)
 	(label "QSPI_SS"
 		(at 247.65 95.25 180)
@@ -6064,6 +5874,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 39.37 187.96 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "04397bb6-80ee-45ed-830e-5a107e343e83")
+		(property "Reference" "#PWR0224"
+			(at 39.37 194.31 0)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 39.497 191.5922 0)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 39.37 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 39.37 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 39.37 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "08655ad7-6f9f-463c-a7e4-5190d7e1dc44")
+		)
+		(instances
+			(project "pcb_octoprobe"
+				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
+					(reference "#PWR0224")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 119.38 87.63 270)
 		(unit 1)
@@ -6125,168 +6000,6 @@
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
 					(reference "R204")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "00_project_library:Crystal_GND24_Small")
-		(at 50.8 175.26 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "08549c87-022c-451e-974f-3d16c1753157")
-		(property "Reference" "Y201"
-			(at 52.07 172.212 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Crystal_GND24_Small"
-			(at 57.15 172.212 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "00_project_library:Crystal_SMD_3225-4Pin_3.2x2.5mm"
-			(at 50.8 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 50.8 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 50.8 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC" "C9002"
-			(at 50.8 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "49901182-62ec-4476-8c9d-1d9dc11955db")
-		)
-		(pin "2"
-			(uuid "68cc7499-f0ea-413a-a6dc-1201009777ec")
-		)
-		(pin "3"
-			(uuid "3b3dbb3f-441e-4af0-a6aa-de1c4dbc222d")
-		)
-		(pin "4"
-			(uuid "0bb15454-7d92-4ed5-b1a6-a16466016037")
-		)
-		(instances
-			(project "pcb_octoprobe"
-				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "Y201")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "00_project_library:C")
-		(at 35.56 170.18 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "11d7d975-5a99-4065-aa0b-4af86434880b")
-		(property "Reference" "C201"
-			(at 34.4424 164.719 90)
-			(effects
-				(font
-					(size 0.8 0.8)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "30p"
-			(at 34.671 166.243 90)
-			(effects
-				(font
-					(size 0.8 0.8)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 31.75 171.1452 0)
-			(effects
-				(font
-					(size 0.8 0.8)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.digikey.com/en/products/detail/yageo/CC0402JRNPO9BN270/302753"
-			(at 35.56 170.18 0)
-			(effects
-				(font
-					(size 0.8 0.8)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 35.56 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC" "C1570"
-			(at 35.56 170.18 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f68e92de-4f62-4cf4-b891-fa49850f67ac")
-		)
-		(pin "2"
-			(uuid "4e6a2e8f-9c30-4a00-8fe1-22200369f1ed")
-		)
-		(instances
-			(project "pcb_octoprobe"
-				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "C201")
 					(unit 1)
 				)
 			)
@@ -6638,71 +6351,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 46.99 175.26 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "20f55ebc-1b77-4cc6-ac7c-321ff46c50d2")
-		(property "Reference" "#PWR0203"
-			(at 40.64 175.26 0)
-			(effects
-				(font
-					(size 0.8 0.8)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 42.7228 175.387 90)
-			(effects
-				(font
-					(size 0.8 0.8)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 46.99 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 46.99 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 46.99 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a22430b2-f1a6-488a-a914-4ca26b51da00")
-		)
-		(instances
-			(project "pcb_octoprobe"
-				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "#PWR0203")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3V3")
 		(at 224.79 72.39 0)
 		(unit 1)
@@ -6763,73 +6411,6 @@
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
 					(reference "#PWR0218")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 59.69 180.34 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "2e6060f4-032e-4dfe-ae30-1b9caa8dbdbd")
-		(property "Reference" "R201"
-			(at 59.69 182.372 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1k"
-			(at 59.69 180.4416 90)
-			(effects
-				(font
-					(size 0.8 0.8)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 59.69 178.562 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 59.69 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 59.69 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "102a26b8-4030-45c4-a28c-061ad18e09f4")
-		)
-		(pin "2"
-			(uuid "c3aa5b6a-4c3b-472c-ae44-d223f6261391")
-		)
-		(instances
-			(project "pcb_octoprobe"
-				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "R201")
 					(unit 1)
 				)
 			)
@@ -7182,6 +6763,97 @@
 		)
 	)
 	(symbol
+		(lib_id "00_project_library:Oscillator-12MHz")
+		(at 39.37 180.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3fb902b9-88e1-413b-aeb1-b9c13104c143")
+		(property "Reference" "X201"
+			(at 52.07 168.656 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Oscillator-12MHz"
+			(at 52.07 171.196 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Oscillator:Oscillator_SMD_ECS_2520MV-xxx-xx-4Pin_2.5x2.0mm"
+			(at 50.8 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2110101030_Shenzhen-SCTF-Elec-SX2M12-000M20F30TNN_C2901596.pdf"
+			(at 34.925 177.165 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "HCMOS Crystal Clock Oscillator, 2.5x2.0 mm SMD"
+			(at 39.37 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet_ori" "https://www.ecsxtal.com/store/pdf/ECS-2520MV.pdf"
+			(at 39.37 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C2901596"
+			(at 39.37 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "6aabc2b3-627e-45fd-9b14-3d2e7543359d")
+		)
+		(pin "4"
+			(uuid "ad55f01c-0ef3-4622-b4d3-b5fc3b03563d")
+		)
+		(pin "1"
+			(uuid "d8fd934f-bd03-488f-a42a-1a9b6da3aa2f")
+		)
+		(pin "2"
+			(uuid "8658885d-0544-41e9-9264-2e6ca7674c16")
+		)
+		(instances
+			(project ""
+				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
+					(reference "X201")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3V3")
 		(at 186.69 109.22 0)
 		(unit 1)
@@ -7311,71 +6983,6 @@
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
 					(reference "C203")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 54.61 175.26 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "44da6bc0-a1a8-4542-9029-b723261da35a")
-		(property "Reference" "#PWR0205"
-			(at 60.96 175.26 0)
-			(effects
-				(font
-					(size 0.8 0.8)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 58.8772 175.133 90)
-			(effects
-				(font
-					(size 0.8 0.8)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 54.61 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 54.61 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 54.61 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a52efd14-6157-41bc-ab44-3509d897e250")
-		)
-		(instances
-			(project "pcb_octoprobe"
-				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "#PWR0205")
 					(unit 1)
 				)
 			)
@@ -8401,7 +8008,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 116.332 109.22 90)
 			(effects
 				(font
@@ -9039,149 +8646,6 @@
 		)
 	)
 	(symbol
-		(lib_id "00_project_library:C")
-		(at 35.56 180.34 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b59ee490-7ced-4a2d-8f4f-0ff0dc5fbed5")
-		(property "Reference" "C202"
-			(at 34.4424 174.879 90)
-			(effects
-				(font
-					(size 0.8 0.8)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "30p"
-			(at 34.671 176.403 90)
-			(effects
-				(font
-					(size 0.8 0.8)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 31.75 181.3052 0)
-			(effects
-				(font
-					(size 0.8 0.8)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.digikey.com/en/products/detail/yageo/CC0402JRNPO9BN270/302753"
-			(at 35.56 180.34 0)
-			(effects
-				(font
-					(size 0.8 0.8)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 35.56 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC" "C1570"
-			(at 35.56 180.34 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c07f8939-19a3-446b-90ce-f8446fd8d4a8")
-		)
-		(pin "2"
-			(uuid "3b0c9c45-b478-4272-b710-256893d47273")
-		)
-		(instances
-			(project "pcb_octoprobe"
-				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "C202")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 27.94 182.88 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b961aeb7-6ab1-41a8-84f0-9438ed52550b")
-		(property "Reference" "#PWR0201"
-			(at 27.94 189.23 0)
-			(effects
-				(font
-					(size 0.8 0.8)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 28.067 186.5122 0)
-			(effects
-				(font
-					(size 0.8 0.8)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 27.94 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 27.94 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 27.94 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "898c3de2-755c-4406-8f84-32c787509647")
-		)
-		(instances
-			(project "pcb_octoprobe"
-				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "#PWR0201")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "00_project_library:NMOS")
 		(at 200.66 120.65 0)
 		(unit 1)
@@ -9607,6 +9071,71 @@
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
 					(reference "#PWR0202")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 39.37 172.72 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cb69150d-5c3c-408c-88b4-44bac7c32d97")
+		(property "Reference" "#PWR0225"
+			(at 39.37 176.53 0)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 39.37 168.148 90)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 39.37 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 39.37 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 39.37 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "19987e39-d43c-4897-bc28-f705e14d9d68")
+		)
+		(instances
+			(project "pcb_octoprobe"
+				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
+					(reference "#PWR0225")
 					(unit 1)
 				)
 			)

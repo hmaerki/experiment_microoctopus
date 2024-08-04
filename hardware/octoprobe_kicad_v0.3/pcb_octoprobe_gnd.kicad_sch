@@ -12,7 +12,7 @@
 		(comment 1 "The MIT License (MIT)")
 	)
 	(lib_symbols
-		(symbol "00_project_library:opctoprobe_relay"
+		(symbol "00_project_library:octoprobe_relay"
 			(exclude_from_sim no)
 			(in_bom no)
 			(on_board yes)
@@ -32,7 +32,7 @@
 					)
 				)
 			)
-			(property "Footprint" "00_project_library:opctoprobe_relay"
+			(property "Footprint" "00_project_library:octoprobe_relay"
 				(at 0 0 0)
 				(effects
 					(font
@@ -59,7 +59,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "opctoprobe_relay_0_1"
+			(symbol "octoprobe_relay_0_1"
 				(rectangle
 					(start -1.27 1.27)
 					(end 10.16 -1.27)
@@ -779,7 +779,7 @@
 		)
 	)
 	(symbol
-		(lib_id "00_project_library:opctoprobe_relay")
+		(lib_id "00_project_library:octoprobe_relay")
 		(at 80.01 43.18 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -804,7 +804,7 @@
 				)
 			)
 		)
-		(property "Footprint" "00_project_library:opctoprobe_relay"
+		(property "Footprint" "00_project_library:octoprobe_relay"
 			(at 80.01 43.18 0)
 			(effects
 				(font

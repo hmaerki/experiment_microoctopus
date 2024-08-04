@@ -1,4 +1,4 @@
-(footprint "opctoprobe_relay"
+(footprint "octoprobe_relay"
 	(version 20240108)
 	(generator "pcbnew")
 	(generator_version "8.0")
@@ -16,7 +16,7 @@
 			)
 		)
 	)
-	(property "Value" "opctoprobe_relay"
+	(property "Value" "octoprobe_relay"
 		(at 0 1 0)
 		(unlocked yes)
 		(layer "F.Fab")
@@ -67,6 +67,7 @@
 			)
 		)
 	)
+	(attr exclude_from_bom allow_missing_courtyard)
 	(fp_line
 		(start 1.21 -14.13)
 		(end 1.21 -0.89)
@@ -118,28 +119,6 @@
 		(fill none)
 		(layer "F.SilkS")
 		(uuid "e1a68d7f-1661-4bf5-b0b9-82082694b3d5")
-	)
-	(fp_rect
-		(start 0 -21.462)
-		(end 5 -16.462)
-		(stroke
-			(width 0.05)
-			(type solid)
-		)
-		(fill none)
-		(layer "F.CrtYd")
-		(uuid "a6699a6e-94f7-47d5-9d7e-44478680de9d")
-	)
-	(fp_rect
-		(start 0 -21.462)
-		(end 5 -16.462)
-		(stroke
-			(width 0.05)
-			(type solid)
-		)
-		(fill none)
-		(layer "F.CrtYd")
-		(uuid "da35147a-47a8-4f1c-8ef9-d0d8115c921a")
 	)
 	(fp_text user "a   b"
 		(at 2.607001 -15.24 0)
