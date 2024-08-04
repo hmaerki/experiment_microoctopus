@@ -120,7 +120,7 @@
 		(layer "F.SilkS")
 		(uuid "e1a68d7f-1661-4bf5-b0b9-82082694b3d5")
 	)
-	(fp_text user "a   b"
+	(fp_text user "b  a"
 		(at 2.607001 -15.24 0)
 		(unlocked yes)
 		(layer "B.SilkS")
@@ -175,7 +175,7 @@
 			(justify bottom)
 		)
 	)
-	(fp_text user "a   b"
+	(fp_text user "a  b"
 		(at 2.607001 -15.24 0)
 		(unlocked yes)
 		(layer "F.SilkS")

@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "Octoprobe tentacle")
-		(date "2024-07-31")
+		(date "2024-08-04")
 		(rev "0.3")
 		(company "Hans Märki, Märki Informatik")
 		(comment 1 "The MIT License (MIT)")
@@ -4003,10 +4003,6 @@
 		(at 115.57 97.79)
 		(uuid "df1a26c7-b0e5-4e82-9e91-ceeee1b3c755")
 	)
-	(no_connect
-		(at 29.21 180.34)
-		(uuid "fe54da61-d4d4-4afe-9f98-43413fe82fab")
-	)
 	(wire
 		(pts
 			(xy 99.06 31.75) (xy 99.06 29.21)
@@ -5427,7 +5423,7 @@
 		)
 		(uuid "09864d65-f1f4-4962-93a0-9b0fa2f727da")
 	)
-	(text "JLC alternatives\n\n| jlc | USD/Stock | Package | Comments |\n| - | - | - | - |\n| C2901596  | 0.37/1k  | SMD2520-4P | 1th |\n| C437139   | 0.29/188 | SMD2520-4P | 2nd |\n| C2831468  | 0.37/1k  | SMD2520-4P | 2nd |\n| C387449   | 0.49/3k  | SMD2520-4P | 2nd |\n| C409301   | 0.55/2k  | SMD2520-4P | 2nd |"
+	(text "JLC alternatives\n\n| jlc | USD/Stock | Package | Comments |\n| - | - | - | - |\n| C2831468  | 0.37/1k  | SMD2520-4P | 1nd |\n| C2901596  | 0.37/1k  | SMD2520-4P | 2nd |\n| C437139   | 0.29/188 | SMD2520-4P | 2nd |\n| C387449   | 0.49/3k  | SMD2520-4P | 2nd |\n| C409301   | 0.55/2k  | SMD2520-4P | 2nd |"
 		(exclude_from_sim no)
 		(at 67.818 188.722 0)
 		(effects
@@ -6017,7 +6013,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "04397bb6-80ee-45ed-830e-5a107e343e83")
-		(property "Reference" "#PWR0224"
+		(property "Reference" "#PWR0204"
 			(at 39.37 194.31 0)
 			(effects
 				(font
@@ -6067,7 +6063,7 @@
 		(instances
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "#PWR0224")
+					(reference "#PWR0204")
 					(unit 1)
 				)
 			)
@@ -6082,7 +6078,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "046ebab2-d067-4200-a276-79a330feeb4b")
-		(property "Reference" "R204"
+		(property "Reference" "R203"
 			(at 119.38 89.662 90)
 			(effects
 				(font
@@ -6134,7 +6130,7 @@
 		(instances
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "R204")
+					(reference "R203")
 					(unit 1)
 				)
 			)
@@ -6291,7 +6287,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1ead5abb-fa1d-47d2-b604-340a50997c3e")
-		(property "Reference" "C205"
+		(property "Reference" "C203"
 			(at 159.639 36.1696 0)
 			(effects
 				(font
@@ -6345,7 +6341,7 @@
 		(instances
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "C205")
+					(reference "C203")
 					(unit 1)
 				)
 			)
@@ -6360,7 +6356,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1f06093b-5aeb-4470-9ac7-371fda23fae2")
-		(property "Reference" "C212"
+		(property "Reference" "C210"
 			(at 237.109 36.1696 0)
 			(effects
 				(font
@@ -6414,7 +6410,7 @@
 		(instances
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "C212")
+					(reference "C210")
 					(unit 1)
 				)
 			)
@@ -6771,7 +6767,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "39237817-8317-42f4-bc98-98e5306fc055")
-		(property "Reference" "C206"
+		(property "Reference" "C204"
 			(at 171.069 36.1696 0)
 			(effects
 				(font
@@ -6825,7 +6821,7 @@
 		(instances
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "C206")
+					(reference "C204")
 					(unit 1)
 				)
 			)
@@ -6995,7 +6991,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2110101030_Shenzhen-SCTF-Elec-SX2M12-000M20F30TNN_C2901596.pdf"
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2105241608_JWT-YM4012M00033T8188099_C2831468.pdf"
 			(at 34.925 177.165 0)
 			(effects
 				(font
@@ -7022,7 +7018,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC" "C2901596"
+		(property "JLC" "C2831468"
 			(at 39.37 180.34 0)
 			(effects
 				(font
@@ -7127,7 +7123,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "40e8a3b3-dd29-40ce-9094-097f4188a9a0")
-		(property "Reference" "C203"
+		(property "Reference" "C201"
 			(at 31.115 147.8026 0)
 			(effects
 				(font
@@ -7181,7 +7177,7 @@
 		(instances
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "C203")
+					(reference "C201")
 					(unit 1)
 				)
 			)
@@ -7326,7 +7322,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4ffbea0e-15d6-490e-bd05-1afb3fae01e8")
-		(property "Reference" "C211"
+		(property "Reference" "C209"
 			(at 225.679 36.1696 0)
 			(effects
 				(font
@@ -7380,7 +7376,7 @@
 		(instances
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "C211")
+					(reference "C209")
 					(unit 1)
 				)
 			)
@@ -7395,7 +7391,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "529f25c6-1fc3-4dc8-8865-99538a1e8255")
-		(property "Reference" "C213"
+		(property "Reference" "C211"
 			(at 248.285 36.1696 0)
 			(effects
 				(font
@@ -7449,7 +7445,7 @@
 		(instances
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "C213")
+					(reference "C211")
 					(unit 1)
 				)
 			)
@@ -7464,7 +7460,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "52ba260b-0acd-4c6b-90ea-cb84c160eba7")
-		(property "Reference" "R208"
+		(property "Reference" "R207"
 			(at 222.504 77.47 90)
 			(effects
 				(font
@@ -7516,7 +7512,7 @@
 		(instances
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "R208")
+					(reference "R207")
 					(unit 1)
 				)
 			)
@@ -7594,9 +7590,9 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "60b28368-3b49-412b-b881-36eec740cbe8")
-		(property "Reference" "R205"
+		(property "Reference" "R204"
 			(at 184.404 115.57 90)
 			(effects
 				(font
@@ -7612,7 +7608,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 184.912 115.57 90)
 			(effects
 				(font
@@ -7648,7 +7644,7 @@
 		(instances
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "R205")
+					(reference "R204")
 					(unit 1)
 				)
 			)
@@ -7663,7 +7659,7 @@
 		(on_board yes)
 		(dnp yes)
 		(uuid "6173c0c4-72e6-49e5-af80-21b73b48bab9")
-		(property "Reference" "R207"
+		(property "Reference" "R206"
 			(at 212.09 108.204 90)
 			(effects
 				(font
@@ -7715,7 +7711,7 @@
 		(instances
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "R207")
+					(reference "R206")
 					(unit 1)
 				)
 			)
@@ -7795,7 +7791,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6876bc25-41eb-45ea-8821-c7fc8fd0a41b")
-		(property "Reference" "#PWR0204"
+		(property "Reference" "#PWR0205"
 			(at 49.53 161.29 0)
 			(effects
 				(font
@@ -7845,7 +7841,7 @@
 		(instances
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "#PWR0204")
+					(reference "#PWR0205")
 					(unit 1)
 				)
 			)
@@ -8191,7 +8187,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6eb4eb10-c66f-406b-93e0-05d40a4be452")
-		(property "Reference" "R202"
+		(property "Reference" "R201"
 			(at 120.142 109.22 90)
 			(effects
 				(font
@@ -8243,7 +8239,7 @@
 		(instances
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "R202")
+					(reference "R201")
 					(unit 1)
 				)
 			)
@@ -8323,7 +8319,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7c4c8ba8-e5bc-478c-95b0-415a6ee56a5b")
-		(property "Reference" "C209"
+		(property "Reference" "C207"
 			(at 202.819 36.4236 0)
 			(effects
 				(font
@@ -8377,7 +8373,7 @@
 		(instances
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "C209")
+					(reference "C207")
 					(unit 1)
 				)
 			)
@@ -8392,7 +8388,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7eea4600-248b-4f38-914f-29efead297c8")
-		(property "Reference" "R206"
+		(property "Reference" "R205"
 			(at 210.82 92.964 90)
 			(effects
 				(font
@@ -8444,7 +8440,7 @@
 		(instances
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "R206")
+					(reference "R205")
 					(unit 1)
 				)
 			)
@@ -8523,7 +8519,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9135f783-e11c-48f8-a718-dd6742397a97")
-		(property "Reference" "C214"
+		(property "Reference" "C212"
 			(at 256.5146 74.041 90)
 			(effects
 				(font
@@ -8577,7 +8573,72 @@
 		(instances
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "C214")
+					(reference "C212")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 29.21 180.34 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "927078c9-86e5-4d4a-9b1f-3cdab3caf14a")
+		(property "Reference" "#PWR0201"
+			(at 33.02 180.34 0)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 24.638 180.34 90)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 29.21 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 29.21 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 29.21 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0e05b7ec-6785-4e81-b8b7-4d81841fb303")
+		)
+		(instances
+			(project "pcb_octoprobe"
+				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
+					(reference "#PWR0201")
 					(unit 1)
 				)
 			)
@@ -8592,7 +8653,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "99919232-e576-46a3-bab8-0a33689cec30")
-		(property "Reference" "C207"
+		(property "Reference" "C205"
 			(at 179.705 36.1696 0)
 			(effects
 				(font
@@ -8646,7 +8707,7 @@
 		(instances
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "C207")
+					(reference "C205")
 					(unit 1)
 				)
 			)
@@ -8851,7 +8912,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "bcd25171-befb-4e84-ab38-97b1abd85b7a")
 		(property "Reference" "Q202"
@@ -9148,7 +9209,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "cae66469-1137-4696-b5d2-ea1b6b9bc591")
-		(property "Reference" "C215"
+		(property "Reference" "C213"
 			(at 259.715 36.1696 0)
 			(effects
 				(font
@@ -9202,7 +9263,7 @@
 		(instances
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "C215")
+					(reference "C213")
 					(unit 1)
 				)
 			)
@@ -9284,7 +9345,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "cb69150d-5c3c-408c-88b4-44bac7c32d97")
-		(property "Reference" "#PWR0225"
+		(property "Reference" "#PWR0203"
 			(at 39.37 176.53 0)
 			(effects
 				(font
@@ -9334,7 +9395,7 @@
 		(instances
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "#PWR0225")
+					(reference "#PWR0203")
 					(unit 1)
 				)
 			)
@@ -9347,7 +9408,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "ccf35da8-1506-4d70-a6a6-70071eee751a")
 		(property "Reference" "Q201"
@@ -9449,7 +9510,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d24386ab-b9df-4ab9-acb1-27f9796faeac")
-		(property "Reference" "R209"
+		(property "Reference" "R208"
 			(at 227.076 102.87 90)
 			(effects
 				(font
@@ -9501,7 +9562,7 @@
 		(instances
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "R209")
+					(reference "R208")
 					(unit 1)
 				)
 			)
@@ -9596,7 +9657,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d75e2f39-416d-43d7-9594-abcc4ea7defe")
-		(property "Reference" "R203"
+		(property "Reference" "R202"
 			(at 119.38 83.058 90)
 			(effects
 				(font
@@ -9648,7 +9709,7 @@
 		(instances
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "R203")
+					(reference "R202")
 					(unit 1)
 				)
 			)
@@ -9849,7 +9910,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "00_project_library:LED_0603_1608Metric"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
 			(at 118.11 116.84 0)
 			(effects
 				(font
@@ -9909,7 +9970,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e8647279-ddb9-447c-aad4-a057c882fb63")
-		(property "Reference" "C216"
+		(property "Reference" "C214"
 			(at 271.145 36.1696 0)
 			(effects
 				(font
@@ -9963,7 +10024,7 @@
 		(instances
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "C216")
+					(reference "C214")
 					(unit 1)
 				)
 			)
@@ -9978,7 +10039,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e882a843-14a8-4642-b495-7acecc5be9f0")
-		(property "Reference" "C204"
+		(property "Reference" "C202"
 			(at 66.675 147.6756 0)
 			(effects
 				(font
@@ -10032,7 +10093,7 @@
 		(instances
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "C204")
+					(reference "C202")
 					(unit 1)
 				)
 			)
@@ -10047,7 +10108,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "eae9b22e-f88c-4e2f-a734-a94b4000dbbe")
-		(property "Reference" "C208"
+		(property "Reference" "C206"
 			(at 193.421 35.9156 0)
 			(effects
 				(font
@@ -10101,7 +10162,7 @@
 		(instances
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "C208")
+					(reference "C206")
 					(unit 1)
 				)
 			)
@@ -10375,7 +10436,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "fb3d207e-7630-4841-b75e-8a1cee6163bf")
-		(property "Reference" "C210"
+		(property "Reference" "C208"
 			(at 214.249 36.1696 0)
 			(effects
 				(font
@@ -10429,7 +10490,7 @@
 		(instances
 			(project "pcb_octoprobe"
 				(path "/35c47459-45a7-4753-acae-c8b47e7575e1/24d7d496-8920-4421-a637-0c9bf263a085"
-					(reference "C210")
+					(reference "C208")
 					(unit 1)
 				)
 			)
