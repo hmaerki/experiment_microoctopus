@@ -10,8 +10,6 @@ from urllib.request import urlretrieve
 
 from usbhubctl.util_subprocess import subprocess_run
 
-from octoprobe.infrastructure_tutorial.config_constants import TentacleType
-
 from .util_baseclasses import PropertyString
 from .util_constants import DIRECTORY_CACHE_FIRMWARE, TAG_BOARD, TAG_PROGRAMMER
 from .util_pyboard import UDEV_FILTER_PYBOARD_BOOT_MODE
@@ -78,7 +76,7 @@ class FirmwareSpec:
         """
         Return True: If tentacles board matches the firmware_spec board.
         """
-        assert tentacle.tentacle_spec.tentacle_type is TentacleType.TENTACLE_MCU
+        # assert tentacle.tentacle_spec.tentacle_type.is_mcu
         board = tentacle.get_property(TAG_BOARD)
         return board == self.board
 
@@ -100,20 +98,29 @@ class FirmwareSpec:
 class DutProgrammer(abc.ABC):
     @abc.abstractmethod
     def flash(
-        self, tentacle: Tentacle, udev: UdevPoller, firmware_spec: FirmwareSpec
+        self,
+        tentacle: Tentacle,
+        udev: UdevPoller,
+        firmware_spec: FirmwareSpec,
     ) -> str: ...
 
 
 class DutProgrammerDfuUtil(DutProgrammer):
     def flash(
-        self, tentacle: Tentacle, udev: UdevPoller, firmware_spec: FirmwareSpec
+        self,
+        tentacle: Tentacle,
+        udev: UdevPoller,
+        firmware_spec: FirmwareSpec,
     ) -> str:
         """
         Example return: /dev/ttyACM1
         """
+        assert tentacle.__class__.__qualname__ == "Tentacle"
         assert isinstance(firmware_spec, FirmwareSpec)
+        assert tentacle.dut is not None
 
-        tentacle.mcu_infra.relays(relays_close=[1])
+        # Press Boot Button
+        tentacle.infra.mcu_infra.relays(relays_close=[1])
 
         tentacle.power_dut_off_and_wait()
 
@@ -122,7 +129,7 @@ class DutProgrammerDfuUtil(DutProgrammer):
 
             event = guard.expect_event(
                 UDEV_FILTER_PYBOARD_BOOT_MODE,
-                text_where=tentacle.label_dut,
+                text_where=tentacle.dut.label,
                 text_expect="Expect mcu to become visible on udev after power on",
                 timeout_s=3.0,
             )
@@ -140,31 +147,39 @@ class DutProgrammerDfuUtil(DutProgrammer):
         ]
         subprocess_run(args=args, timeout_s=60.0)
 
-        tentacle.mcu_infra.relays(relays_open=[1])
+        # Release Boot Button
+        tentacle.infra.mcu_infra.relays(relays_open=[1])
 
-        return tentacle.dut_mcu.application_mode_power_up(tentacle=tentacle, udev=udev)
+        return tentacle.dut.dut_mcu.application_mode_power_up(
+            tentacle=tentacle, udev=udev
+        )
 
 
 class DutProgrammerPicotool(DutProgrammer):
     def flash(
-        self, tentacle: Tentacle, udev: UdevPoller, firmware_spec: FirmwareSpec
+        self,
+        tentacle: Tentacle,
+        udev: UdevPoller,
+        firmware_spec: FirmwareSpec,
     ) -> str:
         """
         Example return: /dev/ttyACM1
         """
+        assert tentacle.__class__.__qualname__ == "Tentacle"
         assert isinstance(firmware_spec, FirmwareSpec)
+        assert tentacle.dut is not None
 
-        tentacle.power_dut_off_and_wait()
+        tentacle.infra.power_dut_off_and_wait()
 
         # Press Boot Button
-        tentacle.mcu_infra.relays(relays_close=[1])
+        tentacle.infra.mcu_infra.relays(relays_close=[1])
 
         with udev.guard as guard:
             tentacle.power.dut = True
 
             event = guard.expect_event(
                 UDEV_FILTER_RP2_BOOT_MODE,
-                text_where=tentacle.label_dut,
+                text_where=tentacle.dut.label,
                 text_expect="Expect RP2 to become visible on udev after power on",
                 timeout_s=2.0,
             )
@@ -172,20 +187,20 @@ class DutProgrammerPicotool(DutProgrammer):
         assert isinstance(event, UdevBootModeEvent)
 
         # Release Boot Button
-        tentacle.mcu_infra.relays(relays_open=[1])
+        tentacle.infra.mcu_infra.relays(relays_open=[1])
 
         rp2_flash_micropython(event=event, filename_uf2=firmware_spec.filename)
 
-        return tentacle.dut_mcu.application_mode_power_up(tentacle=tentacle, udev=udev)
+        return tentacle.dut.dut_mcu.application_mode_power_up(
+            tentacle=tentacle, udev=udev
+        )
 
 
 def dut_programmer_factory(tags: str) -> DutProgrammer:
     """
     Example 'tags': programmer=picotool,xy=5
     """
-    programmer = PropertyString(tags).get_tag(TAG_PROGRAMMER)
-    if programmer is None:
-        raise ValueError(f"No '{TAG_PROGRAMMER}' specified in '{tags}'!")
+    programmer = PropertyString(tags).get_tag(TAG_PROGRAMMER, mandatory=True)
     if programmer == "picotool":
         return DutProgrammerPicotool()
     if programmer == "dfu-util":

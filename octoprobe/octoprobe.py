@@ -1,9 +1,9 @@
 from __future__ import annotations
 
+import enum
 import time
 
 from octoprobe import util_usb_serial
-from octoprobe.infrastructure_tutorial.config_constants import EnumFut, TentacleType
 from octoprobe.util_dut_programmers import FirmwareSpec
 from octoprobe.util_power import UsbPlug, UsbPlugs
 
@@ -67,63 +67,41 @@ class NTestRun:
 
         # Instantiate poller BEFORE switching on power to avoid a race condition
         for tentacle in self.infrastructure.tentacles:
-            tentacle.setup_infra(self.udev_poller)
-
-    def function_teardown(self) -> None:
-        for tentacle in self.infrastructure.tentacles:
-            tentacle.dut_power_off()
+            tentacle.infra.setup_infra(self.udev_poller)
 
     def session_teardown(self) -> None:
         if self._udev_poller is not None:
             self._udev_poller.close()
             self._udev_poller = None
 
-    # @property
-    # def select_tentacles_matching_firmware(self) -> list[Tentacle]:
-    #     """
-    #     Select all tentacles for which the firmware matches.
-    #     """
-    #     list_tentacles: list[Tentacle] = []
-    #     for tentacle in self.infrastructure.tentacles:
-    #         if tentacle.tentacle_spec.tentacle_type != TentacleType.TENTACLE_MCU:
-    #             continue
-    #         board = tentacle.get_property(TAG_BOARD)
-    #         if board == self.firmware_spec.board:
-    #             list_tentacles.append(tentacle)
-    #     return list_tentacles
-
     def function_prepare_dut(self) -> None:
         for tentacle in self.infrastructure.tentacles:
             tentacle.power.dut = False
-            if tentacle.mp_remote_infra is not None:
-                tentacle.mp_remote_infra.close()
-                tentacle.mp_remote_infra = None
-            if tentacle.mp_remote_dut is not None:
-                tentacle.mp_remote_dut.close()
-                tentacle.mp_remote_dut = None
+            tentacle.infra.mp_remote_close()
+            if tentacle.dut is not None:
+                tentacle.dut.mp_remote_close()
 
     def function_setup_dut(self, active_tentacles: list[Tentacle]) -> None:
         for tentacle in active_tentacles:
-            if tentacle.tentacle_spec.tentacle_type == TentacleType.TENTACLE_MCU:
-                with tentacle.active_led:
-                    tentacle.flash_dut(
-                        udev=self.udev_poller,
-                        firmware_spec=self.firmware_spec,
-                    )
+            tentacle.flash_dut(
+                udev_poller=self.udev_poller,
+                firmware_spec=self.firmware_spec,
+            )
 
-    def function_teardown_dut(self, active_tentacles: list[Tentacle]) -> None:
+    def function_teardown(self, active_tentacles: list[Tentacle]) -> None:
         for tentacle in active_tentacles:
             tentacle.power_dut_off_and_wait()
 
-    def function_teardown_infra(self, active_tentacles: list[Tentacle]) -> None:
         for tentacle in active_tentacles:
-            tentacle.mcu_infra.relays(relays_open=tentacle.LIST_ALL_RELAYS)
+            tentacle.infra.mcu_infra.relays(relays_open=tentacle.infra.LIST_ALL_RELAYS)
 
-    def setup_relays(self, tentacles: list[Tentacle], futs: tuple[EnumFut]) -> None:
+    def setup_relays(
+        self, tentacles: list[Tentacle], futs: tuple[enum.StrEnum]
+    ) -> None:
         assert isinstance(tentacles, list | tuple)
         assert isinstance(futs, list | tuple)
         assert len(futs) == 1
         fut = futs[0]
         for tentacle in tentacles:
             list_relays = tentacle.tentacle_spec.relays_closed[fut]
-            tentacle.mcu_infra.relays(relays_close=list_relays)
+            tentacle.infra.mcu_infra.relays(relays_close=list_relays)

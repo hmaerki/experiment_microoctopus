@@ -30,12 +30,17 @@ class DutMcu(abc.ABC):
 
 class DutMicropythonSTM32(DutMcu):
     def application_mode_power_up(
-        self, tentacle: "Tentacle", udev: "UdevPoller"
+        self,
+        tentacle: "Tentacle",
+        udev: "UdevPoller",
     ) -> str:
         """
         Power up and wait for udev-event.
         Return tty of pybard
         """
+        assert tentacle.__class__.__qualname__ == "Tentacle"
+        assert tentacle.dut is not None
+
         tentacle.power_dut_off_and_wait()
 
         with udev.guard as guard:
@@ -43,7 +48,7 @@ class DutMicropythonSTM32(DutMcu):
 
             event = guard.expect_event(
                 UDEV_FILTER_PYBOARD_APPLICATION_MODE,
-                text_where=tentacle.label_dut,
+                text_where=tentacle.dut.label,
                 text_expect="Expect mcu to become visible on udev after DfuUtil programming",
                 timeout_s=3.0,
             )
@@ -64,6 +69,9 @@ class DutMicropythonRP2(DutMcu):
         Power up and wait for udev-event.
         Return tty of pybard
         """
+        assert tentacle.dut is not None
+        assert tentacle.__class__.__qualname__ == "Tentacle"
+
         tentacle.power_dut_off_and_wait()
 
         with udev.guard as guard:
@@ -71,7 +79,7 @@ class DutMicropythonRP2(DutMcu):
 
             event = guard.expect_event(
                 UDEV_FILTER_RP2_APPLICATION_MODE,
-                text_where=tentacle.label_dut,
+                text_where=tentacle.dut.label,
                 text_expect="Expect RP2 to become visible",
                 timeout_s=3.0,
             )
@@ -86,9 +94,7 @@ def dut_mcu_factory(tags: str) -> DutMcu:
     """
     Example 'tags': mcu=stm32,programmer=picotool,xy=5
     """
-    mcu = PropertyString(tags).get_tag(TAG_MCU)
-    if mcu is None:
-        raise ValueError(f"No '{TAG_MCU}' specified in '{tags}'!")
+    mcu = PropertyString(tags).get_tag(TAG_MCU, mandatory=True)
     if mcu == "stm32":
         return DutMicropythonSTM32()
     if mcu == "rp2":

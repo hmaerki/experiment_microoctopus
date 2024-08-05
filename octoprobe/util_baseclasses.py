@@ -1,6 +1,5 @@
 import dataclasses
-
-from octoprobe.infrastructure_tutorial.config_constants import EnumFut, TentacleType
+import enum  # pylint: disable=W0611:unused-import
 
 
 @dataclasses.dataclass(frozen=True)
@@ -11,27 +10,31 @@ class PropertyString:
 
     text: str
 
-    def get_tag(self, tag: str) -> None | str:
+    def get_tag(self, tag: str, mandatory: bool = False) -> None | str:
         """
         Example: get_tag("xy") -> "5"
         """
-        for x in self.text.split(","):
-            _tag, value = x.split("=")
-            if _tag == tag:
-                return value
+        if len(self.text) > 0:
+            for x in self.text.split(","):
+                _tag, value = x.split("=")
+                if _tag == tag:
+                    return value
+        if mandatory:
+            raise ValueError(f"No '{tag}' specified in '{self.text}'!")
+
         return None
 
 
 @dataclasses.dataclass
-class TentacleSpec[T]:
-    tentacle_type: TentacleType
-    futs: list[EnumFut]
+class TentacleSpec[TMcuConfig, TTentacleType: enum.StrEnum, TEnumFut: enum.StrEnum]:
+    tentacle_type: TTentacleType
+    futs: list[TEnumFut]
     category: str
     label: str
     doc: str
     tags: str
-    relays_closed: dict[EnumFut, list[int]]
-    mcu_config: T | None = None
+    relays_closed: dict[TEnumFut, list[int]]
+    mcu_config: TMcuConfig | None = None
 
-    def get_property(self, tag: str) -> str | None:
-        return PropertyString(self.tags).get_tag(tag)
+    def get_property(self, tag: str, mandatory: bool = False) -> str | None:
+        return PropertyString(self.tags).get_tag(tag, mandatory=mandatory)

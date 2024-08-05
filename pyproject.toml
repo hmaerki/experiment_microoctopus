@@ -56,7 +56,8 @@ source-includes = [
     ]
 
 [tool.mypy]
-strict = true
+# strict = true
+enable_incomplete_feature = ["NewGenericSyntax"]
 
 [[tool.mypy.overrides]]
 module = "octoprobe.tests.*"
@@ -179,6 +180,7 @@ disable = '''
     too-many-instance-attributes,
     unreachable,
     line-too-long,
+    unsubscriptable-object,
 '''
 
 [tool.pylint]

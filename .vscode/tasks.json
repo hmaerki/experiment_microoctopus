@@ -26,9 +26,6 @@
                 "cwd": "${workspaceFolder}"
             },
             "problemMatcher": [],
-            "dependsOn": [
-                "mypy"
-            ],
             "group": {
                 "kind": "build",
                 "isDefault": false

@@ -15,7 +15,7 @@ class JinjaEnv:
         self.env.filters["hexy"] = lambda value: f"0x{value:08X}"
 
     def render_file(self, filename: pathlib.Path, **kwargs) -> str:
-        template = self.env.get_template(filename)
+        template = self.env.get_template(str(filename))
         rendered_text = template.render(kwargs=kwargs)
         return rendered_text
 

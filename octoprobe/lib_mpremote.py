@@ -24,6 +24,12 @@ class ExceptionTransport(ExceptionMpRemote):
 
 
 class MpRemote:
+    """
+    A wrapper around 'mpremote'.
+    Not sure if this is the best solution?
+    Are there other ways to access micropython on a remote MCU?
+    """
+
     def __init__(self, tty: str, baudrate: int = 115200, wait_s: int = 5) -> None:
         self.state = State()
         self.state.transport = SerialTransport(tty, baudrate=baudrate, wait=wait_s)
@@ -36,7 +42,7 @@ class MpRemote:
 
     def exec_render(self, micropython_code: str, follow: bool = True, **kwargs) -> str:
         mp_program = render(micropython_code=micropython_code, **kwargs)
-        self.exec_raw(mp_program)
+        return self.exec_raw(mp_program)
 
     def exec_raw(self, cmd: str, follow: bool = True) -> str:
         """

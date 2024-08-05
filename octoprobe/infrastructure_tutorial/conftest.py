@@ -7,7 +7,7 @@ from pytest import fixture
 from usbhubctl.util_logging import init_logging
 
 from octoprobe.infrastructure_tutorial.config_constants import EnumFut, TentacleType
-from octoprobe.infrastructure_tutorial.config_workplace_ch_wetzikon import (
+from octoprobe.infrastructure_tutorial.config_workplace_ch_wetzikon_1 import (
     INFRASTRUCTURE,
 )
 from octoprobe.lib_tentacle import Tentacle
@@ -57,24 +57,28 @@ def pytest_generate_tests(metafunc: pytest.Metafunc) -> None:
         assert isinstance(fut, EnumFut)
 
     if "mcu" in metafunc.fixturenames:
-        tentacles = INFRASTRUCTURE.get_tentacles_for_type(
-            TentacleType.TENTACLE_MCU,
+        tentacles = TentacleType.TENTACLE_MCU.get_tentacles_for_type(
+            tentacles=INFRASTRUCTURE.tentacles,
             required_futs=required_futs,
         )
         firmware_spec = get_firmware_spec(config=metafunc.config)
         tentacles = list(filter(firmware_spec.match_board, tentacles))
         assert len(tentacles) > 0
-        metafunc.parametrize("mcu", tentacles, ids=lambda t: t.pytest_id)
+
+        def get_id(t: Tentacle) -> str:
+            return t.pytest_id
+
+        metafunc.parametrize("mcu", tentacles, ids=get_id)
     if "device_potpourry" in metafunc.fixturenames:
-        tentacles = INFRASTRUCTURE.get_tentacles_for_type(
-            TentacleType.TENTACLE_DEVICE_POTPOURRY,
+        tentacles = TentacleType.TENTACLE_DEVICE_POTPOURRY.get_tentacles_for_type(
+            INFRASTRUCTURE.tentacles,
             required_futs=required_futs,
         )
         assert len(tentacles) > 0
         metafunc.parametrize("device_potpourry", tentacles, ids=lambda t: t.pytest_id)
     if "daq_saleae" in metafunc.fixturenames:
-        tentacles = INFRASTRUCTURE.get_tentacles_for_type(
-            TentacleType.TENTACLE_DAQ_SALEAE,
+        tentacles = TentacleType.TENTACLE_DAQ_SALEAE.get_tentacles_for_type(
+            INFRASTRUCTURE.tentacles,
             required_futs=required_futs,
         )
         assert len(tentacles) > 0
@@ -119,10 +123,10 @@ def testrun(request: pytest.FixtureRequest) -> Iterator[NTestRun]:
 
 @fixture(scope="function", autouse=True)
 def setup_tentacles(
-    testrun: NTestRun,
-    required_futs: tuple[EnumFut],
-    active_tentacles: list[Tentacle],
-) -> None:
+    testrun: NTestRun,  # pylint: disable=W0621:redefined-outer-name
+    required_futs: tuple[EnumFut],  # pylint: disable=W0621:redefined-outer-name
+    active_tentacles: list[Tentacle],  # pylint: disable=W0621:redefined-outer-name
+) -> Iterator[None]:
     try:
         testrun.function_prepare_dut()
         testrun.function_setup_infra()
@@ -133,8 +137,10 @@ def setup_tentacles(
         yield
 
     finally:
-        testrun.function_teardown_dut(active_tentacles=active_tentacles)
-        testrun.function_teardown_infra(active_tentacles=active_tentacles)
+        try:
+            testrun.function_teardown(active_tentacles=active_tentacles)
+        except Exception as e:
+            logger.exception(e)
 
 
 @fixture
