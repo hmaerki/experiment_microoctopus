@@ -3,10 +3,12 @@ from __future__ import annotations
 import time
 
 from octoprobe import util_usb_serial
+from octoprobe.infrastructure_tutorial.config_constants import EnumFut, TentacleType
+from octoprobe.util_dut_programmers import FirmwareSpec
 from octoprobe.util_power import UsbPlug, UsbPlugs
 
 from .lib_infrastructure import Infrastructure
-from .lib_tentacle import Tentacle, Tentacles
+from .lib_tentacle import Tentacle
 from .util_pyudev import UdevPoller
 
 
@@ -18,10 +20,12 @@ class NTestRun:
     def __init__(
         self,
         infrastructure: Infrastructure,
+        firmware_spec: FirmwareSpec,
     ) -> None:
         assert isinstance(infrastructure, Infrastructure)
         self.infrastructure = infrastructure
         self._udev_poller: UdevPoller | None = None
+        self.firmware_spec = firmware_spec
 
     @property
     def udev_poller(self) -> UdevPoller:
@@ -74,6 +78,20 @@ class NTestRun:
             self._udev_poller.close()
             self._udev_poller = None
 
+    # @property
+    # def select_tentacles_matching_firmware(self) -> list[Tentacle]:
+    #     """
+    #     Select all tentacles for which the firmware matches.
+    #     """
+    #     list_tentacles: list[Tentacle] = []
+    #     for tentacle in self.infrastructure.tentacles:
+    #         if tentacle.tentacle_spec.tentacle_type != TentacleType.TENTACLE_MCU:
+    #             continue
+    #         board = tentacle.get_property(TAG_BOARD)
+    #         if board == self.firmware_spec.board:
+    #             list_tentacles.append(tentacle)
+    #     return list_tentacles
+
     def function_prepare_dut(self) -> None:
         for tentacle in self.infrastructure.tentacles:
             tentacle.power.dut = False
@@ -84,16 +102,20 @@ class NTestRun:
                 tentacle.mp_remote_dut.close()
                 tentacle.mp_remote_dut = None
 
-    def function_setup_dut(self, active_tentacles: list[Tentacles]) -> None:
+    def function_setup_dut(self, active_tentacles: list[Tentacle]) -> None:
         for tentacle in active_tentacles:
-            with tentacle.active_led:
-                tentacle.flash_dut(udev=self.udev_poller)
+            if tentacle.tentacle_spec.tentacle_type == TentacleType.TENTACLE_MCU:
+                with tentacle.active_led:
+                    tentacle.flash_dut(
+                        udev=self.udev_poller,
+                        firmware_spec=self.firmware_spec,
+                    )
 
-    def function_teardown_dut(self, active_tentacles: list[Tentacles]) -> None:
+    def function_teardown_dut(self, active_tentacles: list[Tentacle]) -> None:
         for tentacle in active_tentacles:
             tentacle.power_dut_off_and_wait()
 
-    def function_teardown_infra(self, active_tentacles: list[Tentacles]) -> None:
+    def function_teardown_infra(self, active_tentacles: list[Tentacle]) -> None:
         for tentacle in active_tentacles:
             tentacle.mcu_infra.relays(relays_open=tentacle.LIST_ALL_RELAYS)
 

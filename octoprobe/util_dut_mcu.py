@@ -1,15 +1,13 @@
 import abc
-import time
 import typing
 
 from octoprobe.util_baseclasses import PropertyString
+from octoprobe.util_constants import TAG_MCU
 from octoprobe.util_pyboard import UDEV_FILTER_PYBOARD_APPLICATION_MODE
 from octoprobe.util_rp2 import (
-    UdevApplicationModeEvent,
     UDEV_FILTER_RP2_APPLICATION_MODE,
+    UdevApplicationModeEvent,
 )
-
-TAG_MCU = "mcu"
 
 if typing.TYPE_CHECKING:
     from .lib_tentacle import Tentacle

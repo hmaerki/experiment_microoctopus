@@ -22,7 +22,7 @@ pin_trigger_1.value(1)
 i2c_data = i2c.readfrom(0x50, 10, True)
 pin_trigger_1.value(0)
 """
-    ret = mcu.mp_remote_dut.exec_render(
+    _ret = mcu.mp_remote_dut.exec_render(
         mp_program, mcu_config=mcu.tentacle_spec.mcu_config
     )
 

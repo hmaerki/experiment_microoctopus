@@ -20,7 +20,7 @@
             "justMyCode": false
         },
         {
-            "name": "pytest infrastructure_tutorial",
+            "name": "pytest infrastructure_tutorial RPI_PICO 1.23.0",
             "type": "debugpy",
             "request": "launch",
             "module": "pytest",
@@ -28,11 +28,58 @@
             "args": [
                 "-v",
                 "-s",
-                "tests/test_simple.py"
+                "tests/test_simple.py",
+                "--firmware=${workspaceFolder}/octoprobe/infrastructure_tutorial/pytest_args_firmware_RPI_PICO_v1.23.0.json"
             ],
             "console": "integratedTerminal",
             "justMyCode": false
         },
+        {
+            "name": "pytest infrastructure_tutorial RPI_PICO 1.22.1",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pytest",
+            "cwd": "${workspaceFolder}/octoprobe/infrastructure_tutorial",
+            "args": [
+                "-v",
+                "-s",
+                "tests/test_simple.py",
+                "--firmware=${workspaceFolder}/octoprobe/infrastructure_tutorial/pytest_args_firmware_RPI_PICO_v1.22.1.json"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            "name": "pytest infrastructure_tutorial PYBV11 1.22.2",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pytest",
+            "cwd": "${workspaceFolder}/octoprobe/infrastructure_tutorial",
+            "args": [
+                "-v",
+                "-s",
+                "tests/test_simple.py",
+                "--firmware=${workspaceFolder}/octoprobe/infrastructure_tutorial/pytest_args_firmware_PYBV11_v1.22.2.json"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            "name": "pytest infrastructure_tutorial PYBV11 1.23.0",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pytest",
+            "cwd": "${workspaceFolder}/octoprobe/infrastructure_tutorial",
+            "args": [
+                "-v",
+                "-s",
+                "tests/test_simple.py",
+                "--firmware=${workspaceFolder}/octoprobe/infrastructure_tutorial/pytest_args_firmware_PYBV11_v1.23.0.json"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+
         {
             "name": "Ruff",
             "type": "debugpy",

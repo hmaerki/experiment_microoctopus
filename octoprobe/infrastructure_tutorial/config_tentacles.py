@@ -19,13 +19,7 @@ class McuConfig:
 
 
 DOC_TENTACLE_PYBOARD = """
-https://micropython.org/resources/PYBv11-schematics.pdf
-https://micropython.org/resources/pybv11-pinout.jpg
-
-Connections:
-tentacle  | pyboard
-relay 1   | BOOT0
-relay 1   | 3V3
+See: https://github.com/hmaerki/experiment_microoctopus/tree/main/infrastructure_tutorial/tentacle_MCU_grobotics_pyboard
 """
 tentacle_spec_pyboard = TentacleSpec(
     tentacle_type=TentacleType.TENTACLE_MCU,
@@ -33,7 +27,7 @@ tentacle_spec_pyboard = TentacleSpec(
     category="Micropython Board",
     label="pyboard_v1.0",
     doc=DOC_TENTACLE_PYBOARD,
-    tags="mcu=stm32,programmer=dfu-util",
+    tags="board=PYBV11,mcu=stm32,programmer=dfu-util",
     mcu_config=McuConfig(
         trig1="Y2",
         trig2="Y3",
@@ -48,8 +42,6 @@ tentacle_spec_pyboard = TentacleSpec(
 
 
 DOC_TENTACLE_RASPBERRY_PICO = """
-https://micropython.org/download/RPI_PICO/
-
 See: https://github.com/hmaerki/experiment_microoctopus/tree/main/infrastructure_tutorial/tentacle_MCU_raspberry_pico
 """
 tentacle_spec_raspberry_pico = TentacleSpec(
@@ -58,7 +50,7 @@ tentacle_spec_raspberry_pico = TentacleSpec(
     category="Micropython Board",
     label="raspberry_pico_v1.0",
     doc=DOC_TENTACLE_RASPBERRY_PICO,
-    tags="mcu=rp2,programmer=picotool",
+    tags="board=RPI_PICO,mcu=rp2,programmer=picotool",
     mcu_config=McuConfig(
         trig1="GP20",
         trig2="GP21",
@@ -70,31 +62,6 @@ tentacle_spec_raspberry_pico = TentacleSpec(
         EnumFut.FUT_ONEWIRE: [2, 3, 4],
     },
 )
-
-# DOC_TENTACLE_SEED_PICO = """
-# https://files.seeedstudio.com/wiki/XIAO-RP2040/res/Seeed-Studio-XIAO-RP2040-v1.3.pdf
-# https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xinpin.jpg
-
-# Connections:
-# tentacle  | pyboard
-# relay 1   | GND (pin2)
-# relay 1   | RP2040_BOOT (requires soldering)
-# """
-# tentacle_spec_seed_pico = TentacleSpec(
-#     tentacle_type=TentacleType.TENTACLE_MCU,
-#     futs=[EnumFut.FUT_I2C, EnumFut.FUT_UART, EnumFut.FUT_ONEWIRE, EnumFut.FUT_TIMER],
-#     category="Micropython Board",
-#     label="seeed_pico_v1.0",
-#     doc=DOC_TENTACLE_SEED_PICO,
-#     tags="programmer=picotool",
-#     octobus="trigger1,trigger2,onewire,i2c,uart",
-#     relay_1="bootbutton",
-#     relay_2="onewire",
-#     relay_3="i2c.sda",
-#     relay_4="i2c.clk",
-#     relay_5="uart.rx",
-#     relay_6="uart.tx",
-# )
 
 
 DOC_TENTACLE_DEVICE_POTPOURRY = """

@@ -42,7 +42,6 @@ class Tentacle[T]:
         self,
         tentacle_serial_number: str,
         tentacle_spec: TentacleSpec[T],
-        firmware_spec: FirmwareSpec | None = None,
     ) -> None:
         self.tentacle_serial_number = tentacle_serial_number
         self.tentacle_spec = tentacle_spec
@@ -52,17 +51,12 @@ class Tentacle[T]:
         self._dut_programmer: DutProgrammer | None = None
         self._dut_mcu: DutMcu | None = None
         self._power: util_power.TentaclePlugsPower | None = None
-        self.firmware_spec = firmware_spec
         self.mcu_infra: McuInfra = McuInfra(self)
 
     def __post_init__(self) -> None:
         assert (
             self.tentacle_serial_number == self.tentacle_serial_number.lower()
         ), f"Must not contain upper case letters: {self.tentacle_serial_number}"
-        if self.firmware_spec is not None:
-            assert self.firmware_spec.filename.is_file(), str(
-                self.firmware_spec.filename
-            )
 
     @property
     def description_short(self) -> str:
@@ -168,40 +162,45 @@ class Tentacle[T]:
         return version.strip()
 
     def dut_required_firmware_already_installed(
-        self, exception_text: str | None = None
+        self,
+        firmware_spec: FirmwareSpec,
+        exception_text: str | None = None,
     ) -> bool:
         installed_version = self.dut_installed_firmware_version()
-        assert self.firmware_spec is not None
-        assert self.firmware_spec.micropython_version_text is not None
-        versions_equal = (
-            self.firmware_spec.micropython_version_text == installed_version
-        )
+        assert isinstance(firmware_spec, FirmwareSpec)
+        versions_equal = firmware_spec.micropython_version_text == installed_version
         if exception_text is not None:
             if not versions_equal:
                 raise ValueError(
-                    f"{exception_text}: Version installed '{installed_version}', but expected '{self.firmware_spec.micropython_version_text}'!"
+                    f"{exception_text}: Version installed '{installed_version}', but expected '{firmware_spec.micropython_version_text}'!"
                 )
         return versions_equal
 
-    def flash_dut(self, udev: UdevPoller) -> None:
+    def flash_dut(self, udev: UdevPoller, firmware_spec: FirmwareSpec) -> None:
         assert self.hub is not None
-        if self.firmware_spec is None:
-            return
+        assert isinstance(firmware_spec, FirmwareSpec)
 
         try:
             self.boot_and_init_mp_remote_dut(udev=udev)
-            if self.dut_required_firmware_already_installed():
+            if self.dut_required_firmware_already_installed(
+                firmware_spec=firmware_spec
+            ):
                 logger.info(f"{self.label_dut}: firmware is already installed")
                 return
 
         except TimeoutError as e:
             logger.debug(f"DUT seems not to have firmware installed: {e!r}")
 
-        tty = self.dut_programmer.flash(tentacle=self, udev=udev)
+        tty = self.dut_programmer.flash(
+            tentacle=self,
+            udev=udev,
+            firmware_spec=firmware_spec,
+        )
         self.mp_remote_dut = MpRemote(tty=tty)
 
         self.dut_required_firmware_already_installed(
-            exception_text=f"DUT: After installing {self.firmware_spec.filename}"
+            firmware_spec=firmware_spec,
+            exception_text=f"DUT: After installing {firmware_spec.filename}",
         )
 
     def dut_power_off(self) -> None:

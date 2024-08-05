@@ -5,6 +5,7 @@ from typing import Any, Self
 
 from mpremote.main import State  # type: ignore
 from mpremote.transport_serial import SerialTransport, TransportError  # type: ignore
+
 from .util_jinja2 import render
 
 logger = logging.getLogger(__file__)
@@ -23,9 +24,9 @@ class ExceptionTransport(ExceptionMpRemote):
 
 
 class MpRemote:
-    def __init__(self, tty: str, baudrate: int = 115200) -> None:
+    def __init__(self, tty: str, baudrate: int = 115200, wait_s: int = 5) -> None:
         self.state = State()
-        self.state.transport = SerialTransport(tty, baudrate=baudrate)
+        self.state.transport = SerialTransport(tty, baudrate=baudrate, wait=wait_s)
 
     def __enter__(self) -> Self:
         return self
@@ -63,7 +64,6 @@ class MpRemote:
     def _read_var(self, name: str) -> Any:
         value_text = self.exec_raw(f"print({name})")
         return eval(value_text)
-        return value
 
     def read_int(self, name: str) -> int:
         v = self._read_var(name)

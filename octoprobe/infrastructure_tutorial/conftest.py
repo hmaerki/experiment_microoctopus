@@ -1,4 +1,5 @@
 import logging
+import pathlib
 from collections.abc import Iterator
 
 import pytest
@@ -11,20 +12,33 @@ from octoprobe.infrastructure_tutorial.config_workplace_ch_wetzikon import (
 )
 from octoprobe.lib_tentacle import Tentacle
 from octoprobe.octoprobe import NTestRun
+from octoprobe.util_dut_programmers import FirmwareSpec
 from octoprobe.util_pytest import break_into_debugger_on_exception
 
 logger = logging.getLogger(__file__)
 
+DIRECTORY_OF_THIS_FILE = pathlib.Path(__file__).parent
+
+DEFAULT_FIRMWARE_SPEC = (
+    DIRECTORY_OF_THIS_FILE / "pytest_args_firmware_RPI_PICO_v1.22.1.json"
+)
+
+
+_PYTEST_OPT_FIRMWARE = "--firmware"
 
 # Uncomment to following line
 # to stop tests on exceptions
 break_into_debugger_on_exception(globals())
 
 
-def pytest_generate_tests(metafunc: pytest.Metafunc) -> None:
-    # marker = request.node.get_closest_marker("required_futs")
-    # assert marker is not None
+def get_firmware_spec(config: pytest.Config) -> FirmwareSpec:
+    assert isinstance(config, pytest.Config)
 
+    firmware_spec_filename = config.getoption(_PYTEST_OPT_FIRMWARE)
+    return FirmwareSpec.factory(filename=firmware_spec_filename)
+
+
+def pytest_generate_tests(metafunc: pytest.Metafunc) -> None:
     print(metafunc.definition.nodeid)
     for marker in metafunc.definition.own_markers:
         print(f" {marker!r}")
@@ -33,7 +47,7 @@ def pytest_generate_tests(metafunc: pytest.Metafunc) -> None:
         for marker in metafunc.definition.own_markers:
             if marker.name == name:
                 return marker
-        assert False
+        raise AssertionError()
 
     marker_required_futs = get_marker(name="required_futs")
     assert isinstance(marker_required_futs, pytest.Mark)
@@ -47,6 +61,8 @@ def pytest_generate_tests(metafunc: pytest.Metafunc) -> None:
             TentacleType.TENTACLE_MCU,
             required_futs=required_futs,
         )
+        firmware_spec = get_firmware_spec(config=metafunc.config)
+        tentacles = list(filter(firmware_spec.match_board, tentacles))
         assert len(tentacles) > 0
         metafunc.parametrize("mcu", tentacles, ids=lambda t: t.pytest_id)
     if "device_potpourry" in metafunc.fixturenames:
@@ -71,13 +87,13 @@ def required_futs(request: pytest.FixtureRequest) -> tuple[EnumFut]:
         assert isinstance(m, pytest.Mark)
         if m.name == "required_futs":
             return m.args
-    assert False
+    raise AssertionError()
 
 
 @pytest.fixture
 def active_tentacles(request: pytest.FixtureRequest) -> list[Tentacle]:
     def inner() -> Iterator[Tentacle]:
-        for param_name, param_value in request.node.callspec.params.items():
+        for _param_name, param_value in request.node.callspec.params.items():
             if isinstance(param_value, Tentacle):
                 yield param_value
 
@@ -85,9 +101,14 @@ def active_tentacles(request: pytest.FixtureRequest) -> list[Tentacle]:
 
 
 @fixture(scope="session", autouse=True)
-def testrun() -> Iterator[NTestRun]:
+def testrun(request: pytest.FixtureRequest) -> Iterator[NTestRun]:
     init_logging()
-    _testrun = NTestRun(infrastructure=INFRASTRUCTURE)
+    firmware_spec = get_firmware_spec(request.config)
+    firmware_spec.download()
+    _testrun = NTestRun(
+        infrastructure=INFRASTRUCTURE,
+        firmware_spec=firmware_spec,
+    )
 
     _testrun.session_powercycle_tentacles()
 
@@ -117,5 +138,14 @@ def setup_tentacles(
 
 
 @fixture
-def global_fixture():
+def global_fixture() -> None:
     print("\n(Doing global fixture setup stuff!)")
+
+
+def pytest_addoption(parser: pytest.Parser) -> None:
+    parser.addoption(
+        _PYTEST_OPT_FIRMWARE,
+        action="store",
+        default=str(DEFAULT_FIRMWARE_SPEC),
+        help="A json file specifying the firmware",
+    )
