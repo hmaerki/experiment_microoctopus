@@ -2,8 +2,9 @@ from __future__ import annotations
 
 import dataclasses
 
-from octoprobe.infrastructure_tutorial.config_constants import EnumFut, TentacleType
 from octoprobe.util_baseclasses import TentacleSpec
+
+from .config_constants import EnumFut, TentacleType
 
 
 @dataclasses.dataclass

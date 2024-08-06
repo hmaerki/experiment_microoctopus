@@ -1,6 +1,6 @@
 import pytest
 
-from octoprobe.infrastructure_tutorial.config_constants import EnumFut
+from config_constants import EnumFut
 from octoprobe.lib_tentacle import Tentacle
 
 

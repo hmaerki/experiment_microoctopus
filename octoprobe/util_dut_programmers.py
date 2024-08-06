@@ -200,7 +200,7 @@ def dut_programmer_factory(tags: str) -> DutProgrammer:
     """
     Example 'tags': programmer=picotool,xy=5
     """
-    programmer = PropertyString(tags).get_tag(TAG_PROGRAMMER, mandatory=True)
+    programmer = PropertyString(tags).get_tag_mandatory(TAG_PROGRAMMER)
     if programmer == "picotool":
         return DutProgrammerPicotool()
     if programmer == "dfu-util":

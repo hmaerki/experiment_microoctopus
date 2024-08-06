@@ -10,6 +10,11 @@ class PropertyString:
 
     text: str
 
+    def get_tag_mandatory(self, tag: str) -> str:
+        v = self.get_tag(tag=tag, mandatory=True)
+        assert v is not None
+        return v
+
     def get_tag(self, tag: str, mandatory: bool = False) -> None | str:
         """
         Example: get_tag("xy") -> "5"
@@ -36,5 +41,8 @@ class TentacleSpec[TMcuConfig, TTentacleType: enum.StrEnum, TEnumFut: enum.StrEn
     relays_closed: dict[TEnumFut, list[int]]
     mcu_config: TMcuConfig | None = None
 
-    def get_property(self, tag: str, mandatory: bool = False) -> str | None:
-        return PropertyString(self.tags).get_tag(tag, mandatory=mandatory)
+    def get_property(self, tag: str) -> str | None:
+        return PropertyString(self.tags).get_tag(tag)
+
+    def get_property_mandatory(self, tag: str) -> str:
+        return PropertyString(self.tags).get_tag_mandatory(tag)

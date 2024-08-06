@@ -5,9 +5,10 @@ build-backend = "pdm.backend"
 [project]
 name = "octoprobe"
 dynamic = ["version"]
-description = "Allows to switch power on usb hubs"
+description = "Octoprobe HIL Testenvironment"
 readme = "README.md"
 requires-python = ">=3.12"
+license = {text = "MIT"}
 authors = [
     { name = "Hans Märki", email = "buhtig.hans.maerki@ergoinfo.ch" },
 ]
@@ -50,10 +51,12 @@ version = { source = "file", path = "octoprobe/__init__.py" }
 distribution = true
 
 [tool.pdm.build]
-source-includes = [
-    "tests/",
-    "requirements*.txt",
-    ]
+package-dir = "."
+includes = ["octoprobe"]
+# source-includes = [
+#     "octoprobe/",
+#     "requirements*.txt",
+#     ]
 
 [tool.mypy]
 # strict = true
@@ -73,7 +76,7 @@ module = "usb.*"
 ignore_missing_imports = true
 
 [tool.pytest.ini_options]
-pythonpath = "."
+pythonpath = "./infrastructure_tutorial"
 addopts = [
   # "-m", "not live",
   "--strict-config",
@@ -124,7 +127,7 @@ omit = [
 [tool.ruff]
 target-version = "py312"
 # All paths are relative to the project root, which is the directory containing the pyproject.toml.
-src = ["octoprobe", "tests"]
+src = ["octoprobe", "infrastructure_tutorial"]
 exclude = ["assessments", "branding"]
 
 [tool.ruff.lint]
@@ -180,11 +183,11 @@ disable = '''
     too-many-instance-attributes,
     unreachable,
     line-too-long,
-    unsubscriptable-object,
 '''
 
 [tool.pylint]
 max-line-length = 88
 disable = [
     "R0801", # Similar lines in 2 files
+    "E1136", # unsubscriptable-object
 ]

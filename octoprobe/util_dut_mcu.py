@@ -25,7 +25,6 @@ class DutMcu(abc.ABC):
         Power up and wait for udev-event.
         Return tty of pybard
         """
-        ...
 
 
 class DutMicropythonSTM32(DutMcu):
@@ -94,7 +93,7 @@ def dut_mcu_factory(tags: str) -> DutMcu:
     """
     Example 'tags': mcu=stm32,programmer=picotool,xy=5
     """
-    mcu = PropertyString(tags).get_tag(TAG_MCU, mandatory=True)
+    mcu = PropertyString(tags).get_tag_mandatory(TAG_MCU)
     if mcu == "stm32":
         return DutMicropythonSTM32()
     if mcu == "rp2":

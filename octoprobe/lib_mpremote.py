@@ -8,6 +8,7 @@ from mpremote.transport_serial import SerialTransport, TransportError  # type: i
 
 from .util_jinja2 import render
 
+# pylint: disable=W0123 # Use of eval (eval-used)
 logger = logging.getLogger(__file__)
 
 
@@ -42,7 +43,7 @@ class MpRemote:
 
     def exec_render(self, micropython_code: str, follow: bool = True, **kwargs) -> str:
         mp_program = render(micropython_code=micropython_code, **kwargs)
-        return self.exec_raw(mp_program)
+        return self.exec_raw(cmd=mp_program, follow=follow)
 
     def exec_raw(self, cmd: str, follow: bool = True) -> str:
         """
@@ -94,7 +95,7 @@ class MpRemote:
     def read_list(self, name: str) -> list:
         v = self._read_var(name)
         assert isinstance(v, list | tuple)
-        return v
+        return list(v)
 
     def close(self) -> None:
         self.state.transport.close()

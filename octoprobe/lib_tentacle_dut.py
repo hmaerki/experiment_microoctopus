@@ -32,7 +32,7 @@ class TentacleDut:
 
         # Validate consistency
         for tag in TAG_MCU, TAG_BOARD, TAG_PROGRAMMER:
-            tentacle_spec.get_property(tag, mandatory=True)
+            tentacle_spec.get_property_mandatory(tag)
 
         self.label = label
         self._tentacle_spec = tentacle_spec

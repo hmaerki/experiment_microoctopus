@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import dataclasses
+import enum  # pylint: disable=unused-import
 import io
 import logging
 from collections.abc import Iterator
@@ -19,7 +20,7 @@ from .util_pyudev import UdevPoller
 logger = logging.getLogger(__file__)
 
 
-class Tentacle[TTentacleSpec]:
+class Tentacle[TTentacleSpec, TTentacleType: enum.StrEnum, TEnumFut: enum.StrEnum]:
     """
     The interface to a Tentacle:
     Both 'Infrastructure' and 'DUT'.
@@ -28,7 +29,7 @@ class Tentacle[TTentacleSpec]:
     def __init__(
         self,
         tentacle_serial_number: str,
-        tentacle_spec: TentacleSpec[TTentacleSpec],
+        tentacle_spec: TentacleSpec[TTentacleSpec, TTentacleType, TEnumFut],
     ) -> None:
         assert isinstance(tentacle_serial_number, str)
         assert isinstance(tentacle_spec, TentacleSpec)
@@ -92,12 +93,15 @@ class Tentacle[TTentacleSpec]:
     def pytest_id(self) -> str:
         name = self.tentacle_spec.tentacle_type.name
         if name.startswith("TENTACLE_MCU"):
-            name = self.tentacle_spec.get_property(TAG_MCU, mandatory=True)
+            name = self.tentacle_spec.get_property_mandatory(TAG_MCU)
         name = name.replace("TENTACLE_DEVICE_", "").replace("TENTACLE_", "")
         return name + "_" + self.tentacle_serial_number[-4:]
 
     def get_property(self, tag: str) -> str | None:
         return self.tentacle_spec.get_property(tag=tag)
+
+    def get_property_mandatory(self, tag: str) -> str:
+        return self.tentacle_spec.get_property_mandatory(tag=tag)
 
     @property
     @contextmanager

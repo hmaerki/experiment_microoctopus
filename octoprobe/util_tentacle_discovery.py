@@ -54,7 +54,6 @@ class QuerySerial:
     def __init__(self):
         self.list_rp2_mode_application = self._query_rp2_application_mode()
         self.list_rp2_mode_boot = self._query_rp2_boot_mode()
-        pass
 
     def _query_rp2_application_mode(self) -> list[serial.core.SysFs]:
         def inner():

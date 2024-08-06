@@ -6,14 +6,13 @@ import pytest
 from pytest import fixture
 from usbhubctl.util_logging import init_logging
 
-from octoprobe.infrastructure_tutorial.config_constants import EnumFut, TentacleType
-from octoprobe.infrastructure_tutorial.config_workplace_ch_wetzikon_1 import (
-    INFRASTRUCTURE,
-)
 from octoprobe.lib_tentacle import Tentacle
 from octoprobe.octoprobe import NTestRun
 from octoprobe.util_dut_programmers import FirmwareSpec
 from octoprobe.util_pytest import break_into_debugger_on_exception
+
+from .config_constants import EnumFut, TentacleType
+from .config_workplace_ch_wetzikon_1 import INFRASTRUCTURE
 
 logger = logging.getLogger(__file__)
 
@@ -51,15 +50,15 @@ def pytest_generate_tests(metafunc: pytest.Metafunc) -> None:
 
     marker_required_futs = get_marker(name="required_futs")
     assert isinstance(marker_required_futs, pytest.Mark)
-    required_futs = list(marker_required_futs.args)
-    assert isinstance(required_futs, list)
-    for fut in required_futs:
-        assert isinstance(fut, EnumFut)
+    _required_futs = list(marker_required_futs.args)
+    assert isinstance(_required_futs, list)
+    for fut in _required_futs:
+        assert EnumFut(fut), fut
 
     if "mcu" in metafunc.fixturenames:
         tentacles = TentacleType.TENTACLE_MCU.get_tentacles_for_type(
             tentacles=INFRASTRUCTURE.tentacles,
-            required_futs=required_futs,
+            required_futs=_required_futs,
         )
         firmware_spec = get_firmware_spec(config=metafunc.config)
         tentacles = list(filter(firmware_spec.match_board, tentacles))
@@ -72,14 +71,14 @@ def pytest_generate_tests(metafunc: pytest.Metafunc) -> None:
     if "device_potpourry" in metafunc.fixturenames:
         tentacles = TentacleType.TENTACLE_DEVICE_POTPOURRY.get_tentacles_for_type(
             INFRASTRUCTURE.tentacles,
-            required_futs=required_futs,
+            required_futs=_required_futs,
         )
         assert len(tentacles) > 0
         metafunc.parametrize("device_potpourry", tentacles, ids=lambda t: t.pytest_id)
     if "daq_saleae" in metafunc.fixturenames:
         tentacles = TentacleType.TENTACLE_DAQ_SALEAE.get_tentacles_for_type(
             INFRASTRUCTURE.tentacles,
-            required_futs=required_futs,
+            required_futs=_required_futs,
         )
         assert len(tentacles) > 0
         metafunc.parametrize("daq_saleae", tentacles, ids=lambda t: t.pytest_id)
