@@ -10,3 +10,4 @@ hardware/octoprobe_kicad_v*/00_project_library.bak
 hardware/octoprobe_kicad_v*/replicate_layout.log
 hardware/octoprobe_kicad_v*/pcb_octoprobe.kicad_sch-bak
 hardware/octoprobe_kicad_logo/*
+octoprobe/downloads/cache_firmware/*

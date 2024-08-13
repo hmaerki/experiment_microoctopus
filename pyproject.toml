@@ -183,6 +183,7 @@ disable = '''
     too-many-instance-attributes,
     unreachable,
     line-too-long,
+    broad-exception-caught,
 '''
 
 [tool.pylint]

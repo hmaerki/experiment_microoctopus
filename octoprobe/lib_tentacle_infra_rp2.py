@@ -16,7 +16,14 @@ class InfraRP2:
     """
 
     BASE_CODE = """
-from machine import Pin
+import os
+import sys
+from machine import Pin, unique_id
+import ubinascii
+
+rp2_unique_id = ubinascii.hexlify(unique_id()).decode('ascii')
+files_on_flash = len(os.listdir())
+micropython_version = sys.version
 
 pin_led_active = Pin('GPIO24', Pin.OUT)
 
@@ -25,7 +32,10 @@ pin_relays = {
     2: Pin('GPIO2', Pin.OUT),
     3: Pin('GPIO3', Pin.OUT),
     4: Pin('GPIO4', Pin.OUT),
-    5: Pin('GPIO8', Pin.OUT),
+    5: Pin('GPIO8', Pin.OUT), # Tentacle v0.2
+    # 5: Pin('GPIO5', Pin.OUT), # Tentacle v0.3
+    6: Pin('GPIO6', Pin.OUT),
+    7: Pin('GPIO7', Pin.OUT),
 }
 
 def set_relays(list_relays):
@@ -43,6 +53,25 @@ def set_relays(list_relays):
             return
         assert self._infra.mp_remote is not None
         self._infra.mp_remote.exec_raw(self.BASE_CODE)
+
+    def get_unique_id(self) -> str:
+        self._load_base_code()
+        return self._infra.mp_remote.read_str("rp2_unique_id")
+
+    def get_micropython_version(self) -> str:
+        self._load_base_code()
+        return self._infra.mp_remote.read_str("micropython_version")
+
+    def exception_if_files_on_flash(self) -> None:
+        # "import os; print('main.py' in os.listdir())"
+        self._load_base_code()
+        file_count = self._infra.mp_remote.read_int("files_on_flash")
+        if file_count == 0:
+            return
+
+        raise ValueError(
+            f"{self._infra.label}: Found {file_count} files on flash!': Please remove them!"
+        )
 
     def relays(
         self,

@@ -17,7 +17,7 @@
                 "tests/test_fixture.py"
             ],
             "console": "integratedTerminal",
-            "justMyCode": false
+            "justMyCode": false,
         },
         {
             "name": "pytest infrastructure_tutorial RPI_PICO 1.23.0",
@@ -32,7 +32,7 @@
                 "--firmware=${workspaceFolder}/infrastructure_tutorial/pytest_args_firmware_RPI_PICO_v1.23.0.json"
             ],
             "console": "integratedTerminal",
-            "justMyCode": false
+            "justMyCode": false,
         },
         {
             "name": "pytest infrastructure_tutorial RPI_PICO 1.22.1",
@@ -47,7 +47,7 @@
                 "--firmware=${workspaceFolder}/infrastructure_tutorial/pytest_args_firmware_RPI_PICO_v1.22.1.json"
             ],
             "console": "integratedTerminal",
-            "justMyCode": false
+            "justMyCode": false,
         },
         {
             "name": "pytest infrastructure_tutorial PYBV11 1.22.2",
@@ -62,7 +62,7 @@
                 "--firmware=${workspaceFolder}/infrastructure_tutorial/pytest_args_firmware_PYBV11_v1.22.2.json"
             ],
             "console": "integratedTerminal",
-            "justMyCode": false
+            "justMyCode": false,
         },
         {
             "name": "pytest infrastructure_tutorial PYBV11 1.23.0",
@@ -77,9 +77,8 @@
                 "--firmware=${workspaceFolder}/infrastructure_tutorial/pytest_args_firmware_PYBV11_v1.23.0.json"
             ],
             "console": "integratedTerminal",
-            "justMyCode": false
+            "justMyCode": false,
         },
-
         {
             "name": "Ruff",
             "type": "debugpy",
@@ -113,7 +112,7 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "justMyCode": false
+            "justMyCode": false,
         },
         {
             "name": "Python: Current File with Arguments",
@@ -121,7 +120,8 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "args": "${command:pickArgs}"
+            "args": "${command:pickArgs}",
+            "justMyCode": false,
         },
         {
             "name": "Python: Octoprobe main",
@@ -133,6 +133,22 @@
                 "PYTHONPATH": "${workspaceFolder}"
             },
             "console": "integratedTerminal",
+            "justMyCode": false,
+        },
+        {
+            "name": "Python: op commissioning",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "octoprobe.scripts.op",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "commissioning",
+            ],
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            },
+            "console": "integratedTerminal",
+            "justMyCode": false,
         },
         {
             "name": "Python: op cycle dut",
@@ -148,6 +164,7 @@
                 "PYTHONPATH": "${workspaceFolder}"
             },
             "console": "integratedTerminal",
+            "justMyCode": false,
         },
         {
             "name": "Python: op cycle infra --serial xxx",
@@ -168,6 +185,7 @@
                 "PYTHONPATH": "${workspaceFolder}"
             },
             "console": "integratedTerminal",
+            "justMyCode": false,
         },
         {
             "name": "Python: op power",
@@ -186,6 +204,7 @@
                 "PYTHONPATH": "${workspaceFolder}"
             },
             "console": "integratedTerminal",
+            "justMyCode": false,
         },
         {
             "name": "Python: op query",
@@ -201,6 +220,7 @@
                 "PYTHONPATH": "${workspaceFolder}"
             },
             "console": "integratedTerminal",
+            "justMyCode": false,
         }
     ]
 }

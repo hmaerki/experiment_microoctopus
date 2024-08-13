@@ -43,8 +43,14 @@ class UsbPlugs:
         UsbPlug.ERROR: False,
     }
 
+    def __post_init__(self) -> None:
+        assert isinstance(self.plugs, dict)
+
     def set_default_off(self) -> None:
         self.plugs = self._DICT_DEFAULT_OFF
+
+    def copy_from(self, plugs: UsbPlugs) -> None:
+        self.plugs = plugs.plugs.copy()
 
     @property
     def text(self) -> str:
@@ -85,9 +91,20 @@ class UsbPlugs:
 
 
 class TentaclePlugsPower:
+    """
+    We do not know the power state for each usb plug from the usb subsystem.
+    But this class caches the state writtein in 'self._plugs'.
+    So we can create proberties to retrieve the power state.
+    """
+
     def __init__(self, hub_location: Location) -> None:
         self._hub_location = hub_location
         self._plugs = UsbPlugs()
+
+    def set_default_off(self) -> bool:
+        plugs = UsbPlugs.default_off()
+        plugs.power(self._hub_location)
+        self._plugs.copy_from(plugs)
 
     @property
     def infra(self) -> bool:

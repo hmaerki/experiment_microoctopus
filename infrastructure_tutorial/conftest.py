@@ -68,6 +68,7 @@ def pytest_generate_tests(metafunc: pytest.Metafunc) -> None:
             return t.pytest_id
 
         metafunc.parametrize("mcu", tentacles, ids=get_id)
+
     if "device_potpourry" in metafunc.fixturenames:
         tentacles = TentacleType.TENTACLE_DEVICE_POTPOURRY.get_tentacles_for_type(
             INFRASTRUCTURE.tentacles,
@@ -75,6 +76,7 @@ def pytest_generate_tests(metafunc: pytest.Metafunc) -> None:
         )
         assert len(tentacles) > 0
         metafunc.parametrize("device_potpourry", tentacles, ids=lambda t: t.pytest_id)
+
     if "daq_saleae" in metafunc.fixturenames:
         tentacles = TentacleType.TENTACLE_DAQ_SALEAE.get_tentacles_for_type(
             INFRASTRUCTURE.tentacles,

@@ -98,7 +98,7 @@ class QueryResultTentacle:
         return f"usb hub {self.hub_location.short}"
 
     @staticmethod
-    def query(verbose: bool) -> QueryResultTentacles:
+    def query(verbose: bool, use_topology_cache: bool = False) -> QueryResultTentacles:
         result: QueryResultTentacles = QueryResultTentacles()
         if verbose:
             qs = QueryPySerial()
@@ -123,7 +123,15 @@ class QueryResultTentacle:
                         )
             return QueryResultTentacle(hub_location=hub_location)
 
-        dualhubs = octohub4.find_connected_dualhubs()
+        if use_topology_cache:
+            actual_usb_topology = None
+        else:
+            from usbhubctl import backend_query_lsusb  # pylint: disable=C0415
+
+            actual_usb_topology = backend_query_lsusb.lsusb()
+        dualhubs = octohub4.find_connected_dualhubs(
+            actual_usb_topology=actual_usb_topology
+        )
         for hub in dualhubs.hubs_usb2.hubs:
             result.append(handle_all(hub=hub))
 

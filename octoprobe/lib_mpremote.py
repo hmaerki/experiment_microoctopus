@@ -83,8 +83,11 @@ class MpRemote:
         return v
 
     def read_str(self, name: str) -> str:
-        v = self._read_var(name)
+        v = self.exec_raw(f"print({name})")
         assert isinstance(v, str)
+        # Remove '\n\r' at the end of the string
+        assert v.endswith("\r\n")
+        v = v[:-2]
         return v
 
     def read_bytes(self, name: str) -> bytes:

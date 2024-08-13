@@ -7,7 +7,8 @@ import typing_extensions
 
 from .. import util_usb_serial
 from ..util_power import PowerCycle, UsbPlug, UsbPlugs
-from . import typer_dut, typer_query
+from . import typer_query
+from .commissioning import do_commissioning
 
 # 'typer' does not work correctly with typing.Annotated
 # Required is: typing_extensions.Annotated
@@ -19,7 +20,11 @@ TyperAnnotated = typing_extensions.Annotated
 #   op.py:58: note: See https://mypy.readthedocs.io/en/stable/common_issues.html#variables-vs-type-aliases
 
 app = typer.Typer()
-app.add_typer(typer_dut.app, name="dut")
+
+
+@app.command()
+def commissioning() -> None:
+    do_commissioning()
 
 
 @app.command()

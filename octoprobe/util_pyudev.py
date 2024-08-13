@@ -99,7 +99,7 @@ class UdevPoller:
         flushed_events = self.epoll.poll(timeout=0.001)
         flushed_events_count = len(flushed_events)
         if flushed_events_count > 0:
-            logger.info(f"{flushed_events_count} events flushed")
+            logger.debug(f"{flushed_events_count} events flushed")
 
     @property
     def guard(self) -> Guard:
@@ -148,7 +148,7 @@ class UdevPoller:
                 )
             events = self.epoll.poll(timeout=0.5)
             if len(events) == 0:
-                logger.info("Timeout")
+                logger.debug("Timeout")
                 continue
 
             for fileno, _ in events:
