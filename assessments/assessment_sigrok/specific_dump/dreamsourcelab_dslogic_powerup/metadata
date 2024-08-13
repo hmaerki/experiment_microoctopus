@@ -1,0 +1,17 @@
+[global]
+sigrok version=0.5.0-git-9b355aa
+
+[device 1]
+capturefile=logic-1
+total probes=8
+samplerate=4 MHz
+total analog=0
+probe1=SCL
+probe2=SDA
+probe3=WP
+probe4=D3
+probe5=D4
+probe6=D5
+probe7=D6
+probe8=D7
+unitsize=1
