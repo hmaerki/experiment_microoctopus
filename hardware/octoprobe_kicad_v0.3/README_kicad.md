@@ -67,8 +67,11 @@ The below parts won't be assembled due to data missing.
 J202,J203,J204,J103,J104,J101,J102,J105 designators don't exist in the BOM file.
 ```
 
+```
+BOM does not match.
+```
+
 Manual correction
- * J201: USB Connector: Manual postition
- * U202: 3V3 Regulator: Rotate
- * U203: Flash: Rotate
+ * USB Connectors: Manual postition
+ * Various chips: rotate
 

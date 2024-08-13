@@ -32,4 +32,3 @@ Online order at JLCPCB
 | 10 | USD124 | USD37 | USD16 |
 | 20 | USD198 | USD47 | USD12 |
 | 30 | USD263 | USD50 | USD10 |
-
