@@ -82,15 +82,27 @@ class NTestRun:
                 tentacle.dut.mp_remote_close()
 
     def function_setup_dut(self, active_tentacles: list[Tentacle]) -> None:
+        # Flash the MCU(s)
         for tentacle in active_tentacles:
+            if tentacle.dut is None:
+                continue
+            tentacle.infra.mcu_infra.active_led(on=True)
             tentacle.flash_dut(
                 udev_poller=self.udev_poller,
                 firmware_spec=self.firmware_spec,
             )
 
-    def function_teardown(self, active_tentacles: list[Tentacle]) -> None:
+        # Why this sleep.
+        # If remove I2C test fails.
+        time.sleep(2.0)
+
         for tentacle in active_tentacles:
-            tentacle.power_dut_off_and_wait()
+            tentacle.infra.mcu_infra.active_led(on=True)
+
+    def function_teardown(self, active_tentacles: list[Tentacle]) -> None:
+        if False:
+            for tentacle in active_tentacles:
+                tentacle.power_dut_off_and_wait()
 
         for tentacle in active_tentacles:
             tentacle.infra.mcu_infra.relays(relays_open=tentacle.infra.LIST_ALL_RELAYS)

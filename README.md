@@ -1,23 +1,25 @@
+![octoprobe](branding/octoprobe/octoprobe_logo_v3_inkscape.png)
 
-# microOctopus - Micropython Testinfrastructure
+# HIL (Hardware in the Loop) testinfrastructure
 
-** microOctopus has been renamed to OctoProbe. This repo will be moved to github/octoprobe **
+[Presentation at MicroPython Meetup Melbourne](README_images/2024-07-27_melbourne_micropython_meetup.pdf)
 
-Ideas on how to set up a micropython testenvironment
-
-![microOctopus](branding/images/uOctopus-pytest.png)
 
 ## Terms
 
 See [Terms](design/terms.md)
 
+Note: **microOctopus** has been renamed to **Octoprobe**
+
+Note: https://github.com/hmaerki/experiment_microoctopus will be moved to https://github.com/octoprobe soon.
+
 ## Goal
 
-* `microOctopus` allows to automatically test various micropython boards against various gadgets.
+* `octoprobe` allows to automatically test various micropython boards against various gadgets.
 * Tests should run automatically and include firmware update.
 * Tests should be triggered from the github workflow, for example on commits or pull requests.
 
-## microOctopus testenvironment
+## octoprobe testenvironment
 
 * Software:
   * dockerized on linux
@@ -28,42 +30,37 @@ See [Terms](design/terms.md)
   * Every tentacle is equipped by a RP2040 which controls the DUT.
   * The Inkbus connects the tentacles. Typically exactly one BoardTentacle and one GadgetTentacle is connected to the Inkbus.
 * Extended Hardware
-  * microOctopus may also have specialized tentacles like a scope tentacle.
-  * microOctopus may also control cams to read displays, wlan hotspot, etc.
+  * octoprobe may also have specialized tentacles like a scope tentacle.
+  * octoprobe may also control cams to read displays, wlan hotspot, etc.
 * Firmware under test
   * Must be provided by the tester
 * Test software
-  * microOctopus provides basic functionality like updating firmware, connecting the inkbus, tentacle inventory.
+  * octoprobe provides basic functionality like updating firmware, connecting the inkbus, tentacle inventory.
   * However the pytest code itselve is provided by the tester together with the firmware.
 
-## Hardware example
 
-* `microOctopus`
-  * `BoardTentacle` PYBv1.1
-  * `BoardTentacle` ESP32
-  * `GadgetTentacle` OLED
+### Tentacles / infrastructure_tutorial
 
-Tentacles side by side connected by a 40 pin ribbon cable
+Kicad schmatics/pcb may be found [here](hardware/README.md).
 
-![tentacle top all](README_images/uoctopus_tentacle_top-all.png)
+A *infrastructure* describes how test using a set of tentacles.
 
-Tentacles stacked
-
-![tentacle right all](README_images/uoctopus_tentacle_right-all.png)
+*infrastrucure_tutorial* is described here
+[here](infrastructure_tutorial/doc/README.md)
+ and allows to test i2c, uart, onewire and timers.
 
 
-### Above images are just concepts. Below is tentacle v0.1 which I am currently testing.
+**4 tentacles - ribbon cable**
 
-**Side view**
+![](README_images/infrastructure_tutorial_4-ribbon.jpg)
 
-![](hardware/octoprobe_kicad_v0.1/production_v1.0/pcb_octoprobe_v1.0_side.png)
+**4 tentacles - stacked**
 
-**Top view**
+![](README_images/infrastructure_tutorial_4-stacked.jpg)
 
-![](hardware/octoprobe_kicad_v0.1/production_v1.0/pcb_octoprobe_v1.0_top.png)
+**MCU tentacle**
 
-
-
+![](README_images/infrastructure_tutorial_mcu_pico.jpg)
 
 ## Test flow
 
@@ -72,7 +69,7 @@ In this test the OLED display shall be tested agains PYBv1.1 and ESP32 using fir
 ```mermaid
 sequenceDiagram
     participant github
-    participant U as microOctopus
+    participant U as octoprobe
     participant TP as Tentacle PYBv1.1
     participant TE as Tentacle ESP32
     participant TO as Tentacle OLED

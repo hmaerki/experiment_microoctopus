@@ -59,12 +59,12 @@ class Tentacle[TTentacleSpec, TTentacleType: enum.StrEnum, TEnumFut: enum.StrEnu
         if self.dut is None:
             return
 
-        with self.active_led:
-            self.dut.flash_dut(
-                tentacle=self,
-                udev=udev_poller,
-                firmware_spec=firmware_spec,
-            )
+        # with self.active_led:
+        self.dut.flash_dut(
+            tentacle=self,
+            udev=udev_poller,
+            firmware_spec=firmware_spec,
+        )
 
     @property
     def power(self) -> util_power.TentaclePlugsPower:
