@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name Connector-ML)(type Legacy)(uri ${KIPRJMOD}/symbols/Connector-ML.lib)(options "")(descr ""))
-)
